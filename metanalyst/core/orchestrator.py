@@ -42,6 +42,9 @@ class OrchestratorAgent:
     
     The orchestrator analyzes the current state and decides which specialized agent
     should be invoked next, managing the flow of the meta-analysis from start to finish.
+    
+    This class creates the graph structure once and reuses it for multiple meta-analyses.
+    Each meta-analysis gets its own thread_id but shares the same graph infrastructure.
     """
     
     def __init__(self, config: MetanalystConfig):
@@ -55,24 +58,23 @@ class OrchestratorAgent:
         self.llm = get_llm_instance(config.llm)
         self.checkpointer = get_postgres_checkpointer(config.database)
         
-        # Initialize tools
+        # Initialize tools (these are reused across all meta-analyses)
         self.handoff_tools = get_all_handoff_tools()
         self.workflow_tools = create_workflow_handoff_tools()
-        self.all_tools = self.handoff_tools + list(self.workflow_tools.values())
+        self.internal_tools = self._create_internal_tools()
+        self.all_tools = self.handoff_tools + list(self.workflow_tools.values()) + self.internal_tools
         
-        # Bind tools to LLM
-        self.llm_with_tools = self.llm.bind_tools(self.all_tools + [
-            self._define_pico_tool(),
-            self._request_human_feedback_tool(),
-            self._complete_metanalysis_tool(),
-            self._pause_for_review_tool()
-        ])
+        # Bind tools to LLM (this creates the LLM instance with tools)
+        self.llm_with_tools = self.llm.bind_tools(self.all_tools)
         
-        # Create the graph
+        # Create the graph structure ONCE (reused for all meta-analyses)
         self.graph = self._create_graph()
+        
+        logger.info("Orchestrator agent initialized with graph structure")
     
-    def _define_pico_tool(self):
-        """Tool for defining PICO framework elements."""
+    def _create_internal_tools(self):
+        """Create internal tools that are bound to this orchestrator instance."""
+        
         @tool
         def define_pico(
             population: str,
@@ -100,10 +102,6 @@ class OrchestratorAgent:
                 "current_step": "pico_defined"
             }
         
-        return define_pico
-    
-    def _request_human_feedback_tool(self):
-        """Tool for requesting human feedback."""
         @tool
         def request_human_feedback(
             request_type: str,
@@ -136,10 +134,6 @@ class OrchestratorAgent:
                 "current_step": "human_feedback_received"
             }
         
-        return request_human_feedback
-    
-    def _complete_metanalysis_tool(self):
-        """Tool for marking the meta-analysis as complete."""
         @tool
         def complete_metanalysis(
             completion_reason: str,
@@ -162,10 +156,6 @@ class OrchestratorAgent:
                 "completed_at": datetime.now().isoformat()
             }
         
-        return complete_metanalysis
-    
-    def _pause_for_review_tool(self):
-        """Tool for pausing the process for review."""
         @tool
         def pause_for_review(
             pause_reason: str,
@@ -189,7 +179,7 @@ class OrchestratorAgent:
                 "paused_at": datetime.now().isoformat()
             }
         
-        return pause_for_review
+        return [define_pico, request_human_feedback, complete_metanalysis, pause_for_review]
     
     def _create_system_prompt(self) -> str:
         """Create the system prompt for the orchestrator."""
@@ -228,19 +218,17 @@ DECISION PRINCIPLES:
 Use the available handoff tools to delegate tasks. Always provide clear task descriptions and context."""
 
     def _create_graph(self) -> StateGraph:
-        """Create the orchestrator graph."""
+        """
+        Create the orchestrator graph structure.
+        This is created ONCE and reused for all meta-analyses.
+        """
         graph_builder = StateGraph(MetanalysisState)
         
         # Add orchestrator node
         graph_builder.add_node("orchestrator", self._orchestrator_node)
         
         # Add tool node for handling tool calls
-        tool_node = ToolNode(self.all_tools + [
-            self._define_pico_tool(),
-            self._request_human_feedback_tool(),
-            self._complete_metanalysis_tool(),
-            self._pause_for_review_tool()
-        ])
+        tool_node = ToolNode(self.all_tools)
         graph_builder.add_node("tools", tool_node)
         
         # Add conditional edges
@@ -259,15 +247,21 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         # Set entry point
         graph_builder.add_edge(START, "orchestrator")
         
-        # Compile with checkpointer
-        return graph_builder.compile(checkpointer=self.checkpointer)
+        # Compile with checkpointer (this creates the compiled graph)
+        compiled_graph = graph_builder.compile(checkpointer=self.checkpointer)
+        
+        logger.info("Graph structure created and compiled")
+        return compiled_graph
     
     def _orchestrator_node(self, state: MetanalysisState) -> Dict[str, Any]:
         """
         Main orchestrator node that analyzes state and decides next actions.
         
+        This method is called for each step in ANY meta-analysis using this orchestrator.
+        The state parameter contains the current state for the specific meta-analysis.
+        
         Args:
-            state: Current metanalysis state
+            state: Current metanalysis state for this specific meta-analysis
         
         Returns:
             Updated state with orchestrator decisions
@@ -275,7 +269,7 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         try:
             # Log current state
             state_summary = get_state_summary(state)
-            logger.info(f"Orchestrator analyzing state: {state_summary}")
+            logger.info(f"Orchestrator analyzing state for {state['metanalysis_id']}: {state_summary}")
             
             # Get latest human message
             latest_human_msg = get_latest_human_message(state)
@@ -313,7 +307,7 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
             return {"agents_messages": updated_state["agents_messages"]}
             
         except Exception as e:
-            logger.error(f"Error in orchestrator node: {e}")
+            logger.error(f"Error in orchestrator node for {state.get('metanalysis_id', 'unknown')}: {e}")
             error_state = add_agent_message(
                 state,
                 agent_name="orchestrator",
@@ -388,6 +382,8 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         """
         Start a new meta-analysis process.
         
+        This creates a new state for the meta-analysis but uses the existing graph.
+        
         Args:
             initial_request: The initial human request
             metanalysis_id: Optional custom ID for the meta-analysis
@@ -402,16 +398,17 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         if thread_id is None:
             thread_id = str(uuid.uuid4())
         
-        # Create initial state
+        # Create initial state for THIS specific meta-analysis
         initial_state = create_initial_state(metanalysis_id, initial_request)
         
-        # Configure for execution
+        # Configure for execution with the specific thread_id
         config = {"configurable": {"thread_id": thread_id}}
         
         logger.info(f"Starting meta-analysis {metanalysis_id} with thread {thread_id}")
         
-        # Start the graph execution
+        # Start the graph execution with the initial state
         try:
+            # Use the EXISTING graph with the NEW state
             result = self.graph.invoke(initial_state, config)
             logger.info(f"Meta-analysis {metanalysis_id} started successfully")
             return metanalysis_id, thread_id
@@ -423,6 +420,8 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         """
         Continue an existing meta-analysis process.
         
+        This uses the existing graph and loads the state for the specific thread_id.
+        
         Args:
             thread_id: Thread ID of the existing process
             user_input: Optional user input to add to the process
@@ -433,10 +432,12 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         config = {"configurable": {"thread_id": thread_id}}
         
         try:
-            # Get current state
-            current_state = self.graph.get_state(config)
-            
             if user_input:
+                # Get current state
+                current_state = self.graph.get_state(config)
+                if not current_state.values:
+                    raise ValueError(f"No existing meta-analysis found for thread {thread_id}")
+                
                 # Add user input to state
                 from .state import add_human_message
                 updated_state = add_human_message(
@@ -471,6 +472,8 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         
         try:
             state = self.graph.get_state(config)
+            if not state.values:
+                raise ValueError(f"No meta-analysis found for thread {thread_id}")
             return get_state_summary(state.values)
         except Exception as e:
             logger.error(f"Failed to get status for {thread_id}: {e}")
@@ -492,6 +495,9 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         try:
             # Get current state and update status
             current_state = self.graph.get_state(config)
+            if not current_state.values:
+                raise ValueError(f"No meta-analysis found for thread {thread_id}")
+            
             updated_state = set_next_step(
                 current_state.values,
                 "paused",
@@ -510,3 +516,16 @@ Use the available handoff tools to delegate tasks. Always provide clear task des
         except Exception as e:
             logger.error(f"Failed to pause meta-analysis {thread_id}: {e}")
             return False
+    
+    def list_active_metanalyses(self) -> List[Dict[str, Any]]:
+        """
+        List all active meta-analyses managed by this orchestrator.
+        
+        Returns:
+            List of active meta-analysis summaries
+        """
+        # This would require querying the checkpointer for all active threads
+        # Implementation depends on the specific checkpointer interface
+        # For now, return empty list as this requires additional checkpointer methods
+        logger.warning("list_active_metanalyses not fully implemented - requires checkpointer thread enumeration")
+        return []
