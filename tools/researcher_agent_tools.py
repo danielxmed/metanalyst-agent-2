@@ -8,19 +8,19 @@ import os
 @tool
 def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallId]) -> Command:
     """
-    Realiza busca de literatura científica usando Tavily API com foco em periódicos médicos.
-    
-    Esta tool busca artigos científicos em bases de dados médicas confiáveis usando a 
-    API Tavily. Retorna URLs de artigos relevantes formatados como texto.
+    Performs scientific literature search using Tavily API with focus on medical journals.
+
+    This tool searches for scientific articles in reliable medical databases using the
+    Tavily API. Returns URLs of relevant articles formatted as text.
     
     Args:
-        query (str): Consulta de busca para literatura científica
-        
+        query (str): Search query for scientific literature
+
     Returns:
-        str: Resultado da busca formatado como texto
+        str: Search results formatted as text
     """
     
-    # Lista de domínios de periódicos e bases científicas em medicina
+    # List of medical journal and scientific database domains
     medical_domains = [
         "pubmed.ncbi.nlm.nih.gov",
         "www.ncbi.nlm.nih.gov/pmc", 
@@ -88,7 +88,7 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
     ]
     
     try:
-        # Importa e configura o Tavily client
+        # Import and configure Tavily client
         from tavily import TavilyClient
         
         api_key = os.getenv("TAVILY_API_KEY")
@@ -96,16 +96,16 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
             return Command(
                 update={
                     "messages": [ToolMessage(
-                        content="Erro: TAVILY_API_KEY não encontrada nas variáveis de ambiente.",
+                        content="Error: TAVILY_API_KEY not found in environment variables.",
                         tool_call_id=tool_call_id
                     )]
                 }
             )
         
-        # Inicializa o cliente Tavily
+        # Initialize Tavily client
         tavily_client = TavilyClient(api_key=api_key)
         
-        # Realiza a busca com os parâmetros especificados
+        # Perform search with specified parameters
         response = tavily_client.search(
             query=query,
             search_depth="basic",
@@ -113,28 +113,28 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
             include_domains=medical_domains
         )
         
-        # Extrai as URLs dos resultados
+        # Extract URLs from results
         urls = []
         if "results" in response:
             for result in response["results"]:
                 if "url" in result:
                     urls.append(result["url"])
         
-        # Cria mensagem informativa sobre a busca realizada
+        # Create informative message about the search performed
         search_message = ToolMessage(
-            content=f"🔍 Agente Researcher executou busca de literatura científica.\n"
+            content=f"🔍 Researcher Agent executed scientific literature search.\n"
                    f"Query: '{query}'\n" 
-                   f"URLs encontradas: {len(urls)}\n"
-                   f"Domínios pesquisados: periódicos e bases científicas médicas",
+                   f"URLs found: {len(urls)}\n"
+                   f"Domains searched: medical journals and scientific databases",
             tool_call_id=tool_call_id
         )
         
-        # Retorna comando para atualizar o estado
+        # Return command to update state
         return Command(
             update={
-                "urls_to_process": urls,  # Adiciona novos URLs sem remover os anteriores
-                "previous_search_queries": [query],  # Adiciona query às buscas anteriores
-                "messages": [search_message]  # Adiciona mensagem sobre a execução
+                "urls_to_process": urls,  # Add new URLs without removing previous ones
+                "previous_search_queries": [query],  # Add query to previous searches
+                "messages": [search_message]  # Add message about execution
             }
         )
         
@@ -142,7 +142,7 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
         return Command(
             update={
                 "messages": [ToolMessage(
-                    content="Erro: Biblioteca tavily-python não instalada. Execute: pip install tavily-python",
+                    content="Error: tavily-python library not installed. Run: pip install tavily-python",
                     tool_call_id=tool_call_id
                 )]
             }
@@ -151,7 +151,7 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
         return Command(
             update={
                 "messages": [ToolMessage(
-                    content=f"Erro na busca de literatura: {str(e)}",
+                    content=f"Error in literature search: {str(e)}",
                     tool_call_id=tool_call_id
                 )]
             }

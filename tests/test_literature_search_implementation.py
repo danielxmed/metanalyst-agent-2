@@ -1,45 +1,45 @@
 #!/usr/bin/env python3
 """
-Teste básico para verificar a implementação da tool literature_search
+Basic test to verify literature_search tool implementation
 """
 
 import os
 from tools.researcher_agent_tools import literature_search
 
 def test_literature_search_tool():
-    """Testa se a tool literature_search está funcionando corretamente"""
+    """Tests if the literature_search tool is working correctly"""
+
+    print("🧪 Testing the literature_search tool implementation...")
     
-    print("🧪 Testando a implementação da tool literature_search...")
+    # Test 1: Check if the tool exists and can be imported
+    print("✅ Tool literature_search imported successfully")
     
-    # Teste 1: Verificar se a tool existe e pode ser importada
-    print("✅ Tool literature_search importada com sucesso")
+    # Test 2: Check if the tool has the correct signature
+    assert hasattr(literature_search, 'name'), "Tool should have 'name' attribute"
+    assert hasattr(literature_search, 'description'), "Tool should have 'description' attribute"
+    print(f"✅ Tool name: {literature_search.name}")
+    print(f"✅ Tool description: {literature_search.description[:100]}...")
     
-    # Teste 2: Verificar se a tool tem a assinatura correta
-    assert hasattr(literature_search, 'name'), "Tool deve ter atributo 'name'"
-    assert hasattr(literature_search, 'description'), "Tool deve ter atributo 'description'"
-    print(f"✅ Nome da tool: {literature_search.name}")
-    print(f"✅ Descrição da tool: {literature_search.description[:100]}...")
-    
-    # Teste 3: Verificar se consegue executar sem erro (mesmo sem API key)
+    # Test 3: Check if it can execute without error (even without API key)
     try:
-        # Simula execução sem API key para testar tratamento de erro
+        # Simulate execution without API key to test error handling
         if 'TAVILY_API_KEY' in os.environ:
             del os.environ['TAVILY_API_KEY']
         
         result = literature_search.invoke({"query": "diabetes mellitus treatment"})
-        print("✅ Tool executou sem erro (tratamento de erro funcionando)")
-        print(f"✅ Tipo do resultado: {type(result)}")
+        print("✅ Tool executed without error (error handling working)")
+        print(f"✅ Result type: {type(result)}")
         
-        # Verifica se retorna um Command
+        # Check if it returns a Command
         from langgraph.types import Command
-        assert isinstance(result, Command), "Tool deve retornar um Command do LangGraph"
-        print("✅ Tool retorna Command corretamente")
+        assert isinstance(result, Command), "Tool should return a LangGraph Command"
+        print("✅ Tool returns Command correctly")
         
     except Exception as e:
-        print(f"❌ Erro na execução da tool: {e}")
+        print(f"❌ Error in tool execution: {e}")
         return False
     
-    print("\n🎉 Todos os testes passaram! A tool literature_search está implementada corretamente.")
+    print("\n🎉 All tests passed! The literature_search tool is correctly implemented.")
     return True
 
 if __name__ == "__main__":

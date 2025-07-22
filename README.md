@@ -1,127 +1,127 @@
-# 🤖 Metanalyst Agent
+# 🤖 Meta-Analyst Agent
 
-Um sistema de agentes inteligentes para conduzir metanálises automatizadas de literatura científica.
+An intelligent agent system for conducting automated meta-analyses of scientific literature.
 
-## 📋 Visão Geral
+## 📋 Overview
 
-O Metanalyst Agent é um sistema multi-agente que automatiza o processo de condução de metanálises, desde a pesquisa de literatura até a geração do documento final. O sistema utiliza agentes especializados para diferentes etapas do processo.
+The Meta-Analyst Agent is a multi-agent system that automates the process of conducting meta-analyses, from literature search to final document generation. The system uses specialized agents for different stages of the process.
 
-## ⚙️ Configuração
+## ⚙️ Setup
 
-### 1. Pré-requisitos
+### 1. Prerequisites
 
 - Python 3.8+
-- Chaves de API para:
-  - OpenAI (para GPT)
-  - Anthropic (para Claude)
-  - Tavily (para pesquisa na web)
+- API keys for:
+  - OpenAI (for GPT)
+  - Anthropic (for Claude)
+  - Tavily (for web search)
 
-### 2. Instalação
+### 2. Installation
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/danielxmed/metanalyst-agent-2.git
 cd metanalyst-agent-2
 
-# Instale as dependências
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-### 3. Configuração das Variáveis de Ambiente
+### 3. Environment Variables Configuration
 
-1. Copie o arquivo de exemplo:
+1. Copy the example file:
 ```bash
 cp .env.example .env
 ```
 
-2. Edite o arquivo `.env` e adicione suas chaves de API:
+2. Edit the `.env` file and add your API keys:
 ```env
-OPENAI_API_KEY=sua_chave_openai_aqui
-ANTHROPIC_API_KEY=sua_chave_anthropic_aqui
-TAVILY_API_KEY=sua_chave_tavily_aqui
+OPENAI_API_KEY=your_openai_key_here
+ANTHROPIC_API_KEY=your_anthropic_key_here
+TAVILY_API_KEY=your_tavily_key_here
 ```
 
-**⚠️ IMPORTANTE: Nunca commit suas chaves de API reais! O arquivo `.env` está no `.gitignore` para proteger suas credenciais.**
+**⚠️ IMPORTANT: Never commit your real API keys! The `.env` file is in `.gitignore` to protect your credentials.**
 
-## 🏗️ Arquitetura
+## 🏗️ Architecture
 
-O sistema é composto por:
+The system consists of:
 
-- **Supervisor Agent**: Coordena o fluxo de trabalho
-- **Researcher Agent**: Realiza pesquisas de literatura
-- **State Manager**: Mantém o estado do processo
+- **Supervisor Agent**: Coordinates the workflow
+- **Researcher Agent**: Performs literature searches
+- **State Manager**: Maintains process state
 
-## 📊 Estado Atual do Processo
+## 📊 Current Process State
 
-| Chave do Estado                | Descrição                                      |
+| State Key                      | Description                                    |
 |------------------------------- |------------------------------------------------|
-| **current_iteration**          | Iteração atual do fluxo                        |
-| **messages**                   | Mensagens trocadas até o momento               |
-| **metanalysis_pico**           | Elementos PICO definidos                       |
-| **user_request**               | Solicitação original do usuário                |
-| **previous_search_queries**     | Pesquisas anteriores realizadas                |
-| **urls_to_process**            | URLs a serem processadas                       |
-| **processed_urls**             | URLs já processadas                            |
-| **retrieved_chunks**           | Trechos recuperados do repositório             |
-| **previous_retrieve_queries**   | Consultas de recuperação anteriores            |
-| **analysis_results**           | Resultados das análises                        |
-| **current_draft**              | Rascunho atual da metanálise                   |
-| **current_draft_iteration**    | Iteração do rascunho atual                     |
-| **reviewer_feedbacks**         | Feedbacks do revisor                           |
-| **final_draft**                | Versão final da metanálise                     |
+| **current_iteration**          | Current flow iteration                         |
+| **messages**                   | Messages exchanged so far                      |
+| **meta_analysis_pico**         | Defined PICO elements                          |
+| **user_request**               | Original user request                          |
+| **previous_search_queries**    | Previously performed searches                  |
+| **urls_to_process**            | URLs to be processed                           |
+| **processed_urls**             | Already processed URLs                         |
+| **retrieved_chunks**           | Chunks retrieved from repository               |
+| **previous_retrieve_queries**  | Previous retrieval queries                     |
+| **analysis_results**           | Analysis results                               |
+| **current_draft**              | Current meta-analysis draft                    |
+| **current_draft_iteration**    | Current draft iteration                        |
+| **reviewer_feedbacks**         | Reviewer feedbacks                             |
+| **final_draft**                | Final meta-analysis version                    |
 
-> _Cada linha representa uma chave do estado mantido durante a execução do pipeline de metanálise._
+> _Each row represents a state key maintained during meta-analysis pipeline execution._
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
 ```python
-# Exemplo de uso básico
+# Basic usage example
 from agents.supervisor import SupervisorAgent
 from state.state import State
 
-# Inicializar o estado
+# Initialize state
 state = State()
 
-# Criar o agente supervisor
+# Create supervisor agent
 supervisor = SupervisorAgent()
 
-# Executar uma metanálise
-result = supervisor.run("Metanálise sobre eficácia de intervenções em saúde mental")
+# Execute a meta-analysis
+result = supervisor.run("Meta-analysis on effectiveness of mental health interventions")
 ```
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 metanalyst-agent-2/
-├── agents/                 # Agentes do sistema
-│   ├── supervisor.py      # Agente supervisor
-│   └── researcher.py      # Agente pesquisador
-├── prompts/               # Templates de prompts
-├── state/                 # Gerenciamento de estado
-├── tools/                 # Ferramentas dos agentes
-├── tests/                 # Testes automatizados
-├── .env.example          # Exemplo de configuração
-└── requirements.txt      # Dependências Python
+├── agents/                 # System agents
+│   ├── supervisor.py      # Supervisor agent
+│   └── researcher.py      # Researcher agent
+├── prompts/               # Prompt templates
+├── state/                 # State management
+├── tools/                 # Agent tools
+├── tests/                 # Automated tests
+├── .env.example          # Configuration example
+└── requirements.txt      # Python dependencies
 ```
 
-## 🧪 Testes
+## 🧪 Tests
 
-Execute os testes para verificar se tudo está funcionando:
+Run tests to verify everything is working:
 
 ```bash
 python -m pytest tests/
 ```
 
-## 🛡️ Segurança
+## 🛡️ Security
 
-- Nunca committe arquivos `.env` com chaves reais
-- Use variáveis de ambiente para configurações sensíveis
-- Mantenha suas chaves de API seguras e não as compartilhe
+- Never commit `.env` files with real keys
+- Use environment variables for sensitive configurations
+- Keep your API keys secure and don't share them
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está licenciado sob a licença MIT.
+This project is licensed under the MIT License.
 
-## 🤝 Contribuições
+## 🤝 Contributions
 
-Contribuições são bem-vindas! Por favor, abra uma issue ou pull request.
+Contributions are welcome! Please open an issue or pull request.

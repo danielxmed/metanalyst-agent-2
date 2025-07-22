@@ -83,7 +83,7 @@ transfer_to_editor =  create_handoff_tool (
 # PICO tool
 
 @tool
-def create_pico_for_metanalysis(
+def create_pico_for_meta_analysis(
     state: Annotated[dict[str, Any], InjectedState]
 ) -> Command:
     """
@@ -92,7 +92,7 @@ def create_pico_for_metanalysis(
 
 
     pico_prompt = """
-    You are a helpful assistant that makes the PICO elements based on the current state, specially the user_request key, for making a metanalysis.
+    You are a helpful assistant that makes the PICO elements based on the current state, specially the user_request key, for making a meta-analysis.
     You MUST return ONLY a dictionary with the PICO elements, no other text or comments.
     The dictionary must have the following keys: population, intervention, comparison, outcome.
     For example:
@@ -110,4 +110,4 @@ def create_pico_for_metanalysis(
     user_request = state.get("user_request", "")
     pico_result = pico_chain.invoke({"user_request": user_request})
 
-    return Command(update={"metanalysis_pico": pico_result})
+    return Command(update={"meta_analysis_pico": pico_result})

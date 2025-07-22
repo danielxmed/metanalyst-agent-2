@@ -4,7 +4,7 @@ from langgraph.graph.message import add_messages
 from langchain_core.messages import AnyMessage
 import operator
 
-class MetanalysisState(TypedDict):
+class MetaAnalysisState(TypedDict):
     """
     Represents the state of the meta-analysis graph.
 
@@ -26,7 +26,7 @@ class MetanalysisState(TypedDict):
     user_request: str
 
     # PICO elements defined for the meta-analysis
-    metanalysis_pico: Optional[Dict[str, str]]
+    meta_analysis_pico: Optional[Dict[str, str]]
 
     # Search queries already performed
     previous_search_queries: Annotated[List[str], operator.add]

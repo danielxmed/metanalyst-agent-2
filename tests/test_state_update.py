@@ -4,72 +4,72 @@ import sys
 import importlib.util
 from dotenv import load_dotenv
 
-# Adiciona o diretório raiz do projeto ao Python path
+# Add the project root directory to Python path
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, project_root)
 
-# Carrega as variáveis de ambiente do arquivo .env
+# Load environment variables from .env file
 load_dotenv(os.path.join(project_root, '.env'))
 
-# Importa o módulo researcher diretamente evitando o __init__.py
+# Import researcher module directly avoiding __init__.py
 spec = importlib.util.spec_from_file_location("researcher", os.path.join(project_root, "agents", "researcher.py"))
 researcher_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(researcher_module)
 
 researcher_agent = researcher_module.researcher_agent
 
-# Teste para verificar se o estado está sendo atualizado
+# Test to verify if the state is being updated
 def test_state_update():
-    print("🧪 Testando se o estado é atualizado pelas tools...")
+    print("🧪 Testing if the state is being updated by tools...")
     
-    # Estado inicial
+    # Initial state
     initial_state = {
         "messages": [
             {
                 "role": "user", 
-                "content": "Testar busca de diabetes"
+                "content": "Test diabetes search"
             }
         ],
-        "metanalysis_pico": {
-            "population": "pessoas com diabetes tipo 2",
-            "intervention": "metformina", 
+        "meta_analysis_pico": {
+            "population": "people with type 2 diabetes",
+            "intervention": "metformin", 
             "comparison": "placebo",
-            "outcome": "controle de glicemia"
+            "outcome": "glycemic control"
         },
-        "user_request": "Testar busca de diabetes",
+        "user_request": "Test diabetes search",
         "previous_search_queries": [],
-        "urls_to_process": []  # Campo vazio inicialmente
+        "urls_to_process": []  # Initially empty field
     }
     
-    print(f"📊 Estado inicial:")
-    print(f"   - URLs para processar: {len(initial_state.get('urls_to_process', []))}")
-    print(f"   - Queries anteriores: {len(initial_state.get('previous_search_queries', []))}")
-    print(f"   - Mensagens: {len(initial_state.get('messages', []))}")
+    print(f"📊 Initial state:")
+    print(f"   - URLs to process: {len(initial_state.get('urls_to_process', []))}")
+    print(f"   - Previous queries: {len(initial_state.get('previous_search_queries', []))}")
+    print(f"   - Messages: {len(initial_state.get('messages', []))}")
     
-    # Executa o agente
+    # Execute the agent
     result = researcher_agent.invoke(initial_state)
     
-    print(f"\n📊 Estado após execução:")
-    print(f"   - URLs para processar: {len(result.get('urls_to_process', []))}")
-    print(f"   - Queries anteriores: {len(result.get('previous_search_queries', []))}")
-    print(f"   - Mensagens: {len(result.get('messages', []))}")
+    print(f"\n📊 State after execution:")
+    print(f"   - URLs to process: {len(result.get('urls_to_process', []))}")
+    print(f"   - Previous queries: {len(result.get('previous_search_queries', []))}")
+    print(f"   - Messages: {len(result.get('messages', []))}")
     
-    # Verifica se o estado foi atualizado
+    # Check if the state was updated
     urls_updated = len(result.get('urls_to_process', [])) > len(initial_state.get('urls_to_process', []))
     queries_updated = len(result.get('previous_search_queries', [])) > len(initial_state.get('previous_search_queries', []))
     messages_updated = len(result.get('messages', [])) > len(initial_state.get('messages', []))
     
-    print(f"\n✅ Verificações:")
-    print(f"   - URLs foram adicionados: {'✅ SIM' if urls_updated else '❌ NÃO'}")
-    print(f"   - Queries foram adicionadas: {'✅ SIM' if queries_updated else '❌ NÃO'}")
-    print(f"   - Mensagens foram adicionadas: {'✅ SIM' if messages_updated else '❌ NÃO'}")
+    print(f"\n✅ Verifications:")
+    print(f"   - URLs were added: {'✅ YES' if urls_updated else '❌ NO'}")
+    print(f"   - Queries were added: {'✅ YES' if queries_updated else '❌ NO'}")
+    print(f"   - Messages were added: {'✅ YES' if messages_updated else '❌ NO'}")
     
     if urls_updated and queries_updated and messages_updated:
-        print(f"\n🎉 SUCESSO: O estado foi atualizado corretamente pelas tools!")
-        print(f"   - {len(result.get('urls_to_process', []))} URLs encontrados")
-        print(f"   - {len(result.get('previous_search_queries', []))} queries executadas")
+        print(f"\n🎉 SUCCESS: State was correctly updated by the tools!")
+        print(f"   - {len(result.get('urls_to_process', []))} URLs found")
+        print(f"   - {len(result.get('previous_search_queries', []))} queries executed")
     else:
-        print(f"\n❌ FALHA: O estado não foi atualizado como esperado")
+        print(f"\n❌ FAILURE: State was not updated as expected")
         
     return result
 
