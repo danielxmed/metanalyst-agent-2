@@ -80,6 +80,7 @@ dmypy.json
 # Arquivos de ambiente
 .env
 .env.*
+!.env.example
 .venv
 venv/
 ENV/
