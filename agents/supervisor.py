@@ -1,4 +1,4 @@
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_anthropic import ChatAnthropic
 from langgraph_supervisor import create_supervisor
 from prompts.supervisor_prompt import supervisor_prompt
 from agents.researcher import researcher_agent
@@ -28,9 +28,9 @@ supervisor_agent = create_supervisor (
         create_handoff_tool(agent_name="retriever"),
         create_pico_for_meta_analysis,
     ],
-    model = ChatGoogleGenerativeAI(
-        model="gemini-2.5-pro",
-        google_api_key=os.getenv("GOOGLE_API_KEY")
+    model = ChatAnthropic(
+        model="claude-sonnet-4-20250514",
+        anthropic_api_key=os.getenv("ANTHROPIC_API_KEY")
     ),
     prompt = supervisor_prompt,
     state_schema = MetaAnalysisState

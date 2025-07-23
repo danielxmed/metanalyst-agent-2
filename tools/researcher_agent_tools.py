@@ -131,18 +131,16 @@ def literature_search(
         urls = [u for u in urls if u not in existing_to_process and u not in processed_urls]
         
         # CONTROLE RIGOROSO: Para se já tem URLs suficientes
-        if len(existing_to_process) >= 200:
+        if len(existing_to_process) >= 100:
             search_message = ToolMessage(
-                content=f"🛑 Search stopped: Already have {len(existing_to_process)} URLs queued (limit: 200).\n"
+                content=f"🛑 Search stopped: Already have {len(existing_to_process)} URLs queued (limit: 100).\n"
                        f"Query attempted: '{query}' (not executed)",
                 tool_call_id=tool_call_id
             )
-            # CORRIGE O BUG: ADICIONA à lista existente ao invés de substituir
-            existing_queries = state.get("previous_search_queries", [])
-            updated_queries = existing_queries + [query]
+            # Let the custom reducer handle the query limiting
             return Command(
                 update={
-                    "previous_search_queries": updated_queries,  # CORRIGIDO: adiciona query à lista existente
+                    "previous_search_queries": [query],  # Add single query, let reducer handle limiting
                     "messages": [search_message]
                 }
             )
@@ -168,18 +166,15 @@ def literature_search(
         
         # Return command to update state
         updated_urls = existing_to_process + urls
-        # Limita rigorosamente a 200 URLs
-        if len(updated_urls) > 200:
-            updated_urls = updated_urls[:200]
+        # Limita rigorosamente a 100 URLs
+        if len(updated_urls) > 100:
+            updated_urls = updated_urls[:100]
             
-        # CORRIGE O BUG: ADICIONA à lista existente ao invés de substituir
-        existing_queries = state.get("previous_search_queries", [])
-        updated_queries = existing_queries + [query]
-            
+        # Let the custom reducer handle the query limiting
         return Command(
             update={
                 "urls_to_process": updated_urls,  # maintain existing + new unique URLs
-                "previous_search_queries": updated_queries,  # CORRIGIDO: adiciona query à lista existente
+                "previous_search_queries": [query],  # Add single query, let reducer handle limiting
                 "messages": [search_message, friendly_message]  # ToolMessage + AIMessage amigável
             }
         )

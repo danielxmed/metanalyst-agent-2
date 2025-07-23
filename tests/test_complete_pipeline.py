@@ -29,7 +29,7 @@ try:
             meta_analysis_pico = {},
             previous_search_queries = [],
             previous_retrieve_queries = [],
-            retrieved_chunks = [],
+            retrieved_chunks_count = 0,
             analysis_results = [],
             current_draft = "",
             current_draft_iteration = 1,
@@ -60,6 +60,14 @@ try:
                     logger.info(f"URLs to process: {len(value['urls_to_process'])}")
                 if 'processed_urls' in value:
                     logger.info(f"Processed URLs: {len(value['processed_urls'])}")
+                
+                # Log queries info for debugging
+                if 'previous_search_queries' in value:
+                    logger.info(f"Previous search queries ({len(value['previous_search_queries'])}): {value['previous_search_queries']}")
+                if 'previous_retrieve_queries' in value:
+                    logger.info(f"Previous retrieve queries ({len(value['previous_retrieve_queries'])}): {value['previous_retrieve_queries']}")
+                if 'retrieved_chunks_count' in value:
+                    logger.info(f"Retrieved chunks count: {value['retrieved_chunks_count']}")
         
         print(f"\n=== CHUNK #{chunk_count} ===")
         print(chunk)

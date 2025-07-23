@@ -1,4 +1,4 @@
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_anthropic import ChatAnthropic
 from langgraph.prebuilt import create_react_agent
 from state.state import MetaAnalysisState
 from prompts.processor_prompt import processor_prompt
@@ -10,9 +10,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-model = ChatGoogleGenerativeAI(
-    model="gemini-2.5-pro",
-    google_api_key=os.getenv("GOOGLE_API_KEY")
+model = ChatAnthropic(
+    model="claude-sonnet-4-20250514",
+    anthropic_api_key=os.getenv("ANTHROPIC_API_KEY")
 )
 
 processor_agent = create_react_agent(
