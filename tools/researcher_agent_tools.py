@@ -1,12 +1,17 @@
 from langchain_core.tools import tool, InjectedToolCallId
 from langgraph.types import Command
+from langgraph.prebuilt import InjectedState
 from langchain_core.messages import HumanMessage, ToolMessage
 from typing import Annotated
 import os
 
 
 @tool
-def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallId]) -> Command:
+def literature_search(
+    query: str,
+    tool_call_id: Annotated[str, InjectedToolCallId],
+    state: Annotated[dict, InjectedState]
+) -> Command:
     """
     Performs scientific literature search using Tavily API with focus on medical journals.
 
@@ -109,7 +114,7 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
         response = tavily_client.search(
             query=query,
             search_depth="basic",
-            max_results=3,
+            max_results=20,
             include_domains=medical_domains
         )
         
@@ -120,6 +125,11 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
                 if "url" in result:
                     urls.append(result["url"])
         
+        # Filter out URLs already queued or processed
+        existing_to_process = state.get("urls_to_process", [])
+        processed_urls = state.get("processed_urls", [])
+        urls = [u for u in urls if u not in existing_to_process and u not in processed_urls]
+
         # Create informative message about the search performed
         search_message = ToolMessage(
             content=f"🔍 Researcher Agent executed scientific literature search.\n"
@@ -130,9 +140,10 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
         )
         
         # Return command to update state
+        updated_urls = existing_to_process + urls
         return Command(
             update={
-                "urls_to_process": urls,  # Add new URLs without removing previous ones
+                "urls_to_process": updated_urls,  # maintain existing + new unique URLs
                 "previous_search_queries": [query],  # Add query to previous searches
                 "messages": [search_message]  # Add message about execution
             }

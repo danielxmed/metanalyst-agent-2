@@ -81,7 +81,12 @@ def process_urls(
             tavily_client = TavilyClient(api_key=tavily_api_key)
             
             # Execute extract request
-            response = tavily_client.extract(urls=urls, include_images=False)
+            response = tavily_client.extract(
+                urls=urls,
+                include_images=False,
+                extract_depth="advanced",
+                format="text"
+            )
             
             extracted_data = []
             
@@ -97,6 +102,7 @@ def process_urls(
             # Process failed results
             if "failed_results" in response:
                 for failed_result in response["failed_results"]:
+                    logger.warning(f"Failed to extract {failed_result['url']}: {failed_result.get('error', 'Unknown error')}")
                     extracted_data.append({
                         "url": failed_result["url"],
                         "content": "",
@@ -382,8 +388,15 @@ def process_urls(
                 }
             )
         
-        # DEDUPLICATION: Remove URLs that are already processed
-        urls_to_process_filtered = [url for url in urls_to_process if url not in processed_urls_existing]
+        # DEDUPLICATION:
+        # 1) remove duplicatas mantendo ordem original
+        # 2) descartar URLs já processadas
+        seen, deduped = set(), []
+        for u in urls_to_process:
+            if u not in seen:
+                seen.add(u)
+                deduped.append(u)
+        urls_to_process_filtered = [url for url in deduped if url not in processed_urls_existing]
         
         if not urls_to_process_filtered:
             logger.info("All URLs already processed")
@@ -461,6 +474,10 @@ def process_urls(
         
         logger.info(f"Successfully processed {len(processed_urls)} URLs, created {len(chunks)} chunks")
         
+        # Remove any URLs already processed from remaining list and deduplicate processed list
+        processed_urls_updated = list(set(processed_urls_existing + processed_urls))
+        remaining_urls = [url for url in remaining_urls if url not in processed_urls_updated]
+
         # Update state: keep remaining URLs and add processed ones to processed_urls
         batch_status = f"Batch {len(processed_urls)}/{len(urls_batch)} successful"
         remaining_status = f", {len(remaining_urls)} URLs remaining" if remaining_urls else ", all URLs processed"
@@ -468,7 +485,7 @@ def process_urls(
         return Command(
             update={
                 "urls_to_process": remaining_urls,  # Keep remaining URLs for next batch
-                "processed_urls": processed_urls_existing + processed_urls,  # ACCUMULATE processed URLs
+                "processed_urls": processed_urls_updated,  # Deduplicated processed URLs
                 "messages": [
                     ToolMessage(
                         content=f"Successfully processed {len(processed_urls)}/{len(urls_batch)} URLs ({batch_status}){remaining_status}. "
