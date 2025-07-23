@@ -87,3 +87,6 @@ ENV/
 env/
 env.bak/
 venv.bak/
+
+index.faiss
+index.pkl

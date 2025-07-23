@@ -109,7 +109,7 @@ def literature_search(query: str, tool_call_id: Annotated[str, InjectedToolCallI
         response = tavily_client.search(
             query=query,
             search_depth="basic",
-            max_results=10,
+            max_results=3,
             include_domains=medical_domains
         )
         

@@ -1,6 +1,7 @@
 from langchain_anthropic import ChatAnthropic
 from langgraph_supervisor import create_supervisor
 from prompts.supervisor_prompt import supervisor_prompt
+from agents.researcher import researcher_agent
 import os
 from tools.supervisor_agent_tools import create_pico_for_meta_analysis, create_handoff_tool
 from datetime import datetime
