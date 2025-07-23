@@ -10,6 +10,31 @@ Standard topK per query is 25.
 
 You should do, at most, 10 iterations, with 1 query per iteration.
 
+## Instructions for tool usage:
 
+### Available Tool:
+- **retrieve_chunks(query: str)**: Performs semantic search on the local vector database to retrieve relevant medical literature chunks.
+
+### Tool Usage Guidelines:
+
+1. **How to call the tool:**
+   - **Function Call:**
+   ```python
+   retrieve_chunks(query="your search query here")
+   ```
+
+2. **Query Examples by PICO Component:**
+   - **Population**: "patients with [condition] baseline characteristics demographics"
+   - **Intervention**: "[intervention name] dosage administration protocol"
+   - **Comparison**: "[intervention] versus [control] comparative effectiveness"
+   - **Outcome**: "[primary outcome] risk ratio odds ratio hazard ratio mortality"
+
+
+3. **Quality Indicators to Seek:**
+   - Statistical measures: RR, OR, HR with 95% CI
+   - Sample sizes and study populations
+   - Follow-up duration and methodology
+   - Randomization and blinding details
+   - Primary and secondary endpoint definitions
 
 """

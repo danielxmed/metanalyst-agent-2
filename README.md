@@ -1,22 +1,102 @@
-# 🤖 Meta-Analyst Agent
+# 🩺 Meta-Analyst Agent 2
 
-An intelligent agent system for conducting automated meta-analyses of scientific literature.
+An intelligent multi-agent system for automated generation of medical meta-analyses using a supervisor-based architecture.
 
 ## 📋 Overview
 
-The Meta-Analyst Agent is a multi-agent system that automates the process of conducting meta-analyses, from literature search to final document generation. The system uses specialized agents for different stages of the process.
+Meta-Analyst Agent 2 is an open-source project that automates the complex process of conducting medical meta-analyses through a sophisticated multi-agent system. This system orchestrates specialized AI agents to handle each step of the meta-analysis workflow, from literature search to final HTML report generation.
 
-## ⚙️ Setup
+The system is designed to handle the full pipeline of meta-analysis creation, including PICO framework definition, literature search, content processing, statistical analysis, and report writing - all coordinated by a supervisor agent that intelligently manages the workflow.
 
-### 1. Prerequisites
+## 🏗️ Architecture
 
+### Supervisor-Based Multi-Agent System
+
+The core of the system is a **Supervisor Agent** that coordinates a team of specialized agents, each responsible for different aspects of the meta-analysis process:
+
+#### 🎯 **Supervisor Agent**
+- **Role**: Orchestrates the entire workflow and decides which agent to call next
+- **Responsibilities**: 
+  - Defines PICO (Population, Intervention, Comparison, Outcome) elements
+  - Manages state transitions between agents
+  - Ensures optimal workflow progression within 100 iterations
+- **Intelligence**: Adapts workflow based on current state and results quality
+
+#### 🔍 **Researcher Agent**
+- **Role**: Literature search and URL collection
+- **Tools**: Tavily search integration
+- **Output**: Curated list of relevant research paper URLs
+
+#### ⚙️ **Processor Agent**
+- **Role**: Content extraction and vectorization
+- **Functions**: 
+  - Extracts content from research URLs
+  - Chunks content for optimal processing
+  - Creates vector embeddings
+  - Stores in vectorstore for retrieval
+
+#### 📚 **Retriever Agent**
+- **Role**: Context-aware content retrieval
+- **Method**: Retrieves relevant chunks based on PICO criteria
+- **Output**: Focused content segments for analysis
+
+#### 📊 **Analyzer Agent**
+- **Role**: Statistical analysis and metrics calculation
+- **Capabilities**:
+  - Calculates Odds Ratios (OR)
+  - Computes Risk Ratios (RR)
+  - Generates statistical insights
+  - Stores quantitative results
+
+#### ✍️ **Writer Agent**
+- **Role**: Meta-analysis draft creation
+- **Output**: Structured markdown meta-analysis draft
+- **Integration**: Uses analyzer results and retrieved content
+
+#### 🔍 **Reviewer Agent**
+- **Role**: Quality assurance and feedback
+- **Functions**:
+  - Reviews writer drafts for completeness
+  - Provides actionable feedback
+  - Signals when draft quality is sufficient
+
+#### 🎨 **Editor Agent**
+- **Role**: Final report generation
+- **Output**: Polished HTML version of meta-analysis
+- **Trigger**: Called only when reviewer approves draft
+
+### Intelligent Workflow Management
+
+The supervisor doesn't follow a rigid sequence but intelligently decides the next step based on:
+- Current state analysis
+- Content quality assessment
+- Token limit management (200,000 tokens)
+- Iteration efficiency (100 iterations max)
+
+**Key Decision Points:**
+- Always starts with PICO definition
+- Calls Researcher when URLs are needed
+- Activates Processor when URLs need processing
+- Engages Retriever when processed content is available
+- Triggers Analyzer when sufficient content is retrieved
+- Initiates Writer when analysis results are ready
+- Calls Reviewer after each draft
+- Finalizes with Editor only when draft is approved
+
+## 🚀 Recommended Setup
+
+### Model Recommendation
+We **strongly recommend using Gemini 2.5 Pro** due to its:
+- **Larger context window** - Essential for processing extensive medical literature
+- **Superior reasoning capabilities** - Critical for complex meta-analysis logic
+- **Better handling of structured data** - Important for statistical calculations
+
+### Prerequisites
 - Python 3.8+
-- API keys for:
-  - OpenAI (for GPT)
-  - Anthropic (for Claude)
-  - Tavily (for web search)
+- API access to your preferred LLM provider (Gemini 2.5 Pro recommended)
+- Tavily API key for literature search
 
-### 2. Installation
+### Installation
 
 ```bash
 # Clone the repository
@@ -25,103 +105,78 @@ cd metanalyst-agent-2
 
 # Install dependencies
 pip install -r requirements.txt
-```
 
-### 3. Environment Variables Configuration
-
-1. Copy the example file:
-```bash
+# Configure environment variables
 cp .env.example .env
-```
-
-2. Edit the `.env` file and add your API keys:
-```env
-OPENAI_API_KEY=your_openai_key_here
-ANTHROPIC_API_KEY=your_anthropic_key_here
-TAVILY_API_KEY=your_tavily_key_here
-```
-
-**⚠️ IMPORTANT: Never commit your real API keys! The `.env` file is in `.gitignore` to protect your credentials.**
-
-## 🏗️ Architecture
-
-The system consists of:
-
-- **Supervisor Agent**: Coordinates the workflow
-- **Researcher Agent**: Performs literature searches
-- **State Manager**: Maintains process state
-
-## 📊 Current Process State
-
-| State Key                      | Description                                    |
-|------------------------------- |------------------------------------------------|
-| **current_iteration**          | Current flow iteration                         |
-| **messages**                   | Messages exchanged so far                      |
-| **meta_analysis_pico**         | Defined PICO elements                          |
-| **user_request**               | Original user request                          |
-| **previous_search_queries**    | Previously performed searches                  |
-| **urls_to_process**            | URLs to be processed                           |
-| **processed_urls**             | Already processed URLs                         |
-| **retrieved_chunks**           | Chunks retrieved from repository               |
-| **previous_retrieve_queries**  | Previous retrieval queries                     |
-| **analysis_results**           | Analysis results                               |
-| **current_draft**              | Current meta-analysis draft                    |
-| **current_draft_iteration**    | Current draft iteration                        |
-| **reviewer_feedbacks**         | Reviewer feedbacks                             |
-| **final_draft**                | Final meta-analysis version                    |
-
-> _Each row represents a state key maintained during meta-analysis pipeline execution._
-
-## 🚀 How to Use
-
-```python
-# Basic usage example
-from agents.supervisor import SupervisorAgent
-from state.state import State
-
-# Initialize state
-state = State()
-
-# Create supervisor agent
-supervisor = SupervisorAgent()
-
-# Execute a meta-analysis
-result = supervisor.run("Meta-analysis on effectiveness of mental health interventions")
+# Edit .env with your API keys
 ```
 
 ## 📁 Project Structure
 
 ```
 metanalyst-agent-2/
-├── agents/                 # System agents
-│   ├── supervisor.py      # Supervisor agent
-│   └── researcher.py      # Researcher agent
-├── prompts/               # Prompt templates
-├── state/                 # State management
-├── tools/                 # Agent tools
-├── tests/                 # Automated tests
-├── .env.example          # Configuration example
-└── requirements.txt      # Python dependencies
+├── agents/                     # Core agent implementations
+│   ├── supervisor.py          # Supervisor agent - workflow orchestrator
+│   ├── researcher.py          # Literature search agent
+│   ├── processor.py           # Content processing agent
+│   ├── retriever.py           # Content retrieval agent
+│   └── ...                    # Additional specialized agents
+├── prompts/                   # Agent prompt templates
+│   ├── supervisor_prompt.py   # Supervisor agent instructions
+│   └── ...                    # Other agent prompts
+├── tools/                     # Agent-specific tools and utilities
+├── state/                     # State management system
+│   └── state.py              # Centralized state handling
+├── tests/                     # Comprehensive test suite
+├── data/                      # Processing and storage directories
+│   ├── chunks/               # Processed content chunks
+│   ├── publications_vectorstore/ # Vector embeddings
+│   └── full_json_referenced/ # Complete publication data
+└── requirements.txt          # Python dependencies
 ```
 
-## 🧪 Tests
+## 🎯 Key Features
 
-Run tests to verify everything is working:
+- **🤖 Intelligent Workflow**: Supervisor agent adapts strategy based on results
+- **📖 Comprehensive Literature Search**: Automated research paper discovery
+- **🧠 Advanced Content Processing**: Smart chunking and vectorization
+- **📊 Statistical Analysis**: Automated calculation of meta-analysis metrics
+- **📝 Professional Reporting**: Markdown and HTML output generation
+- **🔄 Quality Assurance**: Built-in review and feedback loops
+- **⚡ Scalable Architecture**: Handles large volumes of literature efficiently
 
-```bash
-python -m pytest tests/
-```
+## 🔬 Development Status
 
-## 🛡️ Security
+This project is currently under active development. The core multi-agent architecture is implemented, and we're continuously improving the system's capabilities and reliability.
 
-- Never commit `.env` files with real keys
-- Use environment variables for sensitive configurations
-- Keep your API keys secure and don't share them
+## 🤝 Contributing
+
+We welcome contributions from the medical and AI communities! Whether you're interested in:
+- Improving agent prompts
+- Adding new statistical methods
+- Enhancing the user interface
+- Expanding test coverage
+- Documentation improvements
+
+Feel free to open issues or submit pull requests on our [GitHub repository](https://github.com/danielxmed/metanalyst-agent-2).
+
+## 👨‍⚕️ About the Author
+
+**Daniel Nobrega Medeiros**
+- Physician and Programmer
+- Specialized in AI applications for healthcare
+- Contact: daniel@nobregamedtech.com.br
+- Passionate about Python and medical AI automation
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributions
+When using this software, please cite:
+- **Author**: Daniel Nobrega Medeiros
+- **Repository**: https://github.com/danielxmed/metanalyst-agent-2
+- **Contact**: daniel@nobregamedtech.com.br
 
-Contributions are welcome! Please open an issue or pull request.
+---
+
+*Empowering medical research through intelligent automation* 🚀
