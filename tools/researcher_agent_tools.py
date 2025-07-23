@@ -129,6 +129,23 @@ def literature_search(
         existing_to_process = state.get("urls_to_process", [])
         processed_urls = state.get("processed_urls", [])
         urls = [u for u in urls if u not in existing_to_process and u not in processed_urls]
+        
+        # CONTROLE RIGOROSO: Para se já tem URLs suficientes
+        if len(existing_to_process) >= 200:
+            search_message = ToolMessage(
+                content=f"🛑 Search stopped: Already have {len(existing_to_process)} URLs queued (limit: 200).\n"
+                       f"Query attempted: '{query}' (not executed)",
+                tool_call_id=tool_call_id
+            )
+            # CORRIGE O BUG: ADICIONA à lista existente ao invés de substituir
+            existing_queries = state.get("previous_search_queries", [])
+            updated_queries = existing_queries + [query]
+            return Command(
+                update={
+                    "previous_search_queries": updated_queries,  # CORRIGIDO: adiciona query à lista existente
+                    "messages": [search_message]
+                }
+            )
 
         # Create informative message about the search performed
         search_message = ToolMessage(
@@ -139,13 +156,31 @@ def literature_search(
             tool_call_id=tool_call_id
         )
         
+        # ADICIONA MENSAGEM AMIGÁVEL DO AGENTE (para evitar Issue #5548)
+        from langchain_core.messages import AIMessage
+        friendly_message = AIMessage(
+            content=f"Completei a busca por literatura científica sobre '{query}'. "
+                   f"Encontrei {len(urls)} novos artigos relevantes. "
+                   f"Total de URLs no estado: {len(existing_to_process + urls)}. "
+                   f"Pronto para processar os artigos ou fazer mais buscas se necessário.",
+            name="researcher"
+        )
+        
         # Return command to update state
         updated_urls = existing_to_process + urls
+        # Limita rigorosamente a 200 URLs
+        if len(updated_urls) > 200:
+            updated_urls = updated_urls[:200]
+            
+        # CORRIGE O BUG: ADICIONA à lista existente ao invés de substituir
+        existing_queries = state.get("previous_search_queries", [])
+        updated_queries = existing_queries + [query]
+            
         return Command(
             update={
                 "urls_to_process": updated_urls,  # maintain existing + new unique URLs
-                "previous_search_queries": [query],  # Add query to previous searches
-                "messages": [search_message]  # Add message about execution
+                "previous_search_queries": updated_queries,  # CORRIGIDO: adiciona query à lista existente
+                "messages": [search_message, friendly_message]  # ToolMessage + AIMessage amigável
             }
         )
         

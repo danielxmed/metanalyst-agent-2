@@ -371,125 +371,123 @@ def process_urls(
             logger.warning(f"Error cleaning up temporary directories: {str(e)}")
 
     # Main execution logic
-    try:
-        urls_to_process = state.get("urls_to_process", [])
-        processed_urls_existing = state.get("processed_urls", [])
-        
-        if not urls_to_process:
-            logger.info("No URLs to process")
-            return Command(
-                update={
-                    "messages": [
-                        ToolMessage(
-                            content="No URLs to process",
-                            tool_call_id=tool_call_id
-                        )
-                    ]
-                }
-            )
-        
-        # DEDUPLICATION:
-        # 1) remove duplicatas mantendo ordem original
-        # 2) descartar URLs já processadas
-        seen, deduped = set(), []
-        for u in urls_to_process:
-            if u not in seen:
-                seen.add(u)
-                deduped.append(u)
-        urls_to_process_filtered = [url for url in deduped if url not in processed_urls_existing]
-        
-        if not urls_to_process_filtered:
-            logger.info("All URLs already processed")
-            return Command(
-                update={
-                    "urls_to_process": [],  # Clear the list since all are already processed
-                    "messages": [
-                        ToolMessage(
-                            content="All URLs have already been processed",
-                            tool_call_id=tool_call_id
-                        )
-                    ]
-                }
-            )
-        
-        # BATCH PROCESSING: Limit to max 20 URLs per batch to avoid API overload
-        MAX_BATCH_SIZE = 20
-        urls_batch = urls_to_process_filtered[:MAX_BATCH_SIZE]
-        remaining_urls = urls_to_process_filtered[MAX_BATCH_SIZE:]
-        
-        logger.info(f"Processing batch of {len(urls_batch)} URLs (total: {len(urls_to_process_filtered)}, remaining: {len(remaining_urls)})")
-        
-        # Step 1: Extract content using Tavily (using batch)
-        extracted_data = extract_urls_with_tavily(urls_batch)
-        
-        # Filter successful extractions
-        successful_extractions = [d for d in extracted_data if d["status"] == "success"]
-        
-        if not successful_extractions:
-            logger.error("No URLs were successfully extracted")
-            return Command(
-                update={
-                    "messages": [
-                        ToolMessage(
-                            content="Failed to extract content from any URLs",
-                            tool_call_id=tool_call_id
-                        )
-                    ]
-                }
-            )
-        
-        # Step 2: Generate references using batch LLM
-        referenced_data = generate_references_batch(successful_extractions)
-        
-        if not referenced_data:
-            logger.error("No references were generated")
-            return Command(
-                update={
-                    "messages": [
-                        ToolMessage(
-                            content="Failed to generate references for any URLs",
-                            tool_call_id=tool_call_id
-                        )
-                    ]
-                }
-            )
-        
-        # Step 3: Save referenced JSONs
-        saved_json_files = save_referenced_jsons(referenced_data)
-        
-        # Step 4: Chunk publications
-        chunks = chunk_publications(referenced_data)
-        
-        # Step 5: Save chunks
-        saved_chunk_files = save_chunks(chunks)
-        
-        # Step 6: Vectorize and store
-        vectorstore_path = vectorize_and_store(chunks)
-        
-        # Step 7: Clean up temporary directories after vectorstore creation
-        cleanup_temp_directories()
-        
-        # Extract successfully processed URLs
-        processed_urls = [d["url"] for d in referenced_data]
-        
-        logger.info(f"Successfully processed {len(processed_urls)} URLs, created {len(chunks)} chunks")
-        
-        # Remove any URLs already processed from remaining list and deduplicate processed list
-        processed_urls_updated = list(set(processed_urls_existing + processed_urls))
-        remaining_urls = [url for url in remaining_urls if url not in processed_urls_updated]
+    urls_to_process = state.get("urls_to_process", [])
+    processed_urls_existing = state.get("processed_urls", [])
+    
+    if not urls_to_process:
+        logger.info("No URLs to process")
+        return Command(
+            update={
+                "messages": [
+                    ToolMessage(
+                        content="No URLs to process",
+                        tool_call_id=tool_call_id
+                    )
+                ]
+            }
+        )
+    
+    # DEDUPLICATION:
+    # 1) remove duplicatas mantendo ordem original
+    # 2) descartar URLs já processadas
+    seen, deduped = set(), []
+    for u in urls_to_process:
+        if u not in seen:
+            seen.add(u)
+            deduped.append(u)
+    urls_to_process_filtered = [url for url in deduped if url not in processed_urls_existing]
+    
+    if not urls_to_process_filtered:
+        logger.info("All URLs already processed")
+        return Command(
+            update={
+                "urls_to_process": [],  # Clear the list since all are already processed
+                "messages": [
+                    ToolMessage(
+                        content="All URLs have already been processed",
+                        tool_call_id=tool_call_id
+                    )
+                ]
+            }
+        )
+    
+    # PROCESSAMENTO EM LOTE COM ROTAÇÃO ATÉ 200 URLS
+    MAX_BATCH_SIZE = 20          # requisição segura à Tavily/LLM
+    MAX_TOTAL_PER_INVOCATION = 200  # limite global por chamada da ferramenta
 
-        # Update state: keep remaining URLs and add processed ones to processed_urls
-        batch_status = f"Batch {len(processed_urls)}/{len(urls_batch)} successful"
-        remaining_status = f", {len(remaining_urls)} URLs remaining" if remaining_urls else ", all URLs processed"
+    # Limita o total a processar nesta invocação
+    urls_to_handle_now = urls_to_process_filtered[:MAX_TOTAL_PER_INVOCATION]
+    remaining_urls = urls_to_process_filtered[MAX_TOTAL_PER_INVOCATION:]
+
+    try:
+        processed_urls: List[str] = []
+        total_chunks = 0
+        saved_json_files: List[str] = []
+        saved_chunk_files: List[str] = []
+        vectorstore_path = ""
+
+        # Itera em blocos de 20 até esgotar ou atingir 200
+        for start in range(0, len(urls_to_handle_now), MAX_BATCH_SIZE):
+            urls_batch = urls_to_handle_now[start:start + MAX_BATCH_SIZE]
+            logger.info(f"Processing batch of {len(urls_batch)} URLs "
+                        f"(batch {start//MAX_BATCH_SIZE + 1}/"
+                        f"{(len(urls_to_handle_now)+MAX_BATCH_SIZE-1)//MAX_BATCH_SIZE})")
+
+            # Step 1: Extract content
+            extracted_data = extract_urls_with_tavily(urls_batch)
+            successful_extractions = [d for d in extracted_data if d["status"] == "success"]
+            if not successful_extractions:
+                logger.warning("Batch skipped: no successful extractions")
+                continue
+
+            # Step 2: Generate references
+            referenced_data = generate_references_batch(successful_extractions)
+            if not referenced_data:
+                logger.warning("Batch skipped: failed to generate references")
+                continue
+
+            # Step 3: Save referenced JSONs
+            saved_json_files.extend(save_referenced_jsons(referenced_data))
+
+            # Step 4: Chunk publications
+            chunks = chunk_publications(referenced_data)
+
+            # Step 5: Save chunks
+            saved_chunk_files.extend(save_chunks(chunks))
+
+            # Step 6: Vectorize and store
+            vectorstore_path = vectorize_and_store(chunks)
+
+            # Acumula estatísticas
+            processed_urls.extend([d["url"] for d in referenced_data])
+            total_chunks += len(chunks)
+
+            # Limpeza temporária a cada lote
+            cleanup_temp_directories()
+
+        logger.info(f"Successfully processed {len(processed_urls)} URLs in this invocation, "
+                    f"created {total_chunks} chunks")
+
+        # Marcar TODAS as URLs manuseadas neste lote como processadas,
+        # independentemente de falha ou sucesso, para evitar loops no supervisor
+        processed_urls_updated = list(set(processed_urls_existing + urls_to_handle_now))
+        
+        # Somente mantemos em urls_to_process aquelas que sobraram fora
+        # do limite MAX_TOTAL_PER_INVOCATION (remaining_urls)
+        urls_to_process_updated = remaining_urls
+
+        # Update state: remove processed URLs and keep only unprocessed/failed ones
+        batch_status = f"Batch {len(processed_urls)}/{len(urls_to_handle_now)} successful"
+        remaining_status = f", {len(urls_to_process_updated)} URLs remaining" if urls_to_process_updated else ", all URLs processed"
         
         return Command(
             update={
-                "urls_to_process": remaining_urls,  # Keep remaining URLs for next batch
+                "urls_to_process": urls_to_process_updated,  # Remove processed URLs, keep only unprocessed/failed
                 "processed_urls": processed_urls_updated,  # Deduplicated processed URLs
                 "messages": [
                     ToolMessage(
-                        content=f"Successfully processed {len(processed_urls)}/{len(urls_batch)} URLs ({batch_status}){remaining_status}. "
-                                f"Generated {len(chunks)} chunks and stored in vectorstore at {vectorstore_path}. "
+                        content=f"Successfully processed {len(processed_urls)}/{len(urls_to_handle_now)} URLs ({batch_status}){remaining_status}. "
+                                f"Generated {total_chunks} chunks and stored in vectorstore at {vectorstore_path}. "
                                 f"Saved {len(saved_json_files)} referenced publications and {len(saved_chunk_files)} chunks.",
                         tool_call_id=tool_call_id
                     )
@@ -499,11 +497,19 @@ def process_urls(
         
     except Exception as e:
         logger.error(f"Error in process_urls tool: {str(e)}")
+        
+        # On failure, update state to avoid infinite loops
+        processed_urls_updated = list(set(processed_urls_existing + urls_to_handle_now))
+        urls_to_process_updated = remaining_urls
+        
         return Command(
             update={
+                "urls_to_process": urls_to_process_updated,
+                "processed_urls": processed_urls_updated,
                 "messages": [
                     ToolMessage(
-                        content=f"Error processing URLs: {str(e)}",
+                        content=f"Error processing URLs: {str(e)}. "
+                                f"Marked {len(urls_to_handle_now)} URLs as processed to avoid loop.",
                         tool_call_id=tool_call_id
                     )
                 ]

@@ -4,6 +4,14 @@ from langgraph.graph.message import add_messages
 from langchain_core.messages import AnyMessage
 import operator
 
+def replace_urls_to_process(left: List[str], right: List[str]) -> List[str]:
+    """
+    Custom reducer for urls_to_process that replaces the list instead of adding to it.
+    This allows the processor to remove processed URLs from the list.
+    """
+    # If right (new value) is provided, use it; otherwise keep left (current value)
+    return right if right is not None else left
+
 class MetaAnalysisState(TypedDict):
     """
     Represents the state of the meta-analysis graph.
@@ -35,7 +43,7 @@ class MetaAnalysisState(TypedDict):
     previous_retrieve_queries: Annotated[List[str], operator.add]
 
     # URLs to be processed
-    urls_to_process: Annotated[List[str], operator.add]
+    urls_to_process: Annotated[List[str], replace_urls_to_process]
 
     # URLs already processed
     processed_urls: Annotated[List[str], operator.add]
