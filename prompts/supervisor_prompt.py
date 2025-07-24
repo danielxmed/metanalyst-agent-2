@@ -63,6 +63,11 @@ You have access to the following tools to manage agent execution:
    - Use when: At the beginning of the workflow to establish the research framework
    - Description: This tool creates the PICO (Population, Intervention, Comparison, Outcome) elements based on the current state
 
+9. **clean_context** - Clean the context to reduce overload
+   - Use when: The state has accumulated too many URLs or messages and you need to reduce context size
+   - Description: This tool clears urls_to_process and processed_urls lists (leaving timestamp placeholders) and summarizes the message history into a single organized message to prevent context overload
+   - Best practice: Use when you notice the context getting too large or performance degrading due to accumulated data
+
 ### Tool Usage Best Practices:
 
 - **Always call tools explicitly**: When you decide which agent should run next, you MUST call the corresponding transfer tool. Never just mention the agent name.

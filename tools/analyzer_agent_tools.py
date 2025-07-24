@@ -2,7 +2,7 @@
 Tools for the analyzer agent.
 
 This module contains the tools used by the analyzer agent to:
-1. Analyze retrieved chunks using flexible structured output with Gemini
+1. Analyze the retrieved chunks using flexible structured output with Gemini
 2. Execute Python calculations dynamically written by the model
 """
 
@@ -22,15 +22,15 @@ import tempfile
 import subprocess
 import sys
 
-# Simple and flexible Pydantic model to structure only the essentials
+# Modelo Pydantic simples e flexível para estruturar apenas o essencial
 class AnalysisInsight(BaseModel):
-    """An individual insight extracted from chunk analysis."""
+    """An individual insight extracted from the analysis of the chunks."""
     
-    insight: str = Field(description="The insight text or extracted conclusion")
-    references: List[str] = Field(description="List of references that support this insight (authors, studies, etc.)")
+    insight: str = Field(description="The text of the extracted insight or conclusion")
+    references: List[str] = Field(description="List of references supporting this insight (authors, studies, etc.)")
 
 class FlexibleAnalysisOutput(BaseModel):
-    """Flexible structured output from chunk analysis."""
+    """Flexible structured output from the analysis of the chunks."""
     
     insights: List[AnalysisInsight] = Field(description="List of insights extracted by the model")
 
@@ -40,17 +40,17 @@ def analyze_chunks(
     state: Annotated[dict, InjectedState]
 ) -> Command:
     """
-    Analyzes all retrieved chunks using Gemini with flexible structured output.
+    Analisa todos os chunks recuperados usando Gemini com output estruturado flexível.
     
-    The model has complete freedom to decide which data to extract and which insights to generate.
-    The structuring only serves to properly index references with insights.
+    O modelo tem liberdade total para decidir quais dados extrair e quais insights gerar.
+    A estruturação serve apenas para indexar adequadamente as referências com os insights.
     
     Returns:
-        Command: Command to update the LangGraph state
+        Command: Comando para atualizar o estado do LangGraph
     """
     
     try:
-        # Check if there are chunks to analyze
+        # Verificar se há chunks para analisar
         chunks_dir = "data/retrieved_chunks"
         if not os.path.exists(chunks_dir):
             return {
@@ -62,7 +62,7 @@ def analyze_chunks(
                 }]
             }
         
-        # Read all JSON files from chunks
+        # Ler todos os arquivos JSON dos chunks
         chunk_files = glob.glob(os.path.join(chunks_dir, "*.json"))
         if not chunk_files:
             return {
@@ -87,30 +87,30 @@ def analyze_chunks(
         if not all_chunks_content:
             return {
                 "analysis_results": [{
-                    "insight": "No valid chunks found",
+                    "insight": "No valid chunk found",
                     "references": ["System"],
                     "timestamp": "current", 
                     "analysis_type": "error"
                 }]
             }
         
-        # Configure Gemini model with structured output
+        # Configurar o modelo Gemini com output estruturado
         llm = ChatGoogleGenerativeAI(
             model="gemini-2.5-pro",
             google_api_key=os.getenv("GOOGLE_API_KEY"),
             temperature=0.1
         )
         
-        # Apply flexible structured output schema
+        # Aplicar schema de output estruturado flexível
         structured_llm = llm.with_structured_output(FlexibleAnalysisOutput)
         
-        # Prepare context
+        # Preparar o contexto
         pico_context = state.get("meta_analysis_pico", {})
         user_request = state.get("user_request", "")
         
-        # Flexible prompt that gives freedom to the model
+        # Prompt aprimorado com foco em rastreabilidade científica
         analysis_prompt = f"""
-        You are a medical meta-analysis expert. Carefully analyze all the scientific literature chunks provided.
+        You are a medical meta-analysis expert. Carefully analyze all provided scientific literature chunks.
 
         META-ANALYSIS CONTEXT:
         - User request: {user_request}
@@ -119,34 +119,49 @@ def analyze_chunks(
         CHUNKS FOR ANALYSIS:
         {json.dumps(all_chunks_content, indent=2, ensure_ascii=False)}
 
-        INSTRUCTIONS:
-        You have TOTAL FREEDOM to decide:
-        - Which data is important to extract
-        - Which calculations to perform
-        - Which insights to generate
-        - Which conclusions to draw
-        - Which patterns to identify
+        CRITICAL INSTRUCTIONS FOR SCIENTIFIC RIGOR:
 
-        Extract any information you deem relevant for the meta-analysis, including but not limited to:
-        - Quantitative data (sample sizes, effect sizes, p-values, etc.)
-        - Study characteristics (types, quality, limitations)
-        - Important clinical findings
-        - Methodological patterns
-        - Inconsistencies or gaps in the literature
-        - Any other insight you consider valuable
+        🔬 EXTRACT ANY RELEVANT INSIGHTS:
+        - Quantitative data (sample sizes, effect sizes, p-values, confidence intervals)
+        - Study characteristics (RCT design, patient populations, follow-up periods)
+        - Clinical findings (efficacy, safety, outcomes)
+        - Statistical measures (OR, RR, HR with 95% CI)
+        - Methodological quality assessment
+        - Comparative effectiveness data
+        - Safety profiles and adverse events
+        - Guidelines and recommendations
 
-        For each insight you generate, make sure to:
-        - Properly reference the source (authors, studies, specific chunks)
-        - Be specific and quantitative when possible
-        - Include your critical analysis
+        📚 REFERENCE REQUIREMENTS (CRITICAL):
+        For EVERY insight you generate, you MUST:
+        1. Extract the EXACT reference information from each chunk's "reference" field
+        2. Use the citation format provided in the chunk (author names, year, journal, etc.)
+        3. If insight comes from multiple chunks, include ALL relevant references
+        4. NEVER use generic references like "Study" or "Research" - always use the specific citation
+        5. Ensure each insight is traceable to its original scientific source
 
-        IMPORTANT: You decide what is important. Be creative and comprehensive in your analysis.
+        📊 SCIENTIFIC RIGOR:
+        - Be specific with numbers, percentages, and statistical measures
+        - Quote exact findings from the studies
+        - Mention study designs and sample sizes
+        - Include confidence intervals when available
+        - Note any limitations or heterogeneity
+
+        🎯 COMPREHENSIVE ANALYSIS:
+        Extract insights covering:
+        - Primary efficacy endpoints
+        - Secondary outcomes
+        - Safety and tolerability
+        - Patient subgroups
+        - Duration of treatment effects
+        - Clinical practice implications
+
+        REMEMBER: Every insight must be scientifically traceable through proper referencing!
         """
         
-        # Execute structured analysis
+        # Executar análise estruturada
         structured_result = structured_llm.invoke(analysis_prompt)
         
-        # Convert result to state format
+        # Converter resultado para formato do estado
         formatted_results = []
         
         for insight_obj in structured_result.insights:
@@ -157,19 +172,19 @@ def analyze_chunks(
                 "analysis_type": "flexible_analysis"
             })
         
-        # Analysis feedback message
+        # Mensagem de feedback sobre a análise
         analysis_message = ToolMessage(
             content=f"🔬 Analyzer Agent completed chunk analysis.\n"
-                   f"Insights extracted: {len(formatted_results)}\n"
+                   f"Extracted insights: {len(formatted_results)}\n"
                    f"Chunks analyzed: {len(all_chunks_content)}\n"
                    f"PICO context: {pico_context.get('population', 'N/A')} | {pico_context.get('intervention', 'N/A')}",
             tool_call_id=tool_call_id
         )
         
-        # Friendly agent message
+        # Mensagem amigável do agente
         friendly_message = AIMessage(
             content=f"Chunk analysis completed! I extracted {len(formatted_results)} relevant insights "
-                   f"from {len(all_chunks_content)} available chunks. The insights include quantitative data, "
+                   f"from the {len(all_chunks_content)} available chunks. The insights include quantitative data, "
                    f"methodological characteristics, and clinical conclusions based on the analyzed literature.",
             name="analyzer"
         )
@@ -183,14 +198,14 @@ def analyze_chunks(
         
     except Exception as e:
         error_message = ToolMessage(
-            content=f"❌ Error in chunk analysis: {str(e)}",
+            content=f"❌ Error analyzing chunks: {str(e)}",
             tool_call_id=tool_call_id
         )
         
         return Command(
             update={
                 "analysis_results": [{
-                    "insight": f"Error in chunk analysis: {str(e)}",
+                    "insight": f"Error analyzing chunks: {str(e)}",
                     "references": ["System"],
                     "timestamp": "current",
                     "analysis_type": "error"
@@ -206,10 +221,10 @@ def python_repl(
     state: Annotated[dict, InjectedState]
 ) -> Command:
     """
-    Executes Python code written by the model for advanced analysis.
+    Executes Python code written by the model for advanced analyses.
     
-    The model writes the code it deems necessary, having access to analysis_results
-    from the state and configured Python modules.
+    The model writes whatever code it deems necessary, having access to the state's analysis_results
+    and the configured Python modules.
     
     Args:
         code: Python code written by the model to execute
@@ -223,7 +238,7 @@ def python_repl(
         analysis_results = state.get("analysis_results", [])
         pico_context = state.get("meta_analysis_pico", {})
         
-        # Prepare Python environment with allowed modules
+        # Prepare Python environment with allowed modules and reference preservation
         setup_code = f"""
 import json
 import math
@@ -232,7 +247,7 @@ import re
 from collections import Counter, defaultdict
 from typing import List, Dict, Any, Optional
 
-# Available data for analysis
+# Data available for analysis
 analysis_results = {json.dumps(analysis_results)}
 pico_context = {json.dumps(pico_context)}
 
@@ -249,24 +264,65 @@ def count_keywords(texts, keywords):
         counts[keyword] = sum(1 for text in texts if keyword.lower() in text.lower())
     return counts
 
+# Helper function to collect all unique references from analysis_results
+def collect_all_references():
+    \"\"\"Collects all unique references from existing analysis results\"\"\"
+    all_refs = set()
+    for result in analysis_results:
+        if 'references' in result and result['references']:
+            for ref in result['references']:
+                if ref and ref not in ['Custom Python calculation', 'Python System', 'System']:
+                    all_refs.add(ref)
+    return list(all_refs)
+
+# Helper function to get references from specific insights
+def get_references_from_insights(insight_indices=None):
+    \"\"\"Gets references from specific insights or all insights if indices not provided\"\"\"
+    refs = set()
+    if insight_indices is None:
+        insight_indices = range(len(analysis_results))
+    
+    for i in insight_indices:
+        if i < len(analysis_results) and 'references' in analysis_results[i]:
+            for ref in analysis_results[i]['references']:
+                if ref and ref not in ['Custom Python calculation', 'Python System', 'System']:
+                    refs.add(ref)
+    return list(refs)
+
+# Function to create properly referenced insight
+def create_insight_with_references(insight_text, source_insight_indices=None):
+    \"\"\"Creates an insight with proper references from source insights\"\"\"
+    references = get_references_from_insights(source_insight_indices)
+    if not references:
+        references = collect_all_references()
+    if not references:
+        references = ["Derived from analysis of retrieved literature"]
+    
+    return {{
+        "insight": insight_text,
+        "references": references,
+        "timestamp": "current",
+        "analysis_type": "python_calculation"
+    }}
+
 # Your custom code:
 """
         
         # Combine setup code with model code
         full_code = setup_code + "\n" + code
         
-        # Execute code in secure environment
+        # Execute code in a safe environment
         with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:
             f.write(full_code)
             temp_file = f.name
         
         try:
-            # Execute Python script
+            # Execute the Python script
             result = subprocess.run(
                 [sys.executable, temp_file],
                 capture_output=True,
                 text=True,
-                timeout=60,  # 60 second timeout
+                timeout=60,  # 60 seconds timeout
                 cwd=os.getcwd()
             )
             
@@ -285,7 +341,7 @@ def count_keywords(texts, keywords):
                 # Friendly agent message
                 friendly_message = AIMessage(
                     content=f"Python code executed successfully! I performed custom calculations "
-                           f"based on {len(analysis_results)} insights available in the state.",
+                           f"based on the {len(analysis_results)} insights available in the state.",
                     name="analyzer"
                 )
                 
@@ -339,14 +395,14 @@ def count_keywords(texts, keywords):
                     )
             else:
                 error_message = ToolMessage(
-                    content=f"❌ Error in Python code execution: {result.stderr}",
+                    content=f"❌ Error executing Python code: {result.stderr}",
                     tool_call_id=tool_call_id
                 )
                 
                 return Command(
                     update={
                         "analysis_results": [{
-                            "insight": f"Error in Python code execution: {result.stderr}",
+                            "insight": f"Error executing Python code: {result.stderr}",
                             "references": ["Python System"],
                             "timestamp": "current", 
                             "analysis_type": "python_error"
@@ -364,14 +420,14 @@ def count_keywords(texts, keywords):
         
     except Exception as e:
         error_message = ToolMessage(
-            content=f"❌ General error in Python execution: {str(e)}",
+            content=f"❌ General error executing Python: {str(e)}",
             tool_call_id=tool_call_id
         )
         
         return Command(
             update={
                 "analysis_results": [{
-                    "insight": f"General error in Python execution: {str(e)}",
+                    "insight": f"General error executing Python: {str(e)}",
                     "references": ["Python System"],
                     "timestamp": "current",
                     "analysis_type": "python_error"

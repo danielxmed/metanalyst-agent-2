@@ -1,3 +1,0 @@
-analyzer_prompt = """
-
-"""
