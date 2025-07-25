@@ -54,26 +54,42 @@ def analyze_chunks(
         # Verificar se há chunks para analisar
         chunks_dir = "data/retrieved_chunks"
         if not os.path.exists(chunks_dir):
-            return {
-                "analysis_results": [{
-                    "insight": "Chunks directory not found",
-                    "references": ["System"],
-                    "timestamp": "current",
-                    "analysis_type": "error"
-                }]
-            }
+            error_message = ToolMessage(
+                content="❌ Chunks directory not found",
+                tool_call_id=tool_call_id
+            )
+            
+            return Command(
+                update={
+                    "analysis_results": [{
+                        "insight": "Chunks directory not found",
+                        "references": ["System"],
+                        "timestamp": "current",
+                        "analysis_type": "error"
+                    }],
+                    "messages": [error_message]
+                }
+            )
         
         # Ler todos os arquivos JSON dos chunks
         chunk_files = glob.glob(os.path.join(chunks_dir, "*.json"))
         if not chunk_files:
-            return {
-                "analysis_results": [{
-                    "insight": "No chunks found for analysis",
-                    "references": ["System"],
-                    "timestamp": "current",
-                    "analysis_type": "error"
-                }]
-            }
+            error_message = ToolMessage(
+                content="❌ No chunks found for analysis",
+                tool_call_id=tool_call_id
+            )
+            
+            return Command(
+                update={
+                    "analysis_results": [{
+                        "insight": "No chunks found for analysis",
+                        "references": ["System"],
+                        "timestamp": "current",
+                        "analysis_type": "error"
+                    }],
+                    "messages": [error_message]
+                }
+            )
         
         all_chunks_content = []
         for chunk_file in chunk_files:
@@ -86,14 +102,22 @@ def analyze_chunks(
                 continue
         
         if not all_chunks_content:
-            return {
-                "analysis_results": [{
-                    "insight": "No valid chunk found",
-                    "references": ["System"],
-                    "timestamp": "current", 
-                    "analysis_type": "error"
-                }]
-            }
+            error_message = ToolMessage(
+                content="❌ No valid chunk found",
+                tool_call_id=tool_call_id
+            )
+            
+            return Command(
+                update={
+                    "analysis_results": [{
+                        "insight": "No valid chunk found",
+                        "references": ["System"],
+                        "timestamp": "current", 
+                        "analysis_type": "error"
+                    }],
+                    "messages": [error_message]
+                }
+            )
         
         # Configurar o modelo Gemini com output estruturado
         llm = ChatGoogleGenerativeAI(

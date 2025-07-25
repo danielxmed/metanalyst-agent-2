@@ -2,6 +2,7 @@ from langchain_anthropic import ChatAnthropic
 from langgraph.prebuilt import create_react_agent
 from state.state import MetaAnalysisState
 from prompts.reviewer_prompt import reviewer_prompt
+from tools.reviewer_tools import review_draft
 import os
 from dotenv import load_dotenv
 
@@ -16,7 +17,7 @@ model = ChatAnthropic(
 
 reviewer_agent = create_react_agent(
     model = model,
-    tools = [],
+    tools = [review_draft],
     prompt = reviewer_prompt,
     name = "reviewer",
     state_schema = MetaAnalysisState,

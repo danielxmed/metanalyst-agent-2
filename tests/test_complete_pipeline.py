@@ -32,7 +32,8 @@ try:
             retrieved_chunks_count = 0,
             analysis_results = [],
             current_draft_iteration = 1,
-            reviewer_feedbacks = []
+            reviewer_feedbacks = [],
+            is_complete = False
         )
     ):
         chunk_count += 1

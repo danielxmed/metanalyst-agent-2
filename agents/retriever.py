@@ -1,12 +1,14 @@
 from langchain_anthropic import ChatAnthropic
 from langgraph.prebuilt import create_react_agent
 from state.state import MetaAnalysisState
+from prompts.retriever_prompt import retriever_prompt
+from tools.retriever_agent_tools import retrieve_chunks
 import os
 from dotenv import load_dotenv
-from tools.retriever_agent_tools import retrieve_chunks
-from prompts.retriever_prompt import get_retriever_prompt
 
+# Loads environment variables from the .env file
 load_dotenv()
+
 
 model = ChatAnthropic(
     model="claude-sonnet-4-20250514",
@@ -14,9 +16,9 @@ model = ChatAnthropic(
 )
 
 retriever_agent = create_react_agent(
-    model=model,
-    tools=[retrieve_chunks],
-    prompt=get_retriever_prompt(),
-    name="retriever",
-    state_schema=MetaAnalysisState,
+    model = model,
+    tools = [retrieve_chunks],
+    prompt = retriever_prompt,
+    name = "retriever",
+    state_schema = MetaAnalysisState,
 )

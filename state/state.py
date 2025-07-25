@@ -67,3 +67,6 @@ class MetaAnalysisState(TypedDict):
 
     # Reviewer feedbacks on drafts
     reviewer_feedbacks: Annotated[List[Dict[str, Any]], operator.add]
+    
+    # Whether the meta-analysis is complete according to the reviewer
+    is_complete: bool = False
