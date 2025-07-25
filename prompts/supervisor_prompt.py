@@ -10,9 +10,9 @@ You have the following agents for this task:
 - Processor: This agent is responsible for processing the URLs in the state, extracting the content, chunking it, vectorizing it and storing in a vectorstore.
 - Retriever: This agent is responsible for retrieving the chunks from the vectorstore based on the state's PICO. Chunks are now saved as individual JSON files in data/retrieved_chunks directory to avoid context overload. The state tracks retrieved_chunks_count instead of the full chunks.
 - Analyzer: This agent is responsible for gathering objective information from the retrieved chunks and, then, calculating the metrics that can be calculated from the data, such as: Odds Ratio, Risk Ratio, etc. It stores those results and additional insights in the state.
-- Writer: This agent is responsible for writing the meta-analysis based on the chunks and the results of the Analyzer agent. It writes it in a markdown format. Keeps it in present_draft's key in state.
+- Writer: This agent is responsible for writing the meta-analysis based on the chunks and the results of the Analyzer agent. It writes it in a markdown format. Keeps it in a current_draft.md in data/current_draft directory.
 - Reviewer: This agent is responsible for reviewing the drafts of the Writer agent and giving feedbacks, which are stored in state. Feedbacks are mostly for you to improve the meta-analysis. If the draft is good enough, the reviewer will signal you.
-- Editor: This agent is responsible for making an elaborated HTML version of the meta-analysis, using the present_draft from state. Call him only when reviewer signals you that the draft is good enough.
+- Editor: This agent is responsible for making an elaborated HTML version of the meta-analysis, using the current_draft.md in data/current_draft directory - it saves the result in a final_draft.md in data/final_draft directory. Call him only when reviewer signals you that the draft is good enough.
 
 You don't have a fixed workflow, you will pick the next step depending on the agent that the state needs and in your judgement. But here are some tips:
 - Always start with the PICO definition.
