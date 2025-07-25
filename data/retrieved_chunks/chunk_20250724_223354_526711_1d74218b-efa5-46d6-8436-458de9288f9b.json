@@ -1,0 +1,17 @@
+{
+  "content": "The secondary outcome was to investigate a 1-year composite endpoint of AF-related hospitalizations, repeat AF ablation, or AAD use. A blanking period of 3 months was not included in the 1-year follow-up, and patients were censored in case of either death or migration. AF-related hospitalizations included admission for AF and cardioversions, and AAD use included use of amiodarone, dronedarone, or class 1C antiarrhythmics.\nComorbidities and medications",
+  "source": "https://www.sciencedirect.com/science/article/pii/S2405500X2400851X",
+  "chunk_id": "1d74218b-efa5-46d6-8436-458de9288f9b",
+  "similarity_score": 0.32354509830474854,
+  "query": "long-term outcomes amiodarone beta-blockers atrial fibrillation follow-up recurrence maintenance therapy",
+  "rank": 43,
+  "title": "Temporal Trends in Atrial Fibrillation Ablation in the Elderly: Incidence of MACE and Recurrence Rates",
+  "authors": "Alessandra Fusco, Morten Lock Hansen, Martin H. Ruwald, Christopher R. Zörner, Lise Riis-Vestergaard, Charlotte Middelfart, Regitze Hein, Peter Vibe Rasmussen, Antonio Di Sabatino, Gunnar Gislason, Jacob Tønnesen",
+  "year": "2025",
+  "journal": "JACC: Clinical Electrophysiology",
+  "reference": "Fusco, A., Hansen, M. L., Ruwald, M. H., Zörner, C. R., Riis-Vestergaard, L., Middelfart, C., Hein, R., Rasmussen, P. V., Di Sabatino, A., Gislason, G., & Tønnesen, J. (2025). Temporal trends in atrial fibrillation ablation in the elderly: Incidence of MACE and recurrence rates. JACC: Clinical Electrophysiology, 11(1), 83-94. https://doi.org/10.1016/j.jacep.2024.11.005",
+  "doi": "10.1016/j.jacep.2024.11.005",
+  "chunk_index": 13,
+  "total_chunks": 73,
+  "retrieved_at": "2025-07-24T22:33:54.519413"
+}

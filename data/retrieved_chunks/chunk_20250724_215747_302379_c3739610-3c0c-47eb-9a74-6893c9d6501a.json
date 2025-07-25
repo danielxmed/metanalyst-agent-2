@@ -1,0 +1,17 @@
+{
+  "content": "Amiodarione is currently the most effective prophylactic drug for the maintenance of SR in patients with AF who undergo cardioversion. There are various reports on the efficacy of amiodarone in maintaining SR after cardioversion and on spontaneous cardioversion rates in patients with non-paroxysmal AF. In the literature, the prevention of recurrence of AF after cardioversion ranges from 44% to 67% after follow-up of 8 weeks to 3 years , , , , , , , , . In patients not receiving cardioversion, administration of oral amiodarone is associated with a conversion rate between 12% and 83% over 28 days , , , , , , , , . Conflicting results among trials probably reflect differences in dosing and loading protocols in trials, differing duration of AF prior to treatment, and follow-up periods.",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0914508711001171",
+  "chunk_id": "c3739610-3c0c-47eb-9a74-6893c9d6501a",
+  "similarity_score": 0.33757448196411133,
+  "query": "amiodarone efficacy cardioversion atrial fibrillation success rate beta-blockers metoprolol propranolol carvedilol",
+  "rank": 18,
+  "title": "Role of oral amiodarone in patients with atrial fibrillation and congestive heart failure",
+  "authors": "Mihoko Kawabata, Kenzo Hirao, Hitoshi Hachiya, Kouji Higuchi, Yasuaki Tanaka, Atsuhiko Yagishita, Osamu Inaba, Mitsuaki Isobe",
+  "year": "2011",
+  "journal": "Journal of Cardiology",
+  "reference": "Kawabata, M., Hirao, K., Hachiya, H., Higuchi, K., Tanaka, Y., Yagishita, A., Inaba, O., & Isobe, M. (2011). Role of oral amiodarone in patients with atrial fibrillation and congestive heart failure. Journal of Cardiology, 58(2), 108-115.",
+  "doi": "Not available",
+  "chunk_index": 38,
+  "total_chunks": 95,
+  "retrieved_at": "2025-07-24T21:57:47.296173"
+}

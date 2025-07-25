@@ -1,0 +1,17 @@
+{
+  "content": "Effect of amiodarone on cancer outcomes\nIncident cancer, our primary outcome of interest, and site-specific cancer, were not collected or reported in any of the 5 included trials. Data on cancer-related deaths were available from the 5 included studies. There was no significant increase in cancer-related death in patients treated with amiodarone vs the comparator (risk ratio 0.96, 95% confidence interval 0.57-1.63; I 2= 0%; Fig.3).",
+  "source": "https://www.sciencedirect.com/science/article/pii/S2589790X20301475",
+  "chunk_id": "80459ee0-2855-4f42-a42e-21c9f6cd8e4b",
+  "similarity_score": 0.3992387652397156,
+  "query": "amiodarone beta-blockers mortality death cardiovascular outcomes hazard ratio odds ratio",
+  "rank": 13,
+  "title": "Chronic amiodarone use and the risk of cancer: A systematic review and meta-analysis",
+  "authors": "Lauren A. Siemers, Jenny MacGillivray, Jason G. Andrade, Ricky D. Turgeon",
+  "year": "2021",
+  "journal": "CJC Open",
+  "reference": "Siemers, L. A., MacGillivray, J., Andrade, J. G., & Turgeon, R. D. (2021). Chronic amiodarone use and the risk of cancer: A systematic review and meta-analysis. CJC Open, 3(1), 109-114. https://doi.org/10.1016/j.cjco.2020.12.012",
+  "doi": "10.1016/j.cjco.2020.12.012",
+  "chunk_index": 29,
+  "total_chunks": 62,
+  "retrieved_at": "2025-07-24T22:33:23.680734"
+}

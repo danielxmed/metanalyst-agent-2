@@ -1,0 +1,17 @@
+{
+  "content": "In direct comparisons between antiarrhythmics (Analysis 5.5), amiodarone reduced the recurrence of atrial fibrillation significantly more than the combined class I drugs (OR 0.36, 95% CI 0.26 to 0.50, P < 0.00001) and dronedarone (OR 0.45, 95% CI 0.31 to 0.63, P < 0.00001, 1 trial, 504 patients), and more than sotalol (OR 0.43, 95% CI 0.33 to 0.56, P < 0.00001). No other significant differences were apparent in comparisons between antiarrhythmics.\nResults for atrial fibrillation recurrence were unchanged in sensitivity analyses.\nOther outcomes",
+  "source": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD005049.pub4/full",
+  "chunk_id": "782d2af5-42eb-4b17-aa4e-a598e3430382",
+  "similarity_score": 0.36590397357940674,
+  "query": "amiodarone versus beta-blockers atrial fibrillation randomized controlled trial efficacy comparison",
+  "rank": 33,
+  "title": "Antiarrhythmics for maintaining sinus rhythm after cardioversion of atrial fibrillation",
+  "authors": "Kowey, P. R., & Connolly, S. J.",
+  "year": "2015",
+  "journal": "Cochrane Database of Systematic Reviews",
+  "reference": "Kowey, P. R., & Connolly, S. J. (2015). Antiarrhythmics for maintaining sinus rhythm after cardioversion of atrial fibrillation. Cochrane Database of Systematic Reviews, (3), CD005049. https://doi.org/10.1002/14651858.CD005049.pub4",
+  "doi": "10.1002/14651858.CD005049.pub4",
+  "chunk_index": 86,
+  "total_chunks": 200,
+  "retrieved_at": "2025-07-24T22:33:10.541120"
+}

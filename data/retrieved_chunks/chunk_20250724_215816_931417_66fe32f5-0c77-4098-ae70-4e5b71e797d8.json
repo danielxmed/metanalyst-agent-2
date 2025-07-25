@@ -1,0 +1,17 @@
+{
+  "content": ". 2, Supplementary Fig. 2, only online). Cost-effectiveness of rhythm control medications Patients taking rhythm-control drugs lived an average of 14 QALY, with average lifetime treatments costs of $10745. Among the rhythm-control medications, the cost per QALY for pilsic-ainide was lowest ($638/QALY), while that for amiodarone was highest ($986/QALY). Flecainide, propafenone, and dronedar-one had costs per QALY of $834, $830, and $824/QALY, re-spectively. Sotalol and pilsicainide had incremental cost ($453 and $996) and incremental effectiveness (2 and 3 QALY), dem-onstrating ICER values of $324/QALY and $332/QALY, respec-tively, compared with atenolol",
+  "source": "https://pdfs.semanticscholar.org/798d/e6aa4ebeb8836fdffb27a98ab4195330069c.pdf",
+  "chunk_id": "66fe32f5-0c77-4098-ae70-4e5b71e797d8",
+  "similarity_score": 0.24836939573287964,
+  "query": "cost effectiveness economic analysis amiodarone beta-blockers atrial fibrillation healthcare costs hospitalization reduction",
+  "rank": 46,
+  "title": "Cost-effectiveness of rate- and rhythm-control drugs for treating atrial fibrillation in Korea",
+  "authors": "Min Kim, Woojin Kim, Changsoo Kim, Boyoung Joung",
+  "year": "2019",
+  "journal": "Yonsei Medical Journal",
+  "reference": "Kim, M., Kim, W., Kim, C., & Joung, B. (2019). Cost-effectiveness of rate- and rhythm-control drugs for treating atrial fibrillation in Korea. Yonsei Medical Journal, 60(12), 1157-1163. https://doi.org/10.3349/ymj.2019.60.12.1157",
+  "doi": "10.3349/ymj.2019.60.12.1157",
+  "chunk_index": 32,
+  "total_chunks": 62,
+  "retrieved_at": "2025-07-24T21:58:16.915925"
+}

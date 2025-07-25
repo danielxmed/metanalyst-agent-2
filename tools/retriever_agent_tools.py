@@ -15,7 +15,7 @@ def retrieve_chunks(
     query: str,
     tool_call_id: Annotated[str, InjectedToolCallId],  
     state: Annotated[dict, InjectedState],
-    top_k: int = 25
+    top_k: int = 50
 ) -> Command:
     """
     Performs a semantic search on a local vector database for gathering chunks of
@@ -26,7 +26,7 @@ def retrieve_chunks(
     
     Args:
         query (str): Natural language query to search for relevant chunks
-        top_k (int): Number of top similar chunks to retrieve (default: 25)
+        top_k (int): Number of top similar chunks to retrieve (default: 50)
     
     Returns:
         Command: Updates state with chunk count and query history

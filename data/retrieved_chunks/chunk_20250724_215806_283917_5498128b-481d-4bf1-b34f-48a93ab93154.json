@@ -1,0 +1,17 @@
+{
+  "content": ". Antiarrhythmic drug therapy is generally recommended as a first-line therapy and drug selection is on the basis of the presence or absence of structural heart disease or heart failure, electrocardiographical variables, renal function, and other comorbidities. In patients who continue to have recurrent atrial fibrillation despite medical therapy, catheter ablation has been shown to substantially reduce recurrent atrial fibrillation, decrease symptoms, and improve quality of life, although recurrence is common despite continued advancement in ablation techniques.",
+  "source": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(16)31277-6/abstract",
+  "chunk_id": "5498128b-481d-4bf1-b34f-48a93ab93154",
+  "similarity_score": 0.3558509349822998,
+  "query": "atrial fibrillation guidelines ESC AHA CCS amiodarone beta-blockers recommendations clinical practice first-line therapy",
+  "rank": 34,
+  "title": "Rhythm control in atrial fibrillation",
+  "authors": "Jonathan P. Piccini, Laurent Fauchier",
+  "year": "2016",
+  "journal": "The Lancet",
+  "reference": "Piccini, J. P., & Fauchier, L. (2016). Rhythm control in atrial fibrillation. The Lancet, 388(10046), 829-840. https://doi.org/10.1016/S0140-6736(16)31277-6",
+  "doi": "10.1016/S0140-6736(16)31277-6",
+  "chunk_index": 12,
+  "total_chunks": 67,
+  "retrieved_at": "2025-07-24T21:58:06.270600"
+}

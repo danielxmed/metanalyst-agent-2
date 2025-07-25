@@ -93,14 +93,8 @@ class MetaAnalysisState(TypedDict):
     # Results of the analyses performed
     analysis_results: Annotated[List[Dict[str, Any]], operator.add]
 
-    # Current draft of the document
-    current_draft: Optional[str]
-
     # Iteration of the current draft
     current_draft_iteration: int
 
     # Reviewer feedbacks on drafts
     reviewer_feedbacks: Annotated[List[Dict[str, Any]], operator.add]
-
-    # Final approved document
-    final_draft: Optional[str]

@@ -1,0 +1,17 @@
+{
+  "content": ". At the 4-week follow-up visit, we assessed the patients’ quality of life using the Atrial Fibrillation Effect on Quality-of-Life questionnaire (AFEQT), with scores ranging from 0 to 100 and higher scores indicating a better quality of life.15 All secondary end points of the trial are listed in Table S2 in the Supplementary Appendix.",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa1900353",
+  "chunk_id": "e3979b00-2120-49b6-a453-cb2fefb02291",
+  "similarity_score": 0.3821195960044861,
+  "query": "amiodarone beta-blockers quality of life functional capacity exercise tolerance atrial fibrillation patient reported outcomes",
+  "rank": 2,
+  "title": "Early or Delayed Cardioversion in Recent-Onset Atrial Fibrillation",
+  "authors": "Nikki A.H.A. Pluymaekers, Elton A.M.P. Dudink, Justin G.L.M. Luermans, Joan G. Meeder, Timo Lenderink, Jos Widdershoven, Jeroen J.J. Bucx, Michiel Rienstra, Otto Kamp, Jurren M. Van Opstal, Marco Alings, Anton Oomen, Charles J. Kirchhof, Vincent F. Van Dijk, Hemanth Ramanna, Anho Liem, Lukas R. Dekker, Brigitte A.B. Essers, Jan G.P. Tijssen, Isabelle C. Van Gelder, Harry J.G.M. Crijns",
+  "year": "2019",
+  "journal": "The New England Journal of Medicine",
+  "reference": "Pluymaekers, N. A. H. A., Dudink, E. A. M. P., Luermans, J. G. L. M., Meeder, J. G., Lenderink, T., Widdershoven, J., Bucx, J. J. J., Rienstra, M., Kamp, O., Van Opstal, J. M., Alings, M., Oomen, A., Kirchhof, C. J., Van Dijk, V. F., Ramanna, H., Liem, A., Dekker, L. R., Essers, B. A. B., Tijssen, J. G. P., Van Gelder, I. C., & Crijns, H. J. G. M. (2019). Early or delayed cardioversion in recent-onset atrial fibrillation. *The New England Journal of Medicine, 380*(16), 1499-1508. https://doi.org/10.1056/NEJMoa1900353",
+  "doi": "10.1056/NEJMoa1900353",
+  "chunk_index": 27,
+  "total_chunks": 141,
+  "retrieved_at": "2025-07-24T21:58:02.962137"
+}

@@ -1,0 +1,17 @@
+{
+  "content": "Beta-blockers generally have not been considered to be atrial stabilizing agents except in two well-defined situations. First, a small population of patients experience recurrent AF in association with stress or anxiety; these patients with adrenergically mediated AF may respond well to beta-blockade (as opposed to the opposite syndrome of vagally mediated AF, in which beta-blockers may exacerbate AF and treatment with agents possessing anticholinergic properties is desirable). Second, and more common, is the use of beta-blockers for prevention of AF in patients following cardiothoracic surgery, in which AF occurs in approximately 30% of patients (3)",
+  "source": "https://www.jacc.org/doi/10.1016/S0735-1097(00)00676-8",
+  "chunk_id": "aa59f83d-5961-4b41-8855-36021b178592",
+  "similarity_score": 0.24278783798217773,
+  "query": "beta-blockers safety profile atrial fibrillation heart failure contraindications bradycardia hypotension",
+  "rank": 8,
+  "title": "Beta-blockers for atrial fibrillation: must we consider asymptomatic arrhythmias?",
+  "authors": "Richard L. Page",
+  "year": "2000",
+  "journal": "JACC",
+  "reference": "Page, R. L. (2000). Beta-blockers for atrial fibrillation: must we consider asymptomatic arrhythmias? JACC, 36(1), 147-150.",
+  "doi": "Not available",
+  "chunk_index": 23,
+  "total_chunks": 59,
+  "retrieved_at": "2025-07-24T21:57:55.188491"
+}

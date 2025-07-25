@@ -1,0 +1,17 @@
+{
+  "content": ". However, we did observe clinical differences between the two approaches. An initial strategy of rate control averted much of the toxic effects and side effects associated with amiodarone but was associated with a slower resolution of atrial fibrillation, thereby leading to a greater need for anticoagulation (with its attendant risks) and a slightly higher prevalence of atrial fibrillation during follow-up. The faster resolution of atrial fibrillation in the rhythm-control group came at the price of amiodarone-related side effects in many patients, often necessitating discontinuation of amiodarone after hospital discharge",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa1602002",
+  "chunk_id": "4580d558-8145-4228-ae1d-c38781c85f21",
+  "similarity_score": 0.42075347900390625,
+  "query": "amiodarone versus beta-blockers atrial fibrillation randomized controlled trial effectiveness rhythm control rate control",
+  "rank": 13,
+  "title": "Rate control versus rhythm control for atrial fibrillation after cardiac surgery",
+  "authors": "A. Marc Gillinov, M.D., Emilia Bagiella, Ph.D., Alan J. Moskowitz, M.D., Jesse M. Raiten, M.D., Mark A. Groh, M.D., Michael E. Bowdish, M.D., Gorav Ailawadi, M.D., Katherine A. Kirkwood, M.S., Louis P. Perrault, M.D., Michael K. Parides, Ph.D., Robert L. Smith, II, M.D., John A. Kern, M.D., Gladys Dussault, R.N., Amy E. Hackmann, M.D., Neal O. Jeffries, Ph.D., Marissa A. Miller, D.V.M., Wendy C. Taddei-Peters, Ph.D., Eric A. Rose, M.D., Richard D. Weisel, M.D., Deborah L. Williams, B.S.N., M.P.H., Ralph F. Mangusan, R.N., Michael Argenziano, M.D., Ellen G. Moquete, R.N., Karen L. O’Sullivan, M.P.H., Michel Pellerin, M.D., Kinjal J. Shah, P.A., James S. Gammie, M.D., Mary Lou Mayer, B.S.N., Pierre Voisine, M.D., Annetine C. Gelijns, Ph.D., Patrick T. O’Gara, M.D., and Michael J. Mack, M.D.",
+  "year": "2016",
+  "journal": "The New England Journal of Medicine",
+  "reference": "Gillinov, A. M., Bagiella, E., Moskowitz, A. J., Raiten, J. M., Groh, M. A., Bowdish, M. E., Ailawadi, G., Kirkwood, K. A., Perrault, L. P., Parides, M. K., Smith, R. L. II, Kern, J. A., Dussault, G., Hackmann, A. E., Jeffries, N. O., Miller, M. A., Taddei-Peters, W. C., Rose, E. A., Weisel, R. D., Williams, D. L., Mangusan, R. F., Argenziano, M., Moquete, E. G., O’Sullivan, K. L., Pellerin, M., Shah, K. J., Gammie, J. S., Mayer, M. L., Voisine, P., Gelijns, A. C., O’Gara, P. T., & Mack, M. J. (2016). Rate control versus rhythm control for atrial fibrillation after cardiac surgery. *The New England Journal of Medicine, 374*(20), 1911-1921. https://doi.org/10.1056/NEJMoa1602002",
+  "doi": "10.1056/NEJMoa1602002",
+  "chunk_index": 67,
+  "total_chunks": 130,
+  "retrieved_at": "2025-07-24T21:57:43.521172"
+}

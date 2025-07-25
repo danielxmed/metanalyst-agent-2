@@ -1,0 +1,17 @@
+{
+  "content": "Despite the effectiveness of amiodarone in converting AF to sinus rhythm, the meta-analysis of four studies has shown that it is associated more with all-cause mortality than digoxin. However, the studies included in this review show contradicting results. Hofmann et al.  reported that of 100 patients equally randomized to the amiodarone and digoxin group, three deaths occurred; one of the three patients randomized into the amiodarone group died eight days after drug administration, while two patients in the digoxin died due to recurrent pulmonary embolism and developed pulmonary edema. However, this study reports that none of the patients had died directly from the drugs",
+  "source": "https://pdfs.semanticscholar.org/ff77/522d79d731c5b00db94e402132f7770745ac.pdf",
+  "chunk_id": "beee55c4-da1e-4cc0-b271-94465ff22eb4",
+  "similarity_score": 0.3704761266708374,
+  "query": "amiodarone beta-blockers mortality death cardiovascular outcomes hazard ratio odds ratio",
+  "rank": 20,
+  "title": "An Integrative Comparative Study Between Digoxin and Amiodarone as an Emergency Treatment for Patients With Atrial Fibrillation With Evidence of Heart Failure: A Systematic Review and Meta-Analysis",
+  "authors": "Hany A. Zaki, Khalid Bashir, Haris Iftikhar, Waleed Salem, Eslam Hussein Mohamed, Helmy M. Elhag, Mohamed Hendy, Ahmed Abdu O. Kassem, Emad El-Din Salem, Amr Elmoheen",
+  "year": "2022",
+  "journal": "Cureus",
+  "reference": "Zaki, H. A., Bashir, K., Iftikhar, H., Salem, W., Mohamed, E. H., Elhag, H. M., Hendy, M., Kassem, A. A. O., Salem, E. E.-D., & Elmoheen, A. (2022). An integrative comparative study between digoxin and amiodarone as an emergency treatment for patients with atrial fibrillation with evidence of heart failure: A systematic review and meta-analysis. Cureus, 14(7), e26800. https://doi.org/10.7759/cureus.26800",
+  "doi": "10.7759/cureus.26800",
+  "chunk_index": 52,
+  "total_chunks": 84,
+  "retrieved_at": "2025-07-24T22:33:23.680770"
+}

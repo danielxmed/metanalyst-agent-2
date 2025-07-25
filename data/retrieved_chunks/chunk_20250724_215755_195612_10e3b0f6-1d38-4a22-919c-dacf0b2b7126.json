@@ -1,0 +1,17 @@
+{
+  "content": "Major exclusion criteria were: contraindications to treatment with beta-adrenergic blocking agents (i.e., presence or history of AV-block II/III, sick sinus syndrome, asthma), chronic oral treatment with amiodarone within six months prior to inclusion, concomitant treatment with any class 1 or 3 antiarrhythmic drug within five half-lives of that drug, cardiac surgery in the previous two months, clinical need for concomitant treatment with beta-blockers, and untreated thyroid dysfunction. Excluded from the study were patients with the paroxysmal form of atrial fibrillation or a history of paroxysmal atrial fibrillation, defined as recurrent episodes of atrial fibrillation alternating with sinus rhythm (22).",
+  "source": "https://www.jacc.org/doi/10.1016/S0735-1097%2800%2900693-8",
+  "chunk_id": "10e3b0f6-1d38-4a22-919c-dacf0b2b7126",
+  "similarity_score": 0.1984996795654297,
+  "query": "beta-blockers safety profile atrial fibrillation heart failure contraindications bradycardia hypotension",
+  "rank": 28,
+  "title": "Use of metoprolol CR/XL to maintain sinus rhythm after conversion from persistent atrial fibrillation: A randomized, double-blind, placebo-controlled study",
+  "authors": "Volker Kühlkamp, Alexander Schirdewan, Karl Stangl, Michael Homberg, Matthias Ploch, Otto A Beck",
+  "year": "2000",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "Kühlkamp, V., Schirdewan, A., Stangl, K., Homberg, M., Ploch, M., & Beck, O. A. (2000). Use of metoprolol CR/XL to maintain sinus rhythm after conversion from persistent atrial fibrillation: A randomized, double-blind, placebo-controlled study. Journal of the American College of Cardiology, 36(1), 186-192.",
+  "doi": "Not available",
+  "chunk_index": 16,
+  "total_chunks": 93,
+  "retrieved_at": "2025-07-24T21:57:55.188621"
+}

@@ -1,0 +1,17 @@
+{
+  "content": "Amiodarone has complex pharmacokinetics. It exhibits variable oral bioavailability, averaging approximately 50% (range, 22%-86%).7 Amiodarone is highly lipophilic, with a large volume of distribution (66 L/kg) resulting in a delayed onset of action (2 days to 3 weeks for oral therapy) and long elimination half-life.8 An initial 50% reduction in plasma concentration 3 to 10 days after cessation of chronic therapy is followed by a longer terminal half-life of 13 to 142 days as tissue stores deplete.7,8 Amiodarone is metabolized by the hepatic cytochrome p450 system and excreted in feces. Renal excretion is minimal (<1% unchanged in urine). The active metabolite of amiodarone, N-desethylamiodarone, has a longer half-life",
+  "source": "https://jamanetwork.com/journals/jama/fullarticle/208819",
+  "chunk_id": "c9871af7-d324-4b65-a160-72a179f143f4",
+  "similarity_score": 0.2606229782104492,
+  "query": "amiodarone pharmacokinetics drug interactions CYP450 beta-blockers metabolism clearance atrial fibrillation dosing",
+  "rank": 46,
+  "title": "Prescribing Amiodarone: An Evidence-Based Review of Clinical Indications",
+  "authors": "Patricia Vassallo, Richard G. Trohman",
+  "year": "2007",
+  "journal": "JAMA",
+  "reference": "Vassallo, P., & Trohman, R. G. (2007). Prescribing amiodarone: An evidence-based review of clinical indications. JAMA, 298(11), 1312-1322. https://doi.org/10.1001/jama.298.11.1312",
+  "doi": "10.1001/jama.298.11.1312",
+  "chunk_index": 41,
+  "total_chunks": 177,
+  "retrieved_at": "2025-07-24T21:58:09.739287"
+}

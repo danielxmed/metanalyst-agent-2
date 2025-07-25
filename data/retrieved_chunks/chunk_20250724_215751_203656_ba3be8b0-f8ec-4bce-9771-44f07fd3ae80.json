@@ -1,0 +1,17 @@
+{
+  "content": "Adverse Effects \nAmiodarone therapy has well-characterized toxicity, including pulmonary, thyroid, and skin disorders, as well as sinus bradycardia.12,13 We did observe a higher rate of adverse thyroid and pulmonary events, as well as symptomatic bradycardia, among patients assigned to amiodarone. The rates of adverse effects and drug discontinuation with amiodarone in our study were similar to rates previously reported. More than 80% of patients continued treatment with amiodarone during the 1-year follow-up, although it was administered in addition to a β-blocker. Most patients were already taking a β-blocker at the time of enrollment, which would explain the low rate of discontinuation of β-blockers during the study.",
+  "source": "https://jamanetwork.com/journals/jama/fullarticle/202178",
+  "chunk_id": "ba3be8b0-f8ec-4bce-9771-44f07fd3ae80",
+  "similarity_score": 0.5291226506233215,
+  "query": "amiodarone adverse effects side effects safety profile atrial fibrillation thyroid pulmonary hepatic toxicity",
+  "rank": 7,
+  "title": "Comparison of β-Blockers, Amiodarone Plus β-Blockers, or Sotalol for Prevention of Shocks From Implantable Cardioverter Defibrillators: The OPTIC Study: A Randomized Trial",
+  "authors": "Stuart J. Connolly, Paul Dorian, Robin S. Roberts, Michael Gent, Steven Bailin, Eric S. Fain, Kevin Thorpe, Jean Champagne, Mario Talajic, Benoit Coutu, Gerian C. Gronefeld, Stefan H. Hohnloser",
+  "year": "2006",
+  "journal": "JAMA",
+  "reference": "Connolly, S. J., Dorian, P., Roberts, R. S., Gent, M., Bailin, S., Fain, E. S., Thorpe, K., Champagne, J., Talajic, M., Coutu, B., Gronefeld, G. C., & Hohnloser, S. H. (2006). Comparison of β-blockers, amiodarone plus β-blockers, or sotalol for prevention of shocks from implantable cardioverter defibrillators: The OPTIC study: A randomized trial. JAMA, 295(2), 165–171. https://doi.org/10.1001/jama.295.2.165",
+  "doi": "10.1001/jama.295.2.165",
+  "chunk_index": 64,
+  "total_chunks": 89,
+  "retrieved_at": "2025-07-24T21:57:51.201442"
+}

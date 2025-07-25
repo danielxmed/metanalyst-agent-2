@@ -1,0 +1,17 @@
+{
+  "content": "Key Words\nantiarrhythmia agents\nanticoagulants\nantithrombotic agents\nfactor Xa\nstroke\nthromboembolism\nwarfarin\nAbbreviations and Acronyms\nAF\natrial fibrillation\nCHADS 2\ncongestive heart failure, hypertension, age, diabetes, and stroke\nCI\nconfidence interval\nHR\nhazard ratio\nINR\ninternational normalized ratio\nLVEF\nleft ventricular ejection fraction\nMI\nmyocardial infarction\nTIA\ntransient ischemic attack\nTTR\ntime in therapeutic range\nAmiodarone is the most effective antiarrhythmic drug for the prevention of atrial fibrillation (AF) 1, 2, 3, and it is recommended for patients with frequent, symptomatic AF recurrences, especially in the presence of structural heart disease(4). However, several potential drawbacks may limit the use of amiodarone in patients with AF.",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0735109714057982",
+  "chunk_id": "65bbe99f-e76c-4cf6-983a-6bf09972aaf4",
+  "similarity_score": 0.31509560346603394,
+  "query": "stroke prevention atrial fibrillation amiodarone beta-blockers thromboembolic events anticoagulation",
+  "rank": 8,
+  "title": "Amiodarone, anticoagulation, and clinical events in patients with atrial fibrillation: Insights from the ARISTOTLE trial",
+  "authors": "Greg Flaker, Renato D. Lopes, Elaine Hylek, Daniel M. Wojdyla, Laine Thomas, Sana M. Al-Khatib, Renee M. Sullivan, Stefan H. Hohnloser, David Garcia, Michael Hanna, John Amerena, Veli-Pekka Harjola, Paul Dorian, Alvaro Avezum, Matyas Keltai, Lars Wallentin, Christopher B. Granger, ARISTOTLE Committees and Investigators",
+  "year": "2014",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "Flaker, G., Lopes, R. D., Hylek, E., Wojdyla, D. M., Thomas, L., Al-Khatib, S. M., Sullivan, R. M., Hohnloser, S. H., Garcia, D., Hanna, M., Amerena, J., Harjola, V.-P., Dorian, P., Avezum, A., Keltai, M., Wallentin, L., Granger, C. B., & ARISTOTLE Committees and Investigators. (2014). Amiodarone, anticoagulation, and clinical events in patients with atrial fibrillation: Insights from the ARISTOTLE trial. Journal of the American College of Cardiology, 64(15), 1541-1550. https://doi.org/10.1016/j.jacc.2014.07.984",
+  "doi": "10.1016/j.jacc.2014.07.984",
+  "chunk_index": 8,
+  "total_chunks": 102,
+  "retrieved_at": "2025-07-24T22:33:38.168564"
+}

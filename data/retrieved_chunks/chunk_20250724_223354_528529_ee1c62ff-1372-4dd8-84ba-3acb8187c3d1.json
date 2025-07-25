@@ -1,0 +1,17 @@
+{
+  "content": ". Patients received long-term treatment with the first antiarrhythmic drug that was predicted to be effective on the basis of drug testing. The duration of long-term follow-up was 6.2 years. The last end-point event was recorded at 5.4 years of follow-up. During follow-up, sustained ventricular tachyarrhythmias were considered to be recurrences of arrhythmia rather than proarrhythmic effects, except for torsade de pointes, which was tabulated as a recurrence of arrhythmia in the actuarial analyses and a proarrhythmic effect in the analysis of adverse events. Serious arrhythmia that occurred before the patient had received three doses of drug was not considered to require discontinuation of the drug if the investigator thought that insufficient activity of the drug was responsible.",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJM199308123290702",
+  "chunk_id": "ee1c62ff-1372-4dd8-84ba-3acb8187c3d1",
+  "similarity_score": 0.317144513130188,
+  "query": "long-term outcomes amiodarone beta-blockers atrial fibrillation follow-up recurrence maintenance therapy",
+  "rank": 50,
+  "title": "A Comparison of Seven Antiarrhythmic Drugs in Patients with Ventricular Tachyarrhythmias",
+  "authors": "Jay W. Mason, for the Electrophysiologic Study versus Electrocardiographic Monitoring Investigators",
+  "year": "1993",
+  "journal": "New England Journal of Medicine",
+  "reference": "Mason, J. W., for the Electrophysiologic Study versus Electrocardiographic Monitoring Investigators. (1993). A comparison of seven antiarrhythmic drugs in patients with ventricular tachyarrhythmias. *New England Journal of Medicine, 329*(7), 452-458. https://doi.org/10.1056/NEJM199308123290702",
+  "doi": "10.1056/NEJM199308123290702",
+  "chunk_index": 17,
+  "total_chunks": 107,
+  "retrieved_at": "2025-07-24T22:33:54.519457"
+}

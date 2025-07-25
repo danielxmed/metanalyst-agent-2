@@ -1,0 +1,17 @@
+{
+  "content": ". Therefore, the possibility cannot be excluded that the observed adverse mortality trends with sotalol or amiodarone may have reached statistical significance in a larger trial. However, this possibility appears unlikely, since relatively large mortality trials involving patients with myocardial infarction and heart failure, who have a higher risk of death from arrhythmia34–37 than do patients with atrial fibrillation, have reported similar or lower mortality rates with amiodarone or sotalol, as compared with placebo. In addition, smaller efficacy trials involving patients with atrial fibrillation who received amiodarone or sotalol17,22,23 have not revealed an excess risk of drug-induced mortality.",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa041705",
+  "chunk_id": "1633504c-344e-40c9-a1c7-fc1a0e5245dd",
+  "similarity_score": 0.36318325996398926,
+  "query": "amiodarone beta-blockers mortality death cardiovascular outcomes hazard ratio odds ratio",
+  "rank": 23,
+  "title": "Amiodarone versus Sotalol for Atrial Fibrillation",
+  "authors": "Bramah N. Singh, M.D., D.Sc., Steven N. Singh, M.D., Domenic J. Reda, Ph.D., X. Charlene Tang, M.D., Ph.D., Becky Lopez, R.N., Crystal L. Harris, Pharm.D., Ross D. Fletcher, M.D., Satish C. Sharma, M.D., J. Edwin Atwood, M.D., Alan K. Jacobson, M.D., H. Daniel Lewis, Jr., M.D., Dennis W. Raisch, Ph.D., Michael D. Ezekowitz, M.B., Ch.B., Ph.D.",
+  "year": "2005",
+  "journal": "New England Journal of Medicine",
+  "reference": "Singh, B. N., Singh, S. N., Reda, D. J., Tang, X. C., Lopez, B., Harris, C. L., Fletcher, R. D., Sharma, S. C., Atwood, J. E., Jacobson, A. K., Lewis, H. D. Jr., Raisch, D. W., & Ezekowitz, M. D. (2005). Amiodarone versus sotalol for atrial fibrillation. New England Journal of Medicine, 352(18), 1861-1872. https://doi.org/10.1056/NEJMoa041705",
+  "doi": "10.1056/NEJMoa041705",
+  "chunk_index": 53,
+  "total_chunks": 127,
+  "retrieved_at": "2025-07-24T22:33:23.680790"
+}

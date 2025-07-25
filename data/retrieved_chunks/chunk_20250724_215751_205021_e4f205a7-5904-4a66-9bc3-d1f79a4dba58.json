@@ -1,0 +1,17 @@
+{
+  "content": "Over the course of the follow-up period, adverse effects occurred in 24 (50%) patients. Recorded adverse effects were bradycardia in 7 (15%), thyroid dysfunction (all hypothyroidism) in 10 (21%), pulmonary events in 8 (17%), excessive QT prolongation (QTc>0.52) in 3 (6%), and liver dysfunction in 1 (2%). Amiodarone was discontinued in 11 (23%) of these patients (thyroid dysfunction 3, pulmonary events 7, and liver dysfunction 1). In the remaining 13, amiodarone dosage was decreased, or treatment for thyroid dysfunction was initiated. Among 7 patients who showed bradycardia, 5 had sinus bradycardia of 40–60 BPM and in the other 2 patients sick sinus syndrome was revealed and pacemakers were implanted",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0914508711001171",
+  "chunk_id": "e4f205a7-5904-4a66-9bc3-d1f79a4dba58",
+  "similarity_score": 0.48747771978378296,
+  "query": "amiodarone adverse effects side effects safety profile atrial fibrillation thyroid pulmonary hepatic toxicity",
+  "rank": 12,
+  "title": "Role of oral amiodarone in patients with atrial fibrillation and congestive heart failure",
+  "authors": "Mihoko Kawabata, Kenzo Hirao, Hitoshi Hachiya, Kouji Higuchi, Yasuaki Tanaka, Atsuhiko Yagishita, Osamu Inaba, Mitsuaki Isobe",
+  "year": "2011",
+  "journal": "Journal of Cardiology",
+  "reference": "Kawabata, M., Hirao, K., Hachiya, H., Higuchi, K., Tanaka, Y., Yagishita, A., Inaba, O., & Isobe, M. (2011). Role of oral amiodarone in patients with atrial fibrillation and congestive heart failure. Journal of Cardiology, 58(2), 108-115.",
+  "doi": "Not available",
+  "chunk_index": 30,
+  "total_chunks": 95,
+  "retrieved_at": "2025-07-24T21:57:51.201473"
+}

@@ -1,0 +1,17 @@
+{
+  "content": "Choice of Medication\n\nMetoprolol and diltiazem are both effective for rate control in AF, but metoprolol may have a lower risk of adverse events 7, 8.\nIn patients with HFrEF, metoprolol may be preferred over diltiazem due to a lower incidence of worsening heart failure symptoms 9.\nThe choice of medication should be individualized based on the patient's clinical situation and underlying conditions 6.\n\nAdditional Considerations\n\nFactors precipitating rapid ventricular rate should be treated, and anticoagulation should be considered to reduce the risk of stroke 5, 6.\nClinical judgment is recommended for disposition, but stable patients without certain comorbidities may be discharged 5.",
+  "source": "https://www.droracle.ai/articles/55517/how-to-manage-a-fib-in-a-patient-who-is-hemodynamically-challenged",
+  "chunk_id": "4b7cc3e6-0d69-4c0a-bb11-cb98ce3e9af8",
+  "similarity_score": 0.35600268840789795,
+  "query": "beta-blockers rate control atrial fibrillation metoprolol propranolol heart rate ventricular response",
+  "rank": 5,
+  "title": "How to manage atrial fibrillation (a-fib) in a patient with hemodynamic instability?",
+  "authors": "Dainyal Siddiqui, D. S., Manuel Jimenez, M. J., & Pierre-Louis, F. P.",
+  "year": "2025",
+  "journal": "Dr.Oracle Medical Advisory Board & Editors",
+  "reference": "Dainyal Siddiqui, D. S., Manuel Jimenez, M. J., & Pierre-Louis, F. P. (2025). How to manage atrial fibrillation (a-fib) in a patient with hemodynamic instability? Dr.Oracle Medical Advisory Board & Editors.",
+  "doi": "Not available",
+  "chunk_index": 8,
+  "total_chunks": 14,
+  "retrieved_at": "2025-07-24T22:33:19.809802"
+}

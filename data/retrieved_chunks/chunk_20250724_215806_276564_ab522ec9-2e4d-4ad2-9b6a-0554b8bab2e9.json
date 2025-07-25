@@ -1,0 +1,17 @@
+{
+  "content": "Despite the importance of postoperative atrial fibrillation, the most effective management strategy for this common surgical complication remains uncertain, a factor that had led to a substantial variation in treatments. The joint guidelines of the American College of Cardiology, American Heart Association, and Heart Rhythm Society, which were published when our trial was far along in enrollment, recommend rate control with beta-blockers as the first-line therapy in patients whose condition is hemodynamically stable (i.e., class I, level of evidence A)",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa1602002",
+  "chunk_id": "ab522ec9-2e4d-4ad2-9b6a-0554b8bab2e9",
+  "similarity_score": 0.37521886825561523,
+  "query": "atrial fibrillation guidelines ESC AHA CCS amiodarone beta-blockers recommendations clinical practice first-line therapy",
+  "rank": 18,
+  "title": "Rate control versus rhythm control for atrial fibrillation after cardiac surgery",
+  "authors": "A. Marc Gillinov, M.D., Emilia Bagiella, Ph.D., Alan J. Moskowitz, M.D., Jesse M. Raiten, M.D., Mark A. Groh, M.D., Michael E. Bowdish, M.D., Gorav Ailawadi, M.D., Katherine A. Kirkwood, M.S., Louis P. Perrault, M.D., Michael K. Parides, Ph.D., Robert L. Smith, II, M.D., John A. Kern, M.D., Gladys Dussault, R.N., Amy E. Hackmann, M.D., Neal O. Jeffries, Ph.D., Marissa A. Miller, D.V.M., Wendy C. Taddei-Peters, Ph.D., Eric A. Rose, M.D., Richard D. Weisel, M.D., Deborah L. Williams, B.S.N., M.P.H., Ralph F. Mangusan, R.N., Michael Argenziano, M.D., Ellen G. Moquete, R.N., Karen L. O’Sullivan, M.P.H., Michel Pellerin, M.D., Kinjal J. Shah, P.A., James S. Gammie, M.D., Mary Lou Mayer, B.S.N., Pierre Voisine, M.D., Annetine C. Gelijns, Ph.D., Patrick T. O’Gara, M.D., and Michael J. Mack, M.D.",
+  "year": "2016",
+  "journal": "The New England Journal of Medicine",
+  "reference": "Gillinov, A. M., Bagiella, E., Moskowitz, A. J., Raiten, J. M., Groh, M. A., Bowdish, M. E., Ailawadi, G., Kirkwood, K. A., Perrault, L. P., Parides, M. K., Smith, R. L. II, Kern, J. A., Dussault, G., Hackmann, A. E., Jeffries, N. O., Miller, M. A., Taddei-Peters, W. C., Rose, E. A., Weisel, R. D., Williams, D. L., Mangusan, R. F., Argenziano, M., Moquete, E. G., O’Sullivan, K. L., Pellerin, M., Shah, K. J., Gammie, J. S., Mayer, M. L., Voisine, P., Gelijns, A. C., O’Gara, P. T., & Mack, M. J. (2016). Rate control versus rhythm control for atrial fibrillation after cardiac surgery. *The New England Journal of Medicine, 374*(20), 1911-1921. https://doi.org/10.1056/NEJMoa1602002",
+  "doi": "10.1056/NEJMoa1602002",
+  "chunk_index": 53,
+  "total_chunks": 130,
+  "retrieved_at": "2025-07-24T21:58:06.270501"
+}

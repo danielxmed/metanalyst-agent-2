@@ -1,0 +1,17 @@
+{
+  "content": "Discussion\nThis analysis from the ARISTOTLE study included 2,051 patients who received amiodarone, which represented one of the largest experiences to date with amiodarone for AF in a clinical trial. The main findings were as follows: 1) amiodarone use was associated with a significantly increased risk of stroke and systemic embolism, and a lower time in the TTR when used with warfarin; 2) apixaban consistently reduced the rate of stroke and systemic embolism, death, and major bleeding compared with warfarin in amiodarone patients and patients not on amiodarone (Central Illustration); and 3) the relative reductions in stroke and systemic embolism, mortality, and major bleeding with apixaban compared with warfarin were similar with and without amiodarone use.\nOpen in Viewer",
+  "source": "https://www.jacc.org/doi/10.1016/j.jacc.2014.07.967",
+  "chunk_id": "65a4efee-7aa8-40d3-b780-d848ee8f368d",
+  "similarity_score": 0.3029426336288452,
+  "query": "atrial fibrillation mortality outcomes cardiovascular events stroke prevention amiodarone beta-blockers hazard ratio",
+  "rank": 45,
+  "title": "Amiodarone, Anticoagulation, and Clinical Events in Patients With Atrial Fibrillation: Insights From the ARISTOTLE Trial",
+  "authors": "Greg Flaker, Renato D. Lopes, Elaine Hylek, Daniel M. Wojdyla, Laine Thomas, Sana M. Al-Khatib, Renee M. Sullivan, Stefan H. Hohnloser, David Garcia, Michael Hanna, John Amerena, Veli-Pekka Harjola, Paul Dorian, Alvaro Avezum, Matyas Keltai, Lars Wallentin, Christopher B. Granger",
+  "year": "2014",
+  "journal": "JACC",
+  "reference": "Flaker, G., Lopes, R. D., Hylek, E., Wojdyla, D. M., Thomas, L., Al-Khatib, S. M., Sullivan, R. M., Hohnloser, S. H., Garcia, D., Hanna, M., Amerena, J., Harjola, V.-P., Dorian, P., Avezum, A., Keltai, M., Wallentin, L., & Granger, C. B. (2014). Amiodarone, anticoagulation, and clinical events in patients with atrial fibrillation: Insights from the ARISTOTLE trial. JACC, 64(15), 556-575.",
+  "doi": "Not available",
+  "chunk_index": 60,
+  "total_chunks": 111,
+  "retrieved_at": "2025-07-24T21:57:59.084748"
+}

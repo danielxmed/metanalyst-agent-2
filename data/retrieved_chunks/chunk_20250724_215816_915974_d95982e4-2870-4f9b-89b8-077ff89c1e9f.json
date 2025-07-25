@@ -1,0 +1,17 @@
+{
+  "content": "Hospitalization Costs\nUnlike previous trials of prophylaxis against postoperative atrial fibrillation, this study demonstrated a reduction in the total cost of hospitalization for the patients assigned to amiodarone therapy. These data probably underestimate the cost savings attributable to amiodarone therapy, because professional fees were not included in the cost analysis and cost data for only the initial hospitalization were examined. Atrial fibrillation after discharge was more frequent in the placebo group, and hospitalization costs related to the management of these episodes of atrial fibrillation were not analyzed.\nPrevious Studies",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJM199712183372501",
+  "chunk_id": "d95982e4-2870-4f9b-89b8-077ff89c1e9f",
+  "similarity_score": 0.48418980836868286,
+  "query": "cost effectiveness economic analysis amiodarone beta-blockers atrial fibrillation healthcare costs hospitalization reduction",
+  "rank": 1,
+  "title": "Preoperative amiodarone as prophylaxis against atrial fibrillation after heart surgery",
+  "authors": "Emile G. Daoud, M.D., S. Adam Strickberger, M.D., K. Ching Man, D.O., Rajiva Goyal, M.D., G. Michael Deeb, M.D., Steven F. Bolling, M.D., Francis D. Pagani, M.D., Cynthia Bitar, R.N., Marc D. Meissner, M.D., and Fred Morady, M.D.",
+  "year": "1997",
+  "journal": "The New England Journal of Medicine",
+  "reference": "Daoud, E. G., Strickberger, S. A., Man, K. C., Goyal, R., Deeb, G. M., Bolling, S. F., Pagani, F. D., Bitar, C., Meissner, M. D., & Morady, F. (1997). Preoperative amiodarone as prophylaxis against atrial fibrillation after heart surgery. *The New England Journal of Medicine, 337*(25), 1785-1791. https://doi.org/10.1056/NEJM199712183372501",
+  "doi": "10.1056/NEJM199712183372501",
+  "chunk_index": 32,
+  "total_chunks": 97,
+  "retrieved_at": "2025-07-24T21:58:16.915676"
+}

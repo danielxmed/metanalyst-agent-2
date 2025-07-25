@@ -1,0 +1,17 @@
+{
+  "content": "4.1. Cardiovascular Medication Class Ia antiarrhythmic drugs (amiodarone increases the serum concentration of both pro-cainamide and quinidine) and other class III antiarrhythmics . Increased risk of QT prolongation and torsade de pointes. Amiodarone should not be administered in conjunction with these drugs . \nFlecainide. Flecainide is metabolized by cytochrome P450 2D6 (CYP2D6), and concomi-tant administration of amiodarone increases serum flecainide levels. Although flecainide and amiodarone are rarely used together in clinical practice, it is recommended to reduce the flecainide dose by 50% when the patient is also receiving amiodarone [35,36].",
+  "source": "https://pdfs.semanticscholar.org/eda9/09ebe34c58658072d9d3a1e6db13d581c6cd.pdf?skipShowableCheck=true",
+  "chunk_id": "fa9a7a00-3505-4137-b944-c419267daee5",
+  "similarity_score": 0.26757556200027466,
+  "query": "amiodarone pharmacokinetics drug interactions CYP450 beta-blockers metabolism clearance atrial fibrillation dosing",
+  "rank": 37,
+  "title": "Amiodarone Therapy: Updated Practical Insights",
+  "authors": "Sorodoc, V., Indrei, L., Dobroghii, C., Asaftei, A., Ceasovschih, A., Constantin, M., Lionte, C., Morărașu, B. C., Diaconu, A.-D., Sorodoc, L.",
+  "year": "2024",
+  "journal": "Journal of Clinical Medicine",
+  "reference": "Sorodoc, V., Indrei, L., Dobroghii, C., Asaftei, A., Ceasovschih, A., Constantin, M., Lionte, C., Morărașu, B. C., Diaconu, A.-D., & Sorodoc, L. (2024). Amiodarone therapy: Updated practical insights. Journal of Clinical Medicine, 13(20), 6094. https://doi.org/10.3390/jcm13206094",
+  "doi": "10.3390/jcm13206094",
+  "chunk_index": 42,
+  "total_chunks": 209,
+  "retrieved_at": "2025-07-24T21:58:09.739238"
+}

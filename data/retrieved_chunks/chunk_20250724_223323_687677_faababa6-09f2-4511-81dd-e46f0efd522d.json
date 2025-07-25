@@ -1,0 +1,17 @@
+{
+  "content": ". A recent prospective, randomized trial comparing the empirical administration of amiodarone with the administration of other drugs on the basis of electrophysiologic study or Holter monitoring22 showed that a significantly smaller percentage of patients receiving amiodarone reached a combined end point (death from cardiac causes, resuscitation after cardiac arrest, or electrical shock from an implanted defibrillator), but there was no significant difference in mortality between the two groups.",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJM199308123290702",
+  "chunk_id": "faababa6-09f2-4511-81dd-e46f0efd522d",
+  "similarity_score": 0.3356790542602539,
+  "query": "amiodarone beta-blockers mortality death cardiovascular outcomes hazard ratio odds ratio",
+  "rank": 47,
+  "title": "A Comparison of Seven Antiarrhythmic Drugs in Patients with Ventricular Tachyarrhythmias",
+  "authors": "Jay W. Mason, for the Electrophysiologic Study versus Electrocardiographic Monitoring Investigators",
+  "year": "1993",
+  "journal": "New England Journal of Medicine",
+  "reference": "Mason, J. W., for the Electrophysiologic Study versus Electrocardiographic Monitoring Investigators. (1993). A comparison of seven antiarrhythmic drugs in patients with ventricular tachyarrhythmias. *New England Journal of Medicine, 329*(7), 452-458. https://doi.org/10.1056/NEJM199308123290702",
+  "doi": "10.1056/NEJM199308123290702",
+  "chunk_index": 53,
+  "total_chunks": 107,
+  "retrieved_at": "2025-07-24T22:33:23.680922"
+}

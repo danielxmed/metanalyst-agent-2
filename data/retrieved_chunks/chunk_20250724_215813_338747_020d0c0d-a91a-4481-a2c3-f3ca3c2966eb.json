@@ -1,0 +1,17 @@
+{
+  "content": "Atrial fibrillation recurrence\nResults for atrial fibrillation recurrence are summarised in Analysis 5.1 and Figure 8. All class IA, class IC and class III drugs included in this review significantly reduced the recurrence of atrial fibrillation. Metoprolol, based on two studies (562 patients), also showed a significant effect in reducing the number of recurrences of atrial fibrillation (OR 0.62, 95% CI 0.44 to 0.88, P = 0.008). In contrast, class IB drugs did not show any difference compared with control.",
+  "source": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD005049.pub4/full",
+  "chunk_id": "020d0c0d-a91a-4481-a2c3-f3ca3c2966eb",
+  "similarity_score": 0.36277449131011963,
+  "query": "atrial fibrillation recurrence rates maintenance therapy amiodarone beta-blockers long-term outcomes rhythm maintenance",
+  "rank": 43,
+  "title": "Antiarrhythmics for maintaining sinus rhythm after cardioversion of atrial fibrillation",
+  "authors": "Kowey, P. R., & Connolly, S. J.",
+  "year": "2015",
+  "journal": "Cochrane Database of Systematic Reviews",
+  "reference": "Kowey, P. R., & Connolly, S. J. (2015). Antiarrhythmics for maintaining sinus rhythm after cardioversion of atrial fibrillation. Cochrane Database of Systematic Reviews, (3), CD005049. https://doi.org/10.1002/14651858.CD005049.pub4",
+  "doi": "10.1002/14651858.CD005049.pub4",
+  "chunk_index": 83,
+  "total_chunks": 200,
+  "retrieved_at": "2025-07-24T21:58:13.326374"
+}

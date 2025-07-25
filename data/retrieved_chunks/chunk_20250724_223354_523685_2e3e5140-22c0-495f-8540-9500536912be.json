@@ -1,0 +1,17 @@
+{
+  "content": "a\nReported outcomes exclude 90-day blanking period.\nClinical outcomes\nClinical outcomes are summarized in Table 2. The mean follow-up duration was 325.9 ± 81.6 days and was similar between the groups (P=0.98). During the follow-up period, recurrence of atrial arrhythmias was detected in 164 of 1,086 (15.1%) patients in the first-line ablation group and in 169 of 997 (17.0%) patients in the second-line catheter ablation group (P=0.26). Figure 3 shows the Kaplan-Meyer survival curve for the atrial arrhythmia recurrence rate. There was no difference between the groups as indicated by an HR of 1.13 (95%CI: 0.92-1.41; P=0.25).",
+  "source": "https://www.sciencedirect.com/science/article/pii/S2405500X2400183X",
+  "chunk_id": "2e3e5140-22c0-495f-8540-9500536912be",
+  "similarity_score": 0.3556517958641052,
+  "query": "long-term outcomes amiodarone beta-blockers atrial fibrillation follow-up recurrence maintenance therapy",
+  "rank": 16,
+  "title": "Catheter Ablation as First-Line Therapy in Persistent Atrial Fibrillation: Patient Characteristics and Clinical Outcomes",
+  "authors": "Michael Barkagan, Anat Milman, Guy Zahavi, Arwa Younis, Bishnu Dhakal, Sanjay Dixit, Christopher X. Wong, Edward P. Gerstenfeld, Sanjiv M. Narayan, Jared T. Bunch, Lukasz Cerbin, Wendy S. Tzou, Mark Metzl, Aqeel Khanani, Usman R. Siddiqui, Sanghamitra Mohanty, Andrea Natale, Aaron Medina, Elad Anter",
+  "year": "2024",
+  "journal": "JACC: Clinical Electrophysiology",
+  "reference": "Barkagan, M., Milman, A., Zahavi, G., Younis, A., Dhakal, B., Dixit, S., Wong, C. X., Gerstenfeld, E. P., Narayan, S. M., Bunch, J. T., Cerbin, L., Tzou, W. S., Metzl, M., Khanani, A., Siddiqui, U. R., Mohanty, S., Natale, A., Medina, A., & Anter, E. (2024). Catheter ablation as first-line therapy in persistent atrial fibrillation: Patient characteristics and clinical outcomes. JACC: Clinical Electrophysiology, 10(6), 1078-1086. https://doi.org/10.1016/j.jacep.2024.03.012",
+  "doi": "10.1016/j.jacep.2024.03.012",
+  "chunk_index": 33,
+  "total_chunks": 74,
+  "retrieved_at": "2025-07-24T22:33:54.519269"
+}

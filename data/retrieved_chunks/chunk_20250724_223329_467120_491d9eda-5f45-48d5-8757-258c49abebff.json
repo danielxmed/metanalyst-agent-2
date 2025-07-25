@@ -1,0 +1,17 @@
+{
+  "content": ".2% for amiodarone, 23.5% for sotalol, and 5.3% for β-blocker alone. Adverse pulmonary and thyroid events and symptomatic bradycardia were more common among patients randomized to amiodarone.",
+  "source": "https://jamanetwork.com/journals/jama/fullarticle/202178",
+  "chunk_id": "491d9eda-5f45-48d5-8757-258c49abebff",
+  "similarity_score": 0.4504004716873169,
+  "query": "amiodarone adverse effects thyroid pulmonary toxicity beta-blockers safety hypotension bradycardia",
+  "rank": 19,
+  "title": "Comparison of β-Blockers, Amiodarone Plus β-Blockers, or Sotalol for Prevention of Shocks From Implantable Cardioverter Defibrillators: The OPTIC Study: A Randomized Trial",
+  "authors": "Stuart J. Connolly, Paul Dorian, Robin S. Roberts, Michael Gent, Steven Bailin, Eric S. Fain, Kevin Thorpe, Jean Champagne, Mario Talajic, Benoit Coutu, Gerian C. Gronefeld, Stefan H. Hohnloser",
+  "year": "2006",
+  "journal": "JAMA",
+  "reference": "Connolly, S. J., Dorian, P., Roberts, R. S., Gent, M., Bailin, S., Fain, E. S., Thorpe, K., Champagne, J., Talajic, M., Coutu, B., Gronefeld, G. C., & Hohnloser, S. H. (2006). Comparison of β-blockers, amiodarone plus β-blockers, or sotalol for prevention of shocks from implantable cardioverter defibrillators: The OPTIC study: A randomized trial. JAMA, 295(2), 165–171. https://doi.org/10.1001/jama.295.2.165",
+  "doi": "10.1001/jama.295.2.165",
+  "chunk_index": 18,
+  "total_chunks": 89,
+  "retrieved_at": "2025-07-24T22:33:29.466525"
+}

@@ -39,4 +39,4 @@ supervisor_agent = create_supervisor (
     ),
     prompt = supervisor_prompt,
     state_schema = MetaAnalysisState
-).compile().with_config(recursion_limit=100)
+).compile().with_config(recursion_limit=300)

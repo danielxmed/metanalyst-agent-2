@@ -1,0 +1,17 @@
+{
+  "content": "Concerns regarding an association between amiodarone and cancer outcomes have been based largely on case reports, observational studies, and a subset of RCTs. A previous meta-analysis9 of RCTs designed to evaluate the effect of amiodarone on sudden cardiac death found a statistically borderline increased risk of cancer-related death with amiodarone. However, this review was restricted to patients at high risk of sudden cardiac death, and the observed risk was driven mainly by trials with 6 to 12 months of follow-up. An alternate explanation for these findings is that amiodarone reduced the short-term risk of sudden cardiac death without impacting all-cause mortality, creating shifts among competing causes of death for patients treated with amiodarone.",
+  "source": "https://www.sciencedirect.com/science/article/pii/S2589790X20301475",
+  "chunk_id": "f1039e19-d4b5-472d-966c-b84faa110285",
+  "similarity_score": 0.40270256996154785,
+  "query": "amiodarone beta-blockers mortality death cardiovascular outcomes hazard ratio odds ratio",
+  "rank": 11,
+  "title": "Chronic amiodarone use and the risk of cancer: A systematic review and meta-analysis",
+  "authors": "Lauren A. Siemers, Jenny MacGillivray, Jason G. Andrade, Ricky D. Turgeon",
+  "year": "2021",
+  "journal": "CJC Open",
+  "reference": "Siemers, L. A., MacGillivray, J., Andrade, J. G., & Turgeon, R. D. (2021). Chronic amiodarone use and the risk of cancer: A systematic review and meta-analysis. CJC Open, 3(1), 109-114. https://doi.org/10.1016/j.cjco.2020.12.012",
+  "doi": "10.1016/j.cjco.2020.12.012",
+  "chunk_index": 33,
+  "total_chunks": 62,
+  "retrieved_at": "2025-07-24T22:33:23.680723"
+}

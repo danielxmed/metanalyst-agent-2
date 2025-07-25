@@ -1,0 +1,17 @@
+{
+  "content": "As with the oral form, intravenous amiodarone has a complex pharmacology that begins with its formulation (). Because it is not water soluble, the commercial preparation uses a solvent—polysorbate-80—that may contribute to the hypotensive effect of the commercially available compound (). Polysorbate-80 has also been shown to decrease heart rate, depress atrioventricular (AV) node conduction and increase atrial and ventricular refractory periods (). Once infused, a large percentage of amiodarone is protein bound predominantly to albumin and also to beta-lipoprotein and alpha-1 acid glycoprotein, an acute-phase reactant ([13, 14]). The drug is metabolized mainly by a P450cytochrome oxidase (CYP3A4)-dependent oxidative deethylation",
+  "source": "https://www.jacc.org/doi/10.1016/S0735-1097%2897%2900069-7",
+  "chunk_id": "a0467d3c-269a-4897-aa97-7ec75cd903a6",
+  "similarity_score": 0.2797488570213318,
+  "query": "amiodarone pharmacokinetics drug interactions CYP450 beta-blockers metabolism clearance atrial fibrillation dosing",
+  "rank": 31,
+  "title": "Intravenous amiodarone",
+  "authors": "Peter R Kowey, MD, FACC; Roger A Marinchak, MD, FACC; Seth J Rials, MD, PhD, FACC; Roland A Filart, MD, FACC",
+  "year": "1997",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "Kowey, P. R., Marinchak, R. A., Rials, S. J., & Filart, R. A. (1997). Intravenous amiodarone. Journal of the American College of Cardiology, 29(6), 1190–1198.",
+  "doi": "Not available",
+  "chunk_index": 8,
+  "total_chunks": 118,
+  "retrieved_at": "2025-07-24T21:58:09.739207"
+}

@@ -1,0 +1,17 @@
+{
+  "content": "Methods\nA Markov decision model was developed to compare the lifetime clinical efficacy and costs of three AAD therapies associated with AF recurrence, congestive heart failure, strokes, and deaths due to AF or AF related complications. Model inputs were derived from the ATHENA trial results, real-world database, published literature, and supplemented from expert opinion. Cost-effectiveness was measured by the incremental cost-effectiveness ratio (ICER), defined as the incremental cost per quality-adjusted life year (QALY) gained among groups. One-way sensitivity, probabilistic sensitivity, and scenario analyses were performed to explore the uncertainty of the model.\nFindings",
+  "source": "https://www.sciencedirect.com/science/article/abs/pii/S0149291825002176",
+  "chunk_id": "ad76c42e-d070-4ee0-8d8b-de32559a0507",
+  "similarity_score": 0.24387609958648682,
+  "query": "cost effectiveness economic analysis amiodarone beta-blockers atrial fibrillation healthcare costs hospitalization reduction",
+  "rank": 50,
+  "title": "Cost-Effectiveness of Antiarrhythmic Drugs for Treating Paroxysmal or Persistent Atrial Fibrillation in China: An Economic Evaluation",
+  "authors": "Fuming Li, Dunming Xiao, Yu Xia, Junling Weng, Shimeng Liu, Yingyao Chen",
+  "year": "2025",
+  "journal": "Clinical Therapeutics",
+  "reference": "Li, F., Xiao, D., Xia, Y., Weng, J., Liu, S., & Chen, Y. (2025). Cost-effectiveness of antiarrhythmic drugs for treating paroxysmal or persistent atrial fibrillation in China: An economic evaluation. Clinical Therapeutics. https://doi.org/Not available",
+  "doi": "Not available",
+  "chunk_index": 3,
+  "total_chunks": 30,
+  "retrieved_at": "2025-07-24T21:58:16.915944"
+}

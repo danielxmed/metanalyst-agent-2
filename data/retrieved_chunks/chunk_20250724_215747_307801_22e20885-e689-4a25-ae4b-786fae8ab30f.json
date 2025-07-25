@@ -1,0 +1,17 @@
+{
+  "content": ".01 for the comparison with both amiodarone and sotalol). The rate of DC cardioversion was higher with the use of biphasic shocks (42 given, 81 percent success rate) than monophasic shocks (427 given, 70 percent success rate; P=0.14). The rates of DC cardioversion did not differ significantly among the groups with respect to the duration of atrial fibrillation, but it was higher in the subgroup of patients in the placebo group who had had atrial fibrillation for no more than one year than in those who had had atrial fibrillation for more than one year (71 percent vs. 50 percent, P=0.04).",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa041705",
+  "chunk_id": "22e20885-e689-4a25-ae4b-786fae8ab30f",
+  "similarity_score": 0.32228344678878784,
+  "query": "amiodarone efficacy cardioversion atrial fibrillation success rate beta-blockers metoprolol propranolol carvedilol",
+  "rank": 32,
+  "title": "Amiodarone versus Sotalol for Atrial Fibrillation",
+  "authors": "Bramah N. Singh, M.D., D.Sc., Steven N. Singh, M.D., Domenic J. Reda, Ph.D., X. Charlene Tang, M.D., Ph.D., Becky Lopez, R.N., Crystal L. Harris, Pharm.D., Ross D. Fletcher, M.D., Satish C. Sharma, M.D., J. Edwin Atwood, M.D., Alan K. Jacobson, M.D., H. Daniel Lewis, Jr., M.D., Dennis W. Raisch, Ph.D., Michael D. Ezekowitz, M.B., Ch.B., Ph.D.",
+  "year": "2005",
+  "journal": "New England Journal of Medicine",
+  "reference": "Singh, B. N., Singh, S. N., Reda, D. J., Tang, X. C., Lopez, B., Harris, C. L., Fletcher, R. D., Sharma, S. C., Atwood, J. E., Jacobson, A. K., Lewis, H. D. Jr., Raisch, D. W., & Ezekowitz, M. D. (2005). Amiodarone versus sotalol for atrial fibrillation. New England Journal of Medicine, 352(18), 1861-1872. https://doi.org/10.1056/NEJMoa041705",
+  "doi": "10.1056/NEJMoa041705",
+  "chunk_index": 30,
+  "total_chunks": 127,
+  "retrieved_at": "2025-07-24T21:57:47.296262"
+}

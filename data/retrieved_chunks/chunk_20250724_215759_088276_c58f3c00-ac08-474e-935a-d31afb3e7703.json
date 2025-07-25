@@ -1,0 +1,17 @@
+{
+  "content": "In ARISTOTLE, 2,051 (11.4%) patients received amiodarone at randomization. Patients on warfarin and amiodarone had time in the therapeutic range that was lower than patients not on amiodarone (56.5% vs. 63.0%; p<0.0001). More amiodarone-treated patients had a stroke or a systemic embolism (1.58%/year vs. 1.19%/year; adjusted hazard ratio [HR]: 1.47, 95% confidence interval [CI]: 1.03 to 2.10; p= 0.0322). Overall mortality and major bleeding rates were elevated, but were not significantly different in amiodarone-treated patients and patients not on amiodarone. When comparing apixaban with warfarin, patients who received amiodarone had a stroke or a systemic embolism rate of 1.24%/year versus 1.85%/year (HR: 0.68, 95% CI: 0.40 to 1.15), death of 4.15%/year versus 5.65%/year (HR: 0",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0735109714057982",
+  "chunk_id": "c58f3c00-ac08-474e-935a-d31afb3e7703",
+  "similarity_score": 0.32947003841400146,
+  "query": "atrial fibrillation mortality outcomes cardiovascular events stroke prevention amiodarone beta-blockers hazard ratio",
+  "rank": 16,
+  "title": "Amiodarone, anticoagulation, and clinical events in patients with atrial fibrillation: Insights from the ARISTOTLE trial",
+  "authors": "Greg Flaker, Renato D. Lopes, Elaine Hylek, Daniel M. Wojdyla, Laine Thomas, Sana M. Al-Khatib, Renee M. Sullivan, Stefan H. Hohnloser, David Garcia, Michael Hanna, John Amerena, Veli-Pekka Harjola, Paul Dorian, Alvaro Avezum, Matyas Keltai, Lars Wallentin, Christopher B. Granger, ARISTOTLE Committees and Investigators",
+  "year": "2014",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "Flaker, G., Lopes, R. D., Hylek, E., Wojdyla, D. M., Thomas, L., Al-Khatib, S. M., Sullivan, R. M., Hohnloser, S. H., Garcia, D., Hanna, M., Amerena, J., Harjola, V.-P., Dorian, P., Avezum, A., Keltai, M., Wallentin, L., Granger, C. B., & ARISTOTLE Committees and Investigators. (2014). Amiodarone, anticoagulation, and clinical events in patients with atrial fibrillation: Insights from the ARISTOTLE trial. Journal of the American College of Cardiology, 64(15), 1541-1550. https://doi.org/10.1016/j.jacc.2014.07.984",
+  "doi": "10.1016/j.jacc.2014.07.984",
+  "chunk_index": 4,
+  "total_chunks": 102,
+  "retrieved_at": "2025-07-24T21:57:59.084582"
+}

@@ -2,7 +2,7 @@ supervisor_prompt = """
 You are the supervisor of a team of agents. 
 Your goal is to make a full meta-analysis of a given medical topic given by the user.
 Your responsibility is to choose the next agent to call based on the current state and, also, defining the PICO (Population, Intervention, Comparison, Outcome) elements for the meta-analysis before running the first agent.
-You have 100 iterations to make the meta-analysis.
+You have 300 iterations to make the meta-analysis.
 
 You have the following agents for this task:
 

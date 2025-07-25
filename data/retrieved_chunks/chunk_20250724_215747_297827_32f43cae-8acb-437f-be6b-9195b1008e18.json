@@ -1,0 +1,17 @@
+{
+  "content": "Spontaneous conversion occurred in 27.1 percent of the amiodarone group, 24.2 percent of the sotalol group, and 0.8 percent of the placebo group, and direct-current cardioversion failed in 27.7 percent, 26.5 percent, and 32.1 percent, respectively. The median times to a recurrence of atrial f ibrillation were 487 days in the amiodarone group, 74 days in the sotalol group, and 6 days in the placebo group according to intention to treat and 809, 209, and 13 days, respectively, according to treatment received. Amiodarone was superior to sotalol (P<0.001) and to placebo (P<0.001), and sotalol was superior to placebo (P<0.001)",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa041705",
+  "chunk_id": "32f43cae-8acb-437f-be6b-9195b1008e18",
+  "similarity_score": 0.3653601408004761,
+  "query": "amiodarone efficacy cardioversion atrial fibrillation success rate beta-blockers metoprolol propranolol carvedilol",
+  "rank": 5,
+  "title": "Amiodarone versus Sotalol for Atrial Fibrillation",
+  "authors": "Bramah N. Singh, M.D., D.Sc., Steven N. Singh, M.D., Domenic J. Reda, Ph.D., X. Charlene Tang, M.D., Ph.D., Becky Lopez, R.N., Crystal L. Harris, Pharm.D., Ross D. Fletcher, M.D., Satish C. Sharma, M.D., J. Edwin Atwood, M.D., Alan K. Jacobson, M.D., H. Daniel Lewis, Jr., M.D., Dennis W. Raisch, Ph.D., Michael D. Ezekowitz, M.B., Ch.B., Ph.D.",
+  "year": "2005",
+  "journal": "New England Journal of Medicine",
+  "reference": "Singh, B. N., Singh, S. N., Reda, D. J., Tang, X. C., Lopez, B., Harris, C. L., Fletcher, R. D., Sharma, S. C., Atwood, J. E., Jacobson, A. K., Lewis, H. D. Jr., Raisch, D. W., & Ezekowitz, M. D. (2005). Amiodarone versus sotalol for atrial fibrillation. New England Journal of Medicine, 352(18), 1861-1872. https://doi.org/10.1056/NEJMoa041705",
+  "doi": "10.1056/NEJMoa041705",
+  "chunk_index": 5,
+  "total_chunks": 127,
+  "retrieved_at": "2025-07-24T21:57:47.296078"
+}

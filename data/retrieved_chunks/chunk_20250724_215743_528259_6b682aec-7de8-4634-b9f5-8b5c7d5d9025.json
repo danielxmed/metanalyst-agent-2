@@ -1,0 +1,17 @@
+{
+  "content": "1.   Download: Download high-res image (314KB)\n2.   Download: Download full-size image\nFig. 3. Adjusted hazard ratios (compared with amiodarone) for rate and rhythm control by treatment group.\nNo differences in achieving rate control were observed with beta blockers (aHR 1.09 [0.78–1.51]), CCBs (aHR 0.81 [0.55–1.19]) or cardioversion (aHR 1.59 [0.44–5.75]) versus amiodarone in the USA database, or beta blockers versus amiodarone in the UK database (aHR 0.82 [0.48–1.42]).",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0883944121002525",
+  "chunk_id": "6b682aec-7de8-4634-b9f5-8b5c7d5d9025",
+  "similarity_score": 0.4133812189102173,
+  "query": "amiodarone versus beta-blockers atrial fibrillation randomized controlled trial effectiveness rhythm control rate control",
+  "rank": 17,
+  "title": "Comparative effectiveness of common treatments for new-onset atrial fibrillation within the ICU: Accounting for physiological status",
+  "authors": "Jonathan P. Bedford, Alistair Johnson, Oliver Redfern, Stephen Gerry, James Doidge, David Harrison, Kim Rajappan, Kathryn Rowan, J. Duncan Young, Paul Mouncey, Peter J. Watkinson",
+  "year": "2022",
+  "journal": "Journal of Critical Care",
+  "reference": "Bedford, J. P., Johnson, A., Redfern, O., Gerry, S., Doidge, J., Harrison, D., Rajappan, K., Rowan, K., Young, J. D., Mouncey, P., & Watkinson, P. J. (2022). Comparative effectiveness of common treatments for new-onset atrial fibrillation within the ICU: Accounting for physiological status. Journal of Critical Care, 67, 149-156. https://doi.org/10.1016/j.jcrc.2021.12.002",
+  "doi": "10.1016/j.jcrc.2021.12.002",
+  "chunk_index": 37,
+  "total_chunks": 89,
+  "retrieved_at": "2025-07-24T21:57:43.521199"
+}

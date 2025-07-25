@@ -1,0 +1,17 @@
+{
+  "content": ". In patients with estimated risk of stroke and thromboembolic events of 2% or greater per year, anticoagulation with a vitamin K antagonist or direct oral anticoagulant reduces stroke risk by 60% to 80% compared with placebo. In most patients, a direct oral anticoagulant, such as apixaban, rivaroxaban, or edoxaban, is recommended over warfarin because of lower bleeding risks. Compared with anticoagulation, aspirin is associated with poorer efficacy and is not recommended for stroke prevention. Early rhythm control with antiarrhythmic drugs or catheter ablation to restore and maintain sinus rhythm is recommended by the 2023 ACC/AHA/ACCP/HRS Guideline for some patients with AF",
+  "source": "https://pubmed.ncbi.nlm.nih.gov/39680399/",
+  "chunk_id": "82d8caad-72f8-4286-a144-b893ec6667e9",
+  "similarity_score": 0.29211950302124023,
+  "query": "stroke prevention atrial fibrillation amiodarone beta-blockers thromboembolic events anticoagulation",
+  "rank": 33,
+  "title": "Atrial Fibrillation: A Review",
+  "authors": "Darae Ko, Mina K Chung, Peter T Evans, Emelia J Benjamin, Robert H Helm",
+  "year": "2025",
+  "journal": "JAMA",
+  "reference": "Ko, D., Chung, M. K., Evans, P. T., Benjamin, E. J., & Helm, R. H. (2025). Atrial fibrillation: A review. JAMA, 333(4), 329-342. https://doi.org/10.1001/jama.2024.22451",
+  "doi": "10.1001/jama.2024.22451",
+  "chunk_index": 12,
+  "total_chunks": 29,
+  "retrieved_at": "2025-07-24T22:33:38.168719"
+}

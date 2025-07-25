@@ -1,0 +1,17 @@
+{
+  "content": "The drugs used for rate control in atrial fibrillation and atrial flutter are mainly beta blockers (class II), non-dihydropyridine calcium channel blockers (class IV), and digoxin (class V) [16, 22]. All three types of drugs work by lowering the heart rate which might consequently prevent excessive tachycardia and limit symptoms. Lowering the heart rate might theoretically prevent the development of heart failure and tachycardia-mediated cardiomyopathy [18, 20, 60]. An observational study compared rate control with no rate control and showed lower risk of mortality in the patients receiving beta blockers (class II) or non-dihydropyridine calcium channel blockers (class IV). In contrast, the patients receiving digoxin (class V) seemed to have a higher risk of mortality",
+  "source": "https://systematicreviewsjournal.biomedcentral.com/articles/10.1186/s13643-017-0449-z",
+  "chunk_id": "770bf4f3-a174-49de-acb5-b80460b62cb9",
+  "similarity_score": 0.3341541290283203,
+  "query": "beta-blockers rate control atrial fibrillation metoprolol propranolol heart rate ventricular response",
+  "rank": 21,
+  "title": "The effects of rhythm control strategies versus rate control strategies for atrial fibrillation and atrial flutter: a protocol for a systematic review with meta-analysis and Trial Sequential Analysis",
+  "authors": "Naqash J. Sethi, Sanam Safi, Emil E. Nielsen, Joshua Feinberg, Christian Gluud, Janus C. Jakobsen",
+  "year": "2017",
+  "journal": "Systematic Reviews",
+  "reference": "Sethi, N. J., Safi, S., Nielsen, E. E., Feinberg, J., Gluud, C., & Jakobsen, J. C. (2017). The effects of rhythm control strategies versus rate control strategies for atrial fibrillation and atrial flutter: a protocol for a systematic review with meta-analysis and Trial Sequential Analysis. Systematic Reviews, 6, Article 47. https://doi.org/10.1186/s13643-017-0449-2",
+  "doi": "10.1186/s13643-017-0449-2",
+  "chunk_index": 40,
+  "total_chunks": 193,
+  "retrieved_at": "2025-07-24T22:33:19.809953"
+}

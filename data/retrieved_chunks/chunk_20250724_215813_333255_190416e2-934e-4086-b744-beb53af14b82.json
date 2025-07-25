@@ -1,0 +1,17 @@
+{
+  "content": "Atrial fibrillation is the most common arrhythmia requiring continuous therapy.1–4 Conversion to and maintenance of sinus rhythm remain the cornerstones of therapy, but the optimal long-term drug strategy is controversial. Unblinded trials found that rhythm control did not offer a survival advantage over rate control with anticoagulation,5–7 but they did not compare standardized drug regimens for maintaining sinus rhythm or regularly monitor for atrial fibrillation. Thus, if the best approach to maintaining sinus rhythm had been used, the outcomes might have differed.8",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa041705",
+  "chunk_id": "190416e2-934e-4086-b744-beb53af14b82",
+  "similarity_score": 0.3800281286239624,
+  "query": "atrial fibrillation recurrence rates maintenance therapy amiodarone beta-blockers long-term outcomes rhythm maintenance",
+  "rank": 25,
+  "title": "Amiodarone versus Sotalol for Atrial Fibrillation",
+  "authors": "Bramah N. Singh, M.D., D.Sc., Steven N. Singh, M.D., Domenic J. Reda, Ph.D., X. Charlene Tang, M.D., Ph.D., Becky Lopez, R.N., Crystal L. Harris, Pharm.D., Ross D. Fletcher, M.D., Satish C. Sharma, M.D., J. Edwin Atwood, M.D., Alan K. Jacobson, M.D., H. Daniel Lewis, Jr., M.D., Dennis W. Raisch, Ph.D., Michael D. Ezekowitz, M.B., Ch.B., Ph.D.",
+  "year": "2005",
+  "journal": "New England Journal of Medicine",
+  "reference": "Singh, B. N., Singh, S. N., Reda, D. J., Tang, X. C., Lopez, B., Harris, C. L., Fletcher, R. D., Sharma, S. C., Atwood, J. E., Jacobson, A. K., Lewis, H. D. Jr., Raisch, D. W., & Ezekowitz, M. D. (2005). Amiodarone versus sotalol for atrial fibrillation. New England Journal of Medicine, 352(18), 1861-1872. https://doi.org/10.1056/NEJMoa041705",
+  "doi": "10.1056/NEJMoa041705",
+  "chunk_index": 8,
+  "total_chunks": 127,
+  "retrieved_at": "2025-07-24T21:58:13.326264"
+}

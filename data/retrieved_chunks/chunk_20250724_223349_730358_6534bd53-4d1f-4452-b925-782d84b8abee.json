@@ -1,0 +1,17 @@
+{
+  "content": ". Furthermore, class IC antiarrhythmics (flecainide, propafenone) are contraindicated in patients with structural heart disease and class I and III antiarrhythmic drugs can prolong the QT interval and should be administered with caution or avoided in patients treated with QT-prolonging drugs (many ACDs and antiemetics). Amiodarone increases risk of skin and mucosal damage with radiation and presents multiple interactions, particularly with oral anticoagulants",
+  "source": "https://www.sciencedirect.com/science/article/pii/S1043661824000215",
+  "chunk_id": "6534bd53-4d1f-4452-b925-782d84b8abee",
+  "similarity_score": 0.27045077085494995,
+  "query": "amiodarone drug interactions contraindications beta-blockers digoxin warfarin CYP450 metabolism",
+  "rank": 45,
+  "title": "Drug-induced atrial fibrillation. A narrative review of a forgotten adverse effect",
+  "authors": "Juan Tamargo, Julián Villacastín, Ricardo Caballero, Eva Delpón",
+  "year": "2024",
+  "journal": "Pharmacological Research",
+  "reference": "Tamargo, J., Villacastín, J., Caballero, R., & Delpón, E. (2024). Drug-induced atrial fibrillation. A narrative review of a forgotten adverse effect. Pharmacological Research, 200, 107077. https://doi.org/10.1016/j.phrs.2023.107077",
+  "doi": "10.1016/j.phrs.2023.107077",
+  "chunk_index": 162,
+  "total_chunks": 369,
+  "retrieved_at": "2025-07-24T22:33:49.726052"
+}

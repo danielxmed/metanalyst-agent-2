@@ -1,0 +1,17 @@
+{
+  "content": "The reason for the suggestion of a higher rate of stroke and systemic embolism in patients who received amiodarone versus patients who did not receive amiodarone is unclear. There is no a priori reason for class III antiarrhythmic medications to be thrombogenic. In the AFFIRM study, amiodarone was the most frequently used medication in the rhythm control arm, and there were no differences in cerebrovascular events in patients assigned to the rhythm control arm compared with the rate control arm (15). The multichannel blocker, dronedarone, with class III properties and negligible effects on INR values, was associated with a reduction in stroke in patients with paroxysmal or persistent AF(28), but was also associated with an increased stroke risk in patients with permanent AF(29)",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0735109714057982",
+  "chunk_id": "2b1dcb11-0904-4443-8056-7d93a60d8454",
+  "similarity_score": 0.29091084003448486,
+  "query": "stroke prevention atrial fibrillation amiodarone beta-blockers thromboembolic events anticoagulation",
+  "rank": 35,
+  "title": "Amiodarone, anticoagulation, and clinical events in patients with atrial fibrillation: Insights from the ARISTOTLE trial",
+  "authors": "Greg Flaker, Renato D. Lopes, Elaine Hylek, Daniel M. Wojdyla, Laine Thomas, Sana M. Al-Khatib, Renee M. Sullivan, Stefan H. Hohnloser, David Garcia, Michael Hanna, John Amerena, Veli-Pekka Harjola, Paul Dorian, Alvaro Avezum, Matyas Keltai, Lars Wallentin, Christopher B. Granger, ARISTOTLE Committees and Investigators",
+  "year": "2014",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "Flaker, G., Lopes, R. D., Hylek, E., Wojdyla, D. M., Thomas, L., Al-Khatib, S. M., Sullivan, R. M., Hohnloser, S. H., Garcia, D., Hanna, M., Amerena, J., Harjola, V.-P., Dorian, P., Avezum, A., Keltai, M., Wallentin, L., Granger, C. B., & ARISTOTLE Committees and Investigators. (2014). Amiodarone, anticoagulation, and clinical events in patients with atrial fibrillation: Insights from the ARISTOTLE trial. Journal of the American College of Cardiology, 64(15), 1541-1550. https://doi.org/10.1016/j.jacc.2014.07.984",
+  "doi": "10.1016/j.jacc.2014.07.984",
+  "chunk_index": 61,
+  "total_chunks": 102,
+  "retrieved_at": "2025-07-24T22:33:38.168732"
+}

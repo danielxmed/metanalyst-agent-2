@@ -1,0 +1,17 @@
+{
+  "content": "Canadian Cardiovascular Society atrial fibrillation guidelines 2010: rate and rhythm management.Gillis AM, Verma A, Talajic M, Nattel S, Dorian P; CCS Atrial Fibrillation Guidelines Committee.Gillis AM, et al.Can J Cardiol. 2011 Jan-Feb;27(1):47-59. doi: 10.1016/j.cjca.2010.11.001.Can J Cardiol. 2011.PMID: 21329862  \nIntravenous amiodarone for conversion of atrial fibrillation: misled by meta-analysis?Slavik RS, Zed PJ.Slavik RS, et al.Pharmacotherapy. 2004 Jun;24(6):792-8. doi: 10.1592/phco.24.8.792.36065.Pharmacotherapy. 2004.PMID: 15222670 Review.",
+  "source": "https://pubmed.ncbi.nlm.nih.gov/26412606/",
+  "chunk_id": "dc173fa5-1970-4cb7-aadd-a53144616d5b",
+  "similarity_score": 0.38291633129119873,
+  "query": "atrial fibrillation guidelines ESC AHA CCS amiodarone beta-blockers recommendations clinical practice first-line therapy",
+  "rank": 9,
+  "title": "Mortality risk of long-term amiodarone therapy for atrial fibrillation patients without structural heart disease",
+  "authors": "Dingxin Qin, George Leef, Mian Bilal Alam, Rohit Rattan, Mohamad Bilal Munir, Divyang Patel, Furqan Khattak, Evan Adelstein, Sandeep K Jain, Samir Saba",
+  "year": "2015",
+  "journal": "Cardiology Journal",
+  "reference": "Qin, D., Leef, G., Alam, M. B., Rattan, R., Munir, M. B., Patel, D., Khattak, F., Adelstein, E., Jain, S. K., & Saba, S. (2015). Mortality risk of long-term amiodarone therapy for atrial fibrillation patients without structural heart disease. Cardiology Journal, 22(6), 622-629. https://doi.org/10.5603/CJ.a2015.0055",
+  "doi": "10.5603/CJ.a2015.0055",
+  "chunk_index": 12,
+  "total_chunks": 20,
+  "retrieved_at": "2025-07-24T21:58:06.270440"
+}

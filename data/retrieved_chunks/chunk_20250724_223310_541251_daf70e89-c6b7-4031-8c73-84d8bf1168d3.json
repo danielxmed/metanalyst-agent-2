@@ -1,0 +1,17 @@
+{
+  "content": "•Patients given combination amiodarone and beta-blockers had significantly lower risks of developing postoperative atrial fibrillation (POAF) in comparison to those given beta-blockers alone. \n•Combination amiodarone and beta-blockers saw no significant difference with beta-blockers alone in terms of treatment-related drug discontinuations (TRDD) or mortality. \n•Amiodarone alone saw no significant difference when compared with beta-blockers in terms of POAF prevention.",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0147956323002157",
+  "chunk_id": "daf70e89-c6b7-4031-8c73-84d8bf1168d3",
+  "similarity_score": 0.4441084861755371,
+  "query": "amiodarone versus beta-blockers atrial fibrillation randomized controlled trial efficacy comparison",
+  "rank": 8,
+  "title": "Combination prophylactic amiodarone with beta-blockers versus beta-blockers in atrial fibrillation after cardiac surgery: A systematic-review and meta-analysis",
+  "authors": "Edgar Theodore Polintan, Reejeen Monsalve, Rajiv Hans Menghrajani, Kym Yves Sirilan, Sandeep Samethadka Nayak, Peter Abdelmaseeh, Gabriel Patarroyo-Aponte, Kevin Bryan Lo, Sourbha S. Dani",
+  "year": "2023",
+  "journal": "Heart & Lung",
+  "reference": "Polintan, E. T., Monsalve, R., Menghrajani, R. H., Sirilan, K. Y., Nayak, S. S., Abdelmaseeh, P., Patarroyo-Aponte, G., Lo, K. B., & Dani, S. S. (2023). Combination prophylactic amiodarone with beta-blockers versus beta-blockers in atrial fibrillation after cardiac surgery: A systematic-review and meta-analysis. Heart & Lung, 62, 256-263. https://doi.org/10.1016/j.hrtlng.2023.08.005",
+  "doi": "10.1016/j.hrtlng.2023.08.005",
+  "chunk_index": 2,
+  "total_chunks": 31,
+  "retrieved_at": "2025-07-24T22:33:10.540968"
+}

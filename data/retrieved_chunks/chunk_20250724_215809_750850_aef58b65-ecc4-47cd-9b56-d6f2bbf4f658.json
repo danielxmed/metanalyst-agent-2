@@ -1,0 +1,17 @@
+{
+  "content": "The pharmacodynamics of amiodarone also are complex. Electrophysiological properties differ when amiodarone is used acutely (intravenous administration) and chronically (oral administration).7,9,10 Effects are more pronounced after chronic therapy. Amiodarone prolongs myocardial repolarization homogeneously (reducing dispersion of refractoriness, reentry, and proarrhythmia) via potassium channel blockade (class III effect). Chronic oral therapy prolongs refractory periods in most cardiac tissues. There is little or no prolongation after intravenous use except in AV nodal fibers",
+  "source": "https://jamanetwork.com/journals/jama/fullarticle/208819",
+  "chunk_id": "aef58b65-ecc4-47cd-9b56-d6f2bbf4f658",
+  "similarity_score": 0.256791353225708,
+  "query": "amiodarone pharmacokinetics drug interactions CYP450 beta-blockers metabolism clearance atrial fibrillation dosing",
+  "rank": 49,
+  "title": "Prescribing Amiodarone: An Evidence-Based Review of Clinical Indications",
+  "authors": "Patricia Vassallo, Richard G. Trohman",
+  "year": "2007",
+  "journal": "JAMA",
+  "reference": "Vassallo, P., & Trohman, R. G. (2007). Prescribing amiodarone: An evidence-based review of clinical indications. JAMA, 298(11), 1312-1322. https://doi.org/10.1001/jama.298.11.1312",
+  "doi": "10.1001/jama.298.11.1312",
+  "chunk_index": 44,
+  "total_chunks": 177,
+  "retrieved_at": "2025-07-24T21:58:09.739300"
+}

@@ -1,0 +1,17 @@
+{
+  "content": ". The accounting for atrial fibrillation included patients who had recurrent atrial fibrillation (as adjudicated by the clinical events committee) or who were readmitted to the hospital for recurrent atrial fibrillation during the interval periods. Overall, 11.5% of patients underwent direct-current cardioversion (9.2% in the rate-control group and 13.8% in the rhythm-control group). Of the direct-current cardioversions, 85% occurred during the index hospitalization. Among the patients who were discharged from the hospital with atrial fibrillation, direct-current cardioversion was performed during the index hospitalization in 3 of 26 patients (12%) in the rate-control group and in 7 of 17 patients (41%) in the rhythm-control group.",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa1602002",
+  "chunk_id": "da72d942-4cd5-4aef-8a99-00d5cc87cae2",
+  "similarity_score": 0.478263795375824,
+  "query": "amiodarone cardioversion rhythm control atrial fibrillation conversion rate success",
+  "rank": 9,
+  "title": "Rate control versus rhythm control for atrial fibrillation after cardiac surgery",
+  "authors": "A. Marc Gillinov, M.D., Emilia Bagiella, Ph.D., Alan J. Moskowitz, M.D., Jesse M. Raiten, M.D., Mark A. Groh, M.D., Michael E. Bowdish, M.D., Gorav Ailawadi, M.D., Katherine A. Kirkwood, M.S., Louis P. Perrault, M.D., Michael K. Parides, Ph.D., Robert L. Smith, II, M.D., John A. Kern, M.D., Gladys Dussault, R.N., Amy E. Hackmann, M.D., Neal O. Jeffries, Ph.D., Marissa A. Miller, D.V.M., Wendy C. Taddei-Peters, Ph.D., Eric A. Rose, M.D., Richard D. Weisel, M.D., Deborah L. Williams, B.S.N., M.P.H., Ralph F. Mangusan, R.N., Michael Argenziano, M.D., Ellen G. Moquete, R.N., Karen L. O’Sullivan, M.P.H., Michel Pellerin, M.D., Kinjal J. Shah, P.A., James S. Gammie, M.D., Mary Lou Mayer, B.S.N., Pierre Voisine, M.D., Annetine C. Gelijns, Ph.D., Patrick T. O’Gara, M.D., and Michael J. Mack, M.D.",
+  "year": "2016",
+  "journal": "The New England Journal of Medicine",
+  "reference": "Gillinov, A. M., Bagiella, E., Moskowitz, A. J., Raiten, J. M., Groh, M. A., Bowdish, M. E., Ailawadi, G., Kirkwood, K. A., Perrault, L. P., Parides, M. K., Smith, R. L. II, Kern, J. A., Dussault, G., Hackmann, A. E., Jeffries, N. O., Miller, M. A., Taddei-Peters, W. C., Rose, E. A., Weisel, R. D., Williams, D. L., Mangusan, R. F., Argenziano, M., Moquete, E. G., O’Sullivan, K. L., Pellerin, M., Shah, K. J., Gammie, J. S., Mayer, M. L., Voisine, P., Gelijns, A. C., O’Gara, P. T., & Mack, M. J. (2016). Rate control versus rhythm control for atrial fibrillation after cardiac surgery. *The New England Journal of Medicine, 374*(20), 1911-1921. https://doi.org/10.1056/NEJMoa1602002",
+  "doi": "10.1056/NEJMoa1602002",
+  "chunk_index": 122,
+  "total_chunks": 130,
+  "retrieved_at": "2025-07-24T22:33:15.199000"
+}

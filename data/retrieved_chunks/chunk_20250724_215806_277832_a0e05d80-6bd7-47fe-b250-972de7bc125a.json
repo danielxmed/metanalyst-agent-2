@@ -1,0 +1,17 @@
+{
+  "content": ". The guidelines also stress healthcare equity, advocating for the elimination of disparities related to sex, ethnicity, disability, and socioeconomic status. For diagnosis, electrocardiographic confirmation of clinical AF is essential, followed by risk stratification using the CHA₂DS₂-VASc score to guide anticoagulation therapy. Direct oral anticoagulants are preferred for most patients because of their good safety profile. Stroke prevention is prioritized, with rhythm control as first-line treatment for suitable patients. For those with persistent symptoms despite medications, catheter ablation is recommended. Rate control strategies, including beta-blockers, digoxin, and calcium channel blockers, are used to manage heart rate and symptoms",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0883944121002525",
+  "chunk_id": "a0e05d80-6bd7-47fe-b250-972de7bc125a",
+  "similarity_score": 0.37095391750335693,
+  "query": "atrial fibrillation guidelines ESC AHA CCS amiodarone beta-blockers recommendations clinical practice first-line therapy",
+  "rank": 21,
+  "title": "Comparative effectiveness of common treatments for new-onset atrial fibrillation within the ICU: Accounting for physiological status",
+  "authors": "Jonathan P. Bedford, Alistair Johnson, Oliver Redfern, Stephen Gerry, James Doidge, David Harrison, Kim Rajappan, Kathryn Rowan, J. Duncan Young, Paul Mouncey, Peter J. Watkinson",
+  "year": "2022",
+  "journal": "Journal of Critical Care",
+  "reference": "Bedford, J. P., Johnson, A., Redfern, O., Gerry, S., Doidge, J., Harrison, D., Rajappan, K., Rowan, K., Young, J. D., Mouncey, P., & Watkinson, P. J. (2022). Comparative effectiveness of common treatments for new-onset atrial fibrillation within the ICU: Accounting for physiological status. Journal of Critical Care, 67, 149-156. https://doi.org/10.1016/j.jcrc.2021.12.002",
+  "doi": "10.1016/j.jcrc.2021.12.002",
+  "chunk_index": 77,
+  "total_chunks": 89,
+  "retrieved_at": "2025-07-24T21:58:06.270518"
+}

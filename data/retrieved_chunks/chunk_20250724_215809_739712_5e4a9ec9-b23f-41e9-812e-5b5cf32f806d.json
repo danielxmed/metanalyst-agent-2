@@ -1,0 +1,17 @@
+{
+  "content": "Direct-oral anticoagulants (DOACs). Given the frequent association between amiodarone and DOACs in the context of AF, it is crucial to understand the interactions between these two drug classes. The absorption, metabolism, and elimination of DOACs rely on the P-gp transporter system and CYP3A4 enzymes. Amiodarone, as a moderate inhibitor of both P-gp and CYP3A4, can lead to increased serum levels of DOACs (varying by specific drug), potentially increasing the risk of bleeding [ 44 ]. The available data on the bleeding risk in AF patients receiving both amiodarone and DOACs remains insufficient and is sometimes even contradictory [ 44 – 46 ]",
+  "source": "https://pdfs.semanticscholar.org/eda9/09ebe34c58658072d9d3a1e6db13d581c6cd.pdf?skipShowableCheck=true",
+  "chunk_id": "5e4a9ec9-b23f-41e9-812e-5b5cf32f806d",
+  "similarity_score": 0.3512535095214844,
+  "query": "amiodarone pharmacokinetics drug interactions CYP450 beta-blockers metabolism clearance atrial fibrillation dosing",
+  "rank": 2,
+  "title": "Amiodarone Therapy: Updated Practical Insights",
+  "authors": "Sorodoc, V., Indrei, L., Dobroghii, C., Asaftei, A., Ceasovschih, A., Constantin, M., Lionte, C., Morărașu, B. C., Diaconu, A.-D., Sorodoc, L.",
+  "year": "2024",
+  "journal": "Journal of Clinical Medicine",
+  "reference": "Sorodoc, V., Indrei, L., Dobroghii, C., Asaftei, A., Ceasovschih, A., Constantin, M., Lionte, C., Morărașu, B. C., Diaconu, A.-D., & Sorodoc, L. (2024). Amiodarone therapy: Updated practical insights. Journal of Clinical Medicine, 13(20), 6094. https://doi.org/10.3390/jcm13206094",
+  "doi": "10.3390/jcm13206094",
+  "chunk_index": 48,
+  "total_chunks": 209,
+  "retrieved_at": "2025-07-24T21:58:09.739005"
+}

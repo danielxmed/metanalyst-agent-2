@@ -1,0 +1,17 @@
+{
+  "content": "Refer to cardiologist when amiodarone therapy is contemplated\n\nMake every effort to use less toxic alternatives (other antiarrhythmic drugs or ablation)\n\nDo not use in patients with symptomatic conduction system disease, significant liver disease, hyperthyroidism, or significant pulmonary disease\n\nPatients should wear sunscreen and limit sun exposure\n\nTo avoid adverse drug-drug interactions, patients taking amiodarone should consult their pharmacist/cardiologist whenever a new drug is prescribed",
+  "source": "https://jamanetwork.com/journals/jama/fullarticle/208819",
+  "chunk_id": "c5784924-4b2c-4695-89ca-34bb284060b4",
+  "similarity_score": 0.2542693018913269,
+  "query": "amiodarone pharmacokinetics drug interactions CYP450 beta-blockers metabolism clearance atrial fibrillation dosing",
+  "rank": 50,
+  "title": "Prescribing Amiodarone: An Evidence-Based Review of Clinical Indications",
+  "authors": "Patricia Vassallo, Richard G. Trohman",
+  "year": "2007",
+  "journal": "JAMA",
+  "reference": "Vassallo, P., & Trohman, R. G. (2007). Prescribing amiodarone: An evidence-based review of clinical indications. JAMA, 298(11), 1312-1322. https://doi.org/10.1001/jama.298.11.1312",
+  "doi": "10.1001/jama.298.11.1312",
+  "chunk_index": 52,
+  "total_chunks": 177,
+  "retrieved_at": "2025-07-24T21:58:09.739304"
+}

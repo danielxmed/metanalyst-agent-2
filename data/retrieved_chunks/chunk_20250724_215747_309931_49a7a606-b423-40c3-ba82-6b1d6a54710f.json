@@ -1,0 +1,17 @@
+{
+  "content": "| Kanji (2012)48 | 348 | Atrial fibrillation | Multiple/combination∗ DCCV, n=64 Amiodarone, n=103 Sotalol, n=2 | Cardioversion to SR at 24 and 72 h HR control not reported (no definition of successful HR control) | DCCV: 37/64 (50%) Amiodarone: 66/103 (24 h), 90/103 (72 h) Sotalol: 2/2 (24 h) Patients may have had multiple/combinations of interventions. Cardioversion success rates may reflect combinations of agents. |\n| Delle Karth (2005)49 | 17 | Atrial fibrillation Atrial flutter | Ibutilide | Cardioversion to SR (within 60 min) | 14/17 (82.4%) |\n| Mayr (2004)50 | 131∗∗ 70∗∗ | SVT | Amiodarone | Cardioversion to SR HR at 12, 24, and 48 h (no definition of successful HR control) | 52/70 (74.3%) 137 (26) (0 h) 91 (17) (12 h) 91 (18) (24 h) 86 (16) (48 h) |",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0007091221007443",
+  "chunk_id": "49a7a606-b423-40c3-ba82-6b1d6a54710f",
+  "similarity_score": 0.31769633293151855,
+  "query": "amiodarone efficacy cardioversion atrial fibrillation success rate beta-blockers metoprolol propranolol carvedilol",
+  "rank": 37,
+  "title": "Management of new onset atrial fibrillation in critically unwell adult patients: a systematic review and narrative synthesis",
+  "authors": "Brian W. Johnston, Chung S. Chean, Rui Duarte, Ruaraidh Hill, Bronagh Blackwood, Danny F. McAuley, Ingeborg D. Welters",
+  "year": "2022",
+  "journal": "British Journal of Anaesthesia",
+  "reference": "Johnston, B. W., Chean, C. S., Duarte, R., Hill, R., Blackwood, B., McAuley, D. F., & Welters, I. D. (2022). Management of new onset atrial fibrillation in critically unwell adult patients: A systematic review and narrative synthesis. British Journal of Anaesthesia, 128(5), 759-771. https://doi.org/10.1016/j.bja.2022.02.022",
+  "doi": "10.1016/j.bja.2022.02.022",
+  "chunk_index": 44,
+  "total_chunks": 128,
+  "retrieved_at": "2025-07-24T21:57:47.296293"
+}

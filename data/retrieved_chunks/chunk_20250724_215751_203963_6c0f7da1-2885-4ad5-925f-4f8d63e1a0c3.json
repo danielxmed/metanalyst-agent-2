@@ -1,0 +1,17 @@
+{
+  "content": "Amiodarone is an effective antiarrhythmic medication frequently used in practice for both ventricular and atrial arrhythmias. Though classified as a class III antiarrhythmic, it affects all phases of the cardiac action potential. However, the drug has several side effects, including thyroid abnormalities, pulmonary fibrosis, and transaminitis, for which routine monitoring is recommended. It also interacts with several medications, such as warfarin, simvastatin, and atorvastatin, and many HIV antiretroviral medications. Given the common use of this medication in medical practice, it is vital that clinicians understand the indications, contraindications, dosing, side effects, and interactions of this medication",
+  "source": "https://pubmed.ncbi.nlm.nih.gov/32166725/",
+  "chunk_id": "6c0f7da1-2885-4ad5-925f-4f8d63e1a0c3",
+  "similarity_score": 0.5097759962081909,
+  "query": "amiodarone adverse effects side effects safety profile atrial fibrillation thyroid pulmonary hepatic toxicity",
+  "rank": 8,
+  "title": "Amiodarone: A Comprehensive Guide for Clinicians",
+  "authors": "David Hamilton Sr, Shuktika Nandkeolyar, Howard Lan, Pooja Desai, Jonathan Evans, Christopher Hauschild, Dimpa Choksi, Islam Abudayyeh, Tahmeed Contractor, Anthony Hilliard",
+  "year": "2020",
+  "journal": "American Journal of Cardiovascular Drugs",
+  "reference": "Hamilton, D. Sr., Nandkeolyar, S., Lan, H., Desai, P., Evans, J., Hauschild, C., Choksi, D., Abudayyeh, I., Contractor, T., & Hilliard, A. (2020). Amiodarone: A comprehensive guide for clinicians. American Journal of Cardiovascular Drugs, 20(6), 549-558. https://doi.org/10.1007/s40256-020-00401-5",
+  "doi": "10.1007/s40256-020-00401-5",
+  "chunk_index": 9,
+  "total_chunks": 22,
+  "retrieved_at": "2025-07-24T21:57:51.201448"
+}

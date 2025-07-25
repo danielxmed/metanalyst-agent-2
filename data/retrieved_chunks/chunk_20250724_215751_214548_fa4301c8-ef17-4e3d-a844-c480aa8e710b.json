@@ -1,0 +1,17 @@
+{
+  "content": "The findings of this meta-analysis indicate that antiarrhythmic drug therapy with low dose amiodarone should not be considered innocuous or free of adverse effects. At the mean daily doses used in the trials we analyzed, amiodarone exposure was associated with an increased likelihood of adverse events compared with placebo in several organ systems, including thyroid, skin, ocular and neurologic. In addition, there was an increased likelihood of bradycardia and drug discontinuation in patients treated with amiodarone. Our results show that pulmonary toxicity, a potentially serious side effect of amiodarone, was not statistically more likely in the drug treatment group",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0735109797002209",
+  "chunk_id": "fa4301c8-ef17-4e3d-a844-c480aa8e710b",
+  "similarity_score": 0.4382956624031067,
+  "query": "amiodarone adverse effects side effects safety profile atrial fibrillation thyroid pulmonary hepatic toxicity",
+  "rank": 32,
+  "title": "Adverse Effects of Low Dose Amiodarone: A Meta-Analysis",
+  "authors": "Vicken R Vorperian, Thomas C Havighurst, Stephen Miller, Craig T January",
+  "year": "1997",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "Vorperian, V. R., Havighurst, T. C., Miller, S., & January, C. T. (1997). Adverse effects of low dose amiodarone: A meta-analysis. Journal of the American College of Cardiology, 30(3), 791-798.",
+  "doi": "Not available",
+  "chunk_index": 52,
+  "total_chunks": 90,
+  "retrieved_at": "2025-07-24T21:57:51.201583"
+}

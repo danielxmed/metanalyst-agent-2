@@ -1,0 +1,17 @@
+{
+  "content": "Conclusions\nAmiodarone and sotalol are equally efficacious in converting atrial fibrillation to sinus rhythm. Amiodarone is superior for maintaining sinus rhythm, but both drugs have similar efficacy in patients with ischemic heart disease. Sustained sinus rhythm is associated with an improved quality of life and improved exercise performance.",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa041705",
+  "chunk_id": "9f42540e-4429-4cf9-961b-4423aba52d09",
+  "similarity_score": 0.3419703245162964,
+  "query": "amiodarone efficacy cardioversion atrial fibrillation success rate beta-blockers metoprolol propranolol carvedilol",
+  "rank": 12,
+  "title": "Amiodarone versus Sotalol for Atrial Fibrillation",
+  "authors": "Bramah N. Singh, M.D., D.Sc., Steven N. Singh, M.D., Domenic J. Reda, Ph.D., X. Charlene Tang, M.D., Ph.D., Becky Lopez, R.N., Crystal L. Harris, Pharm.D., Ross D. Fletcher, M.D., Satish C. Sharma, M.D., J. Edwin Atwood, M.D., Alan K. Jacobson, M.D., H. Daniel Lewis, Jr., M.D., Dennis W. Raisch, Ph.D., Michael D. Ezekowitz, M.B., Ch.B., Ph.D.",
+  "year": "2005",
+  "journal": "New England Journal of Medicine",
+  "reference": "Singh, B. N., Singh, S. N., Reda, D. J., Tang, X. C., Lopez, B., Harris, C. L., Fletcher, R. D., Sharma, S. C., Atwood, J. E., Jacobson, A. K., Lewis, H. D. Jr., Raisch, D. W., & Ezekowitz, M. D. (2005). Amiodarone versus sotalol for atrial fibrillation. New England Journal of Medicine, 352(18), 1861-1872. https://doi.org/10.1056/NEJMoa041705",
+  "doi": "10.1056/NEJMoa041705",
+  "chunk_index": 7,
+  "total_chunks": 127,
+  "retrieved_at": "2025-07-24T21:57:47.296131"
+}

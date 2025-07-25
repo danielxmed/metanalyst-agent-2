@@ -1,0 +1,17 @@
+{
+  "content": "AF indicates atrial fibrillation; COR, Class of Recommendation; IV, intravenous; LA, left atrial; LMWH, low-molecular-weight heparin; LOE, Level of Evidence; N/A, not applicable; RVR, rapid ventricular response; and TEE, transesophageal echocardiography.\n5.1 Prevention of Thromboembolism\nClass I\n1.\nFor patients with AF or atrial flutter of 48 hours’ duration or longer, or when the duration of AF is unknown, anticoagulation with warfarin (INR 2.0 to 3.0) is recommended for at least 3 weeks before and 4 weeks after cardioversion, regardless of the CHA 2 DS 2-VASc score and the method (electrical or pharmacological) used to restore sinus rhythm (110–113). (Level of Evidence: B)\n2.",
+  "source": "https://www.jacc.org/doi/10.1016/j.jacc.2014.03.021",
+  "chunk_id": "83d465e3-fa53-4772-b49c-3576974fb3c7",
+  "similarity_score": 0.27969247102737427,
+  "query": "stroke prevention atrial fibrillation amiodarone beta-blockers thromboembolic events anticoagulation",
+  "rank": 48,
+  "title": "2014 AHA/ACC/HRS guideline for the management of patients with atrial fibrillation: Executive summary: A report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines and the Heart Rhythm Society",
+  "authors": "Craig T. January, L. Samuel Wann, Joseph S. Alpert, Hugh Calkins, Joaquin E. Cigarroa, Joseph C. Cleveland, Jamie B. Conti, Patrick T. Ellinor, Michael D. Ezekowitz, Michael E. Field, Katherine T. Murray, Ralph L. Sacco, William G. Stevenson, Patrick J. Tchou, Cynthia M. Tracy, Clyde W. Yancy",
+  "year": "2014",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "January, C. T., Wann, L. S., Alpert, J. S., Calkins, H., Cigarroa, J. E., Cleveland, J. C., Conti, J. B., Ellinor, P. T., Ezekowitz, M. D., Field, M. E., Murray, K. T., Sacco, R. L., Stevenson, W. G., Tchou, P. J., Tracy, C. M., & Yancy, C. W. (2014). 2014 AHA/ACC/HRS guideline for the management of patients with atrial fibrillation: Executive summary: A report of the American College of Cardiology/American Heart Association Task Force on Practice Guidelines and the Heart Rhythm Society. *Journal of the American College of Cardiology*, *64*(21), 2246-2280. https://doi.org/10.1016/j.jacc.2014.03.021",
+  "doi": "10.1016/j.jacc.2014.03.021",
+  "chunk_index": 88,
+  "total_chunks": 278,
+  "retrieved_at": "2025-07-24T22:33:38.168802"
+}

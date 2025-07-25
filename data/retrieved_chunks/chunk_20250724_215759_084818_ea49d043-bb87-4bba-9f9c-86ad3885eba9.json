@@ -1,0 +1,17 @@
+{
+  "content": "Atrial fibrillation developed in 67 of 142 patients assigned to placebo (47% incidence) and in 56 of 158 (35%) patients assigned to amiodarone (p = 0.01), representing a 26% relative risk reduction. The percentages of patients free of atrial fibrillation during hospitalization by treatment group are shown in Figure 1, and confirm a significant reduction in atrial fibrillation in the amiodarone group. Analysis of the Kaplan-Meier curve demonstrates that the drug effect appears to occur in the first few days of treatment. The first episode of atrial fibrillation occurred on postoperative day 2.9 ± 1.2 in the group receiving amiodarone and on day 2.3 ± 1.3 in the placebo group (p < 0.01)",
+  "source": "https://www.jacc.org/doi/10.1016/S0735-1097%2899%2900212-0",
+  "chunk_id": "ea49d043-bb87-4bba-9f9c-86ad3885eba9",
+  "similarity_score": 0.3568471074104309,
+  "query": "atrial fibrillation mortality outcomes cardiovascular events stroke prevention amiodarone beta-blockers hazard ratio",
+  "rank": 3,
+  "title": "Intravenous amiodarone for the prevention of atrial fibrillation after open heart surgery: the amiodarone reduction in coronary heart (ARCH) trial",
+  "authors": "Thomas Guarnieri, Shellee Nolan, Sidney O Gottlieb, Audrey Dudek, David R Lowry",
+  "year": "2000",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "Guarnieri, T., Nolan, S., Gottlieb, S. O., Dudek, A., & Lowry, D. R. (2000). Intravenous amiodarone for the prevention of atrial fibrillation after open heart surgery: The amiodarone reduction in coronary heart (ARCH) trial. Journal of the American College of Cardiology, 34(2), 313-320.",
+  "doi": "Not available",
+  "chunk_index": 22,
+  "total_chunks": 66,
+  "retrieved_at": "2025-07-24T21:57:59.084494"
+}

@@ -1,0 +1,17 @@
+{
+  "content": "Materials and Methods: We built a Markov chain Monte Carlo model using the Korean Health Insurance Review & Assessment Service database. Drugs for rate control and rhythm control in AF were analyzed. Cost-effective therapies were selected using a cost-effectiveness ratio, calculated by net cost and quality-adjusted life years (QALY). Results: In the National Health Insurance Service data, 268149 patients with prevalent AF (age ≥18 years) were identified between January 1, 2013 and December 31, 2015. Among them, 212459 and 55690 patients were taking drugs for rate and rhythm control, respectively. Atenolol cost $714/QALY. Among the rate-control medications, the cost of propranolol was lowest at $487/QALY, while that of carvedilol was highest at $1363/QALY",
+  "source": "https://pdfs.semanticscholar.org/798d/e6aa4ebeb8836fdffb27a98ab4195330069c.pdf",
+  "chunk_id": "742daaed-5d56-4912-823f-1441aace89ac",
+  "similarity_score": 0.2764456272125244,
+  "query": "cost effectiveness economic analysis amiodarone beta-blockers atrial fibrillation healthcare costs hospitalization reduction",
+  "rank": 20,
+  "title": "Cost-effectiveness of rate- and rhythm-control drugs for treating atrial fibrillation in Korea",
+  "authors": "Min Kim, Woojin Kim, Changsoo Kim, Boyoung Joung",
+  "year": "2019",
+  "journal": "Yonsei Medical Journal",
+  "reference": "Kim, M., Kim, W., Kim, C., & Joung, B. (2019). Cost-effectiveness of rate- and rhythm-control drugs for treating atrial fibrillation in Korea. Yonsei Medical Journal, 60(12), 1157-1163. https://doi.org/10.3349/ymj.2019.60.12.1157",
+  "doi": "10.3349/ymj.2019.60.12.1157",
+  "chunk_index": 4,
+  "total_chunks": 62,
+  "retrieved_at": "2025-07-24T21:58:16.915799"
+}

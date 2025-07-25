@@ -1,0 +1,17 @@
+{
+  "content": "Patients in the rhythm-control group were treated with amiodarone with or without a rate-slowing agent. If atrial fibrillation persisted for 24 to 48 hours after randomization, direct-current cardioversion was recommended. The recommended dose of amiodarone was the equivalent of 3 g of oral amiodarone before hospital discharge, with a maintenance dose of 200 mg per day or less if direct-current cardioversion was successful. It was recommended that the use of amiodarone be extended for 60 days, but discontinuation was allowed for amiodarone-related adverse events (e.g., symptomatic bradycardia, a corrected QT interval of >480 msec, or neuropathy).",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa1602002",
+  "chunk_id": "c1764a8f-56b8-40f9-a832-25516a87f76b",
+  "similarity_score": 0.46999847888946533,
+  "query": "amiodarone cardioversion rhythm control atrial fibrillation conversion rate success",
+  "rank": 12,
+  "title": "Rate control versus rhythm control for atrial fibrillation after cardiac surgery",
+  "authors": "A. Marc Gillinov, M.D., Emilia Bagiella, Ph.D., Alan J. Moskowitz, M.D., Jesse M. Raiten, M.D., Mark A. Groh, M.D., Michael E. Bowdish, M.D., Gorav Ailawadi, M.D., Katherine A. Kirkwood, M.S., Louis P. Perrault, M.D., Michael K. Parides, Ph.D., Robert L. Smith, II, M.D., John A. Kern, M.D., Gladys Dussault, R.N., Amy E. Hackmann, M.D., Neal O. Jeffries, Ph.D., Marissa A. Miller, D.V.M., Wendy C. Taddei-Peters, Ph.D., Eric A. Rose, M.D., Richard D. Weisel, M.D., Deborah L. Williams, B.S.N., M.P.H., Ralph F. Mangusan, R.N., Michael Argenziano, M.D., Ellen G. Moquete, R.N., Karen L. O’Sullivan, M.P.H., Michel Pellerin, M.D., Kinjal J. Shah, P.A., James S. Gammie, M.D., Mary Lou Mayer, B.S.N., Pierre Voisine, M.D., Annetine C. Gelijns, Ph.D., Patrick T. O’Gara, M.D., and Michael J. Mack, M.D.",
+  "year": "2016",
+  "journal": "The New England Journal of Medicine",
+  "reference": "Gillinov, A. M., Bagiella, E., Moskowitz, A. J., Raiten, J. M., Groh, M. A., Bowdish, M. E., Ailawadi, G., Kirkwood, K. A., Perrault, L. P., Parides, M. K., Smith, R. L. II, Kern, J. A., Dussault, G., Hackmann, A. E., Jeffries, N. O., Miller, M. A., Taddei-Peters, W. C., Rose, E. A., Weisel, R. D., Williams, D. L., Mangusan, R. F., Argenziano, M., Moquete, E. G., O’Sullivan, K. L., Pellerin, M., Shah, K. J., Gammie, J. S., Mayer, M. L., Voisine, P., Gelijns, A. C., O’Gara, P. T., & Mack, M. J. (2016). Rate control versus rhythm control for atrial fibrillation after cardiac surgery. *The New England Journal of Medicine, 374*(20), 1911-1921. https://doi.org/10.1056/NEJMoa1602002",
+  "doi": "10.1056/NEJMoa1602002",
+  "chunk_index": 20,
+  "total_chunks": 130,
+  "retrieved_at": "2025-07-24T22:33:15.199024"
+}

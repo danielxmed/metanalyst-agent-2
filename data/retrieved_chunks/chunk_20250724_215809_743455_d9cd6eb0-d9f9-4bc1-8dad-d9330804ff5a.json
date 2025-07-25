@@ -1,0 +1,17 @@
+{
+  "content": "2.2. Pharmacodynamics Drug–channel interactions. The relative blocking potency of amiodarone is high for re-polarizing K + channels, moderate for alpha and beta-adrenergic receptors (non-competitive blockade, with this effect being additive to the competitive receptor inhibition by beta-blockers), and low for Na + channels (at high stimulation frequencies) and L-type (slow) Ca + channels . \nElectrophysiological effects . Amiodarone slows the heart rate, thereby prolonging the RR interval, lengthens the PR and QT intervals, while typically leaving the QRS duration unchanged. The drug prolongs the P-A, A-H, and H-V conduction times, as well as the J. Clin. Med. 2024 , 13 , 6094 3 of 27",
+  "source": "https://pdfs.semanticscholar.org/eda9/09ebe34c58658072d9d3a1e6db13d581c6cd.pdf?skipShowableCheck=true",
+  "chunk_id": "d9cd6eb0-d9f9-4bc1-8dad-d9330804ff5a",
+  "similarity_score": 0.297601580619812,
+  "query": "amiodarone pharmacokinetics drug interactions CYP450 beta-blockers metabolism clearance atrial fibrillation dosing",
+  "rank": 19,
+  "title": "Amiodarone Therapy: Updated Practical Insights",
+  "authors": "Sorodoc, V., Indrei, L., Dobroghii, C., Asaftei, A., Ceasovschih, A., Constantin, M., Lionte, C., Morărasu, B. C., Diaconu, A.-D., Sorodoc, L.",
+  "year": "2024",
+  "journal": "Journal of Clinical Medicine",
+  "reference": "Sorodoc, V., Indrei, L., Dobroghii, C., Asaftei, A., Ceasovschih, A., Constantin, M., Lionte, C., Morărasu, B. C., Diaconu, A.-D., & Sorodoc, L. (2024). Amiodarone therapy: Updated practical insights. Journal of Clinical Medicine, 13(20), 6094. https://doi.org/10.3390/jcm13206094",
+  "doi": "10.3390/jcm13206094",
+  "chunk_index": 18,
+  "total_chunks": 209,
+  "retrieved_at": "2025-07-24T21:58:09.739141"
+}

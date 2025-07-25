@@ -1,0 +1,17 @@
+{
+  "content": "Atrial fibrillation is not a benign disease. It may cause symptoms, heart failure, and stroke.1 Recent studies have established that morbidity and mortality are comparable between rate- and rhythm-control therapy.2-5 However, long-term maintenance of sinus rhythm provides a variety of benefits, including an improvement in cardiac function and quality of life.6-8 Therefore, maintenance of sinus rhythm is still the treatment of choice in symptomatic patients, those with tachycardiomyopathy, and when adequate rate control cannot be achieved.3 However, success of pharmacological rhythm control is rather limited.3,9 With a serial antiarrhythmic drug approach, no more than 40% of the patients are in sinus rhythm after a year and only about 30% after 4 years",
+  "source": "https://jamanetwork.com/journals/jama/fullarticle/182743",
+  "chunk_id": "6eb01e07-8218-4331-9a54-c5658acef26f",
+  "similarity_score": 0.3628056049346924,
+  "query": "atrial fibrillation recurrence rates maintenance therapy amiodarone beta-blockers long-term outcomes rhythm maintenance",
+  "rank": 42,
+  "title": "Continuous vs Episodic Prophylactic Treatment With Amiodarone for the Prevention of Atrial Fibrillation: A Randomized Trial",
+  "authors": "Sheba Ahmed, MD; Michiel Rienstra, MD, PhD; Harry J. G. M. Crijns, MD, PhD; Thera P. Links, MD, PhD; Ans C. P. Wiesfeld, MD, PhD; Hans L. Hillege, MD, PhD; Hans A. Bosker, MD, PhD; Dirk J. A. Lok, MD; Dirk J. Van Veldhuisen, MD, PhD; Isabelle C. Van Gelder, MD, PhD",
+  "year": "2008",
+  "journal": "JAMA",
+  "reference": "Ahmed, S., Rienstra, M., Crijns, H. J. G. M., Links, T. P., Wiesfeld, A. C. P., Hillege, H. L., Bosker, H. A., Lok, D. J. A., Van Veldhuisen, D. J., & Van Gelder, I. C. (2008). Continuous vs episodic prophylactic treatment with amiodarone for the prevention of atrial fibrillation: A randomized trial. JAMA, 300(15), 1784–1792. https://doi.org/10.1001/jama.300.15.1784",
+  "doi": "10.1001/jama.300.15.1784",
+  "chunk_index": 21,
+  "total_chunks": 106,
+  "retrieved_at": "2025-07-24T21:58:13.326370"
+}

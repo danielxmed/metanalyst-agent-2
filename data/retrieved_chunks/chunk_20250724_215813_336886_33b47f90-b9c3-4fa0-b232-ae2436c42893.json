@@ -1,0 +1,17 @@
+{
+  "content": "Long-term therapy is aimed at alleviating symptoms and reducing risk from preexcited AF. The most effective therapy is catheter ablation. Even the low annual incidence of sudden death (0.15% to 0.39% over 3- to 10-year follow-up) supports liberal ablation indications.56 Ablation eliminates atrial fibrillation in more than 90% of patients.56,61 Amiodarone is generally not warranted because of its adverse-effect profile. Exceptions might include patients with structural cardiac disease who are not ablation candidates or when other available options have been exhausted.56 Amiodarone is an ACC/AHA/ESC class IIb recommendation in hemodynamically stable patients with AF involving accessory pathway conduction (evidence level B).6",
+  "source": "https://jamanetwork.com/journals/jama/fullarticle/208819",
+  "chunk_id": "33b47f90-b9c3-4fa0-b232-ae2436c42893",
+  "similarity_score": 0.36656761169433594,
+  "query": "atrial fibrillation recurrence rates maintenance therapy amiodarone beta-blockers long-term outcomes rhythm maintenance",
+  "rank": 38,
+  "title": "Prescribing Amiodarone: An Evidence-Based Review of Clinical Indications",
+  "authors": "Patricia Vassallo, Richard G. Trohman",
+  "year": "2007",
+  "journal": "JAMA",
+  "reference": "Vassallo, P., & Trohman, R. G. (2007). Prescribing amiodarone: An evidence-based review of clinical indications. JAMA, 298(11), 1312-1322. https://doi.org/10.1001/jama.298.11.1312",
+  "doi": "10.1001/jama.298.11.1312",
+  "chunk_index": 75,
+  "total_chunks": 177,
+  "retrieved_at": "2025-07-24T21:58:13.326345"
+}

@@ -1,0 +1,17 @@
+{
+  "content": "Cost Data\nData on hospitalization costs for the study population were provided through the use of a commercially available decision-support information software system (Model 204, Transition Systems, Boston), operated by the University of Michigan Budget Office. These data represent the sum of variable direct costs, fixed direct costs, and indirect costs. Professional-service fees were not included in these costs. Cost data were collected for 114 patients (58 given placebo and 56 given amiodarone) who underwent surgery at the University of Michigan and were hospitalized no more than 21 days from the day of surgery. The cost of amiodarone therapy was estimated at $2.61 per tablet.28\nStatistical Analysis",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJM199712183372501",
+  "chunk_id": "79eb38df-295f-4e1e-897b-291eb3aa9979",
+  "similarity_score": 0.3550405502319336,
+  "query": "cost effectiveness economic analysis amiodarone beta-blockers atrial fibrillation healthcare costs hospitalization reduction",
+  "rank": 4,
+  "title": "Preoperative amiodarone as prophylaxis against atrial fibrillation after heart surgery",
+  "authors": "Emile G. Daoud, M.D., S. Adam Strickberger, M.D., K. Ching Man, D.O., Rajiva Goyal, M.D., G. Michael Deeb, M.D., Steven F. Bolling, M.D., Francis D. Pagani, M.D., Cynthia Bitar, R.N., Marc D. Meissner, M.D., and Fred Morady, M.D.",
+  "year": "1997",
+  "journal": "The New England Journal of Medicine",
+  "reference": "Daoud, E. G., Strickberger, S. A., Man, K. C., Goyal, R., Deeb, G. M., Bolling, S. F., Pagani, F. D., Bitar, C., Meissner, M. D., & Morady, F. (1997). Preoperative amiodarone as prophylaxis against atrial fibrillation after heart surgery. *The New England Journal of Medicine, 337*(25), 1785-1791. https://doi.org/10.1056/NEJM199712183372501",
+  "doi": "10.1056/NEJM199712183372501",
+  "chunk_index": 16,
+  "total_chunks": 97,
+  "retrieved_at": "2025-07-24T21:58:16.915707"
+}

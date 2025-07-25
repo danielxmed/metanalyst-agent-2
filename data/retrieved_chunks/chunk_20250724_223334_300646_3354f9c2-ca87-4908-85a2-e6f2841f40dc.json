@@ -1,0 +1,17 @@
+{
+  "content": "| Receiving amiodarone | 28 (29) | 55 (57) |\nAtrial Fibrillation Classification and Amiodarone Use at 12 Months.\nDiscussion\nIn the CASTLE-HTx trial, we found that catheter ablation of atrial fibrillation plus medical therapy in patients with end-stage heart failure who were referred for transplantation evaluation was associated with a lower likelihood of a composite of death from any cause, implantation of a left ventricular assist device, or urgent heart transplantation than medical therapy alone. Fewer deaths from any cause and implantations of a left ventricular assist device occurred among the patients who received catheter ablation than among those who received medical therapy alone. There were few, minor adverse events related to catheter ablation.",
+  "source": "https://www.nejm.org/doi/full/10.1056/NEJMoa2306037",
+  "chunk_id": "3354f9c2-ca87-4908-85a2-e6f2841f40dc",
+  "similarity_score": 0.29800474643707275,
+  "query": "atrial fibrillation hospitalization quality of life amiodarone beta-blockers rehospitalization emergency department",
+  "rank": 41,
+  "title": "Catheter Ablation in End-Stage Heart Failure with Atrial Fibrillation",
+  "authors": "Christian Sohns, M.D., Henrik Fox, M.D., Nassir F. Marrouche, M.D., Harry J.G.M. Crijns, M.D., Ph.D., Angelika Costard-Jaeckle, M.D., Leonard Bergau, M.D., Gerhard Hindricks, M.D., Nikolaos Dagres, M.D., Samuel Sossalla, M.D., Rene Schramm, M.D., Ph.D., Thomas Fink, M.D., Mustapha El Hamriti, M.D., Maximilian Moersdorf, M.D., Vanessa Sciacca, M.D., Frank Konietschke, Ph.D., Volker Rudolph, M.D., Jan Gummert, M.D., Jan G.P. Tijssen, Ph.D., Philipp Sommer, M.D., for the CASTLE HTx Investigators",
+  "year": "2023",
+  "journal": "New England Journal of Medicine",
+  "reference": "Sohns, C., Fox, H. M., Marrouche, N. F., Crijns, H. J. G. M., Costard-Jaeckle, A., Bergau, L., Hindricks, G., Dagres, N., Sossalla, S., Schramm, R., Fink, T., El Hamriti, M., Moersdorf, M., Sciacca, V., Konietschke, F., Rudolph, V., Gummert, J., Tijssen, J. G. P., & Sommer, P. (2023). Catheter ablation in end-stage heart failure with atrial fibrillation. *New England Journal of Medicine, 389*(15), 1380-1389. https://doi.org/10.1056/NEJMoa2306037",
+  "doi": "10.1056/NEJMoa2306037",
+  "chunk_index": 57,
+  "total_chunks": 134,
+  "retrieved_at": "2025-07-24T22:33:34.290284"
+}

@@ -1,0 +1,17 @@
+{
+  "content": ".92 A trend toward higher mortality was found with amiodarone compared with nonamiodarone drugs, and a significantly higher mortality was found with amiodarone compared with the subset of patients receiving Class 1C agents. Overall, these analyses suggest that acute and chronic therapy with flecainide does not confer a mortality benefit or risk compared with controls in patients with AF, but that flecainide may confer a lower mortality risk compared with sotalol and amiodarone. Furthermore, there appears to be a higher risk of death with chronic amiodarone therapy compared with controls.",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0002914920300060",
+  "chunk_id": "d2da7a49-711c-4ef7-8b8e-66d0475e357e",
+  "similarity_score": 0.343211829662323,
+  "query": "amiodarone beta-blockers mortality death cardiovascular outcomes hazard ratio odds ratio",
+  "rank": 42,
+  "title": "Use of flecainide for the treatment of atrial fibrillation",
+  "authors": "Debra S. Echt, Jeremy N. Ruskin",
+  "year": "2020",
+  "journal": "The American Journal of Cardiology",
+  "reference": "Echt, D. S., & Ruskin, J. N. (2020). Use of flecainide for the treatment of atrial fibrillation. The American Journal of Cardiology, 125(7), 1123-1133. https://doi.org/10.1016/j.amjcard.2019.12.041",
+  "doi": "10.1016/j.amjcard.2019.12.041",
+  "chunk_index": 57,
+  "total_chunks": 143,
+  "retrieved_at": "2025-07-24T22:33:23.680897"
+}

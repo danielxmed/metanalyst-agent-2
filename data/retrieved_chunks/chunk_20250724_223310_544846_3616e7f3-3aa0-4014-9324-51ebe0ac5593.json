@@ -1,0 +1,17 @@
+{
+  "content": "Methods\nWe searched Medline and EMBASE databases, as well as the Cochrane Controlled Trials Register for randomized trials on recent-onset AF comparing amiodarone to placebo or class Ic drugs. Data were combined according to a fixed effect model. The primary end point was the rate of conversion at 24 h. To study time-dependency of the drugs, efficacy at 1 to 2 h, 3 to 5 h, 6 to 8 h, and at 24 h was analyzed.\nResults",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0735109702027055",
+  "chunk_id": "3616e7f3-3aa0-4014-9324-51ebe0ac5593",
+  "similarity_score": 0.3710439205169678,
+  "query": "amiodarone versus beta-blockers atrial fibrillation randomized controlled trial efficacy comparison",
+  "rank": 31,
+  "title": "Amiodarone versus placebo and class ic drugs for cardioversion of recent-onset atrial fibrillation: a meta-analysis",
+  "authors": "Philippe Chevalier, Alexis Durand-Dubief, Haran Burri, Michel Cucherat, Gilbert Kirkorian, Paul Touboul",
+  "year": "2003",
+  "journal": "Journal of the American College of Cardiology",
+  "reference": "Chevalier, P., Durand-Dubief, A., Burri, H., Cucherat, M., Kirkorian, G., & Touboul, P. (2003). Amiodarone versus placebo and class Ic drugs for cardioversion of recent-onset atrial fibrillation: A meta-analysis. Journal of the American College of Cardiology, 41(2), 255-262.",
+  "doi": "Not available",
+  "chunk_index": 2,
+  "total_chunks": 77,
+  "retrieved_at": "2025-07-24T22:33:10.541107"
+}

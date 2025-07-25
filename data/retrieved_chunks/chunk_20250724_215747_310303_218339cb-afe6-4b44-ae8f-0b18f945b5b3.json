@@ -1,0 +1,17 @@
+{
+  "content": "Landiolol, metoprolol, and esmolol were investigated in observational studies. Okajima and colleagues45 reported a significant difference in rates of cardioversion to SR at 24 h between landiolol and control (27/39 [69.7%] vs 8/22 [36.4%], P=0.05). Balik and colleagues40 compared cardioversion rates at 24 h between amiodarone, propafenone, and metoprolol. Cardioversion rates for metoprolol were 12/13 (92.3%) compared with 111/151 (73.5%) for amiodarone and 32/36 (88.9%) for propafenone.40 Milojevic and colleagues37 reported a significant difference in rates of cardioversion to SR between esmolol and amiodarone (44/100 [44%] vs 36/200 [18%], P<0.01). However, Milojevic and colleagues37 reported cardioversion to SR at shortly after commencement of treatment at 40 min.",
+  "source": "https://www.sciencedirect.com/science/article/pii/S0007091221007443",
+  "chunk_id": "218339cb-afe6-4b44-ae8f-0b18f945b5b3",
+  "similarity_score": 0.3170510530471802,
+  "query": "amiodarone efficacy cardioversion atrial fibrillation success rate beta-blockers metoprolol propranolol carvedilol",
+  "rank": 38,
+  "title": "Management of new onset atrial fibrillation in critically unwell adult patients: a systematic review and narrative synthesis",
+  "authors": "Brian W. Johnston, Chung S. Chean, Rui Duarte, Ruaraidh Hill, Bronagh Blackwood, Danny F. McAuley, Ingeborg D. Welters",
+  "year": "2022",
+  "journal": "British Journal of Anaesthesia",
+  "reference": "Johnston, B. W., Chean, C. S., Duarte, R., Hill, R., Blackwood, B., McAuley, D. F., & Welters, I. D. (2022). Management of new onset atrial fibrillation in critically unwell adult patients: A systematic review and narrative synthesis. British Journal of Anaesthesia, 128(5), 759-771. https://doi.org/10.1016/j.bja.2022.02.022",
+  "doi": "10.1016/j.bja.2022.02.022",
+  "chunk_index": 62,
+  "total_chunks": 128,
+  "retrieved_at": "2025-07-24T21:57:47.296298"
+}

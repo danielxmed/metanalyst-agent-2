@@ -1,0 +1,17 @@
+{
+  "content": "Many antiarrhythmic drugs carry the cardiovascular side effects of bradycardia, hypotension, and Torsades de Pointes. As a result, many are contraindicated in patients who have ischemic or structural heart disease, heart failure, or other arrhythmias such as Wolff-Parkinson-White. Furthermore, numerous antiarrhythmic drugs inhibit the CYP system, creating potential adverse reactions with other medications that may require routine hepatic and renal monitoring [15,16]. Multiple studies have reported the risk of major complications in ablation being anywhere from 2% to 5%, with the most notable complications including tamponade, pneumothorax, and pulmonary vein stenosis requiring further intervention [17,18]",
+  "source": "https://pdfs.semanticscholar.org/5ed1/8f7ac0b1ff47e72bb1648fbcde7b296ba977.pdf",
+  "chunk_id": "04dc6d56-69dd-415e-b083-4145cd6c8f66",
+  "similarity_score": 0.3023286461830139,
+  "query": "beta-blockers safety profile atrial fibrillation heart failure contraindications bradycardia hypotension",
+  "rank": 3,
+  "title": "Ablation Compared to Pharmacological Treatment for the Reduction of Atrial Fibrillation Recurrence: A Meta-Analysis",
+  "authors": "Alan D. Kaye, Nicholas T. Jones, Tyler Tran, Munira E. Khaled, Sean Tilmon, Michael Lieu, Joseph Drinkard, Yair Lopez Torres, Edwin Herron, Shahab Ahmadzadeh, Sahar Shekoohi, Giustino Varrassi",
+  "year": "2024",
+  "journal": "Cureus",
+  "reference": "Kaye, A. D., Jones, N. T., Tran, T., Khaled, M. E., Tilmon, S., Lieu, M., Drinkard, J., Lopez Torres, Y., Herron, E., Ahmadzadeh, S., Shekoohi, S., & Varrassi, G. (2024). Ablation compared to pharmacological treatment for the reduction of atrial fibrillation recurrence: A meta-analysis. Cureus, 16(6), e62728. https://doi.org/10.7759/cureus.62728",
+  "doi": "10.7759/cureus.62728",
+  "chunk_index": 13,
+  "total_chunks": 45,
+  "retrieved_at": "2025-07-24T21:57:55.188455"
+}

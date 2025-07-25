@@ -1,0 +1,17 @@
+{
+  "content": "Alongside its well-established benefits, amiodarone carries a distinct profile of side effects, particularly with chronic use.9 These include multi-organ toxicities affecting the lungs, liver, thyroid gland, skin, and eyes, as well as proarrhythmic side effects.10 Additionally, its inhibition of various cytochrome P450 (CYP450) enzymes and P-glycoprotein contributes to significant drug interaction risks.8,10",
+  "source": "https://www.sciencedirect.com/science/article/abs/pii/S0002934325000427",
+  "chunk_id": "388e5113-fb87-4964-92d0-4755f1a37301",
+  "similarity_score": 0.46806633472442627,
+  "query": "amiodarone adverse effects side effects safety profile atrial fibrillation thyroid pulmonary hepatic toxicity",
+  "rank": 23,
+  "title": "The safety profile of amiodarone among older adults (age ≥75 years): A pharmacovigilance study from the FDA data",
+  "authors": "Tsahi T. Lerman, Chen Gadot, Noam Greenberg, Boris Kruchin, Ori Rahat, Kirill Buturlin, Aharon Erez, Gustavo Goldenberg, Alon Barsheshet, Gregory Golovchiner, Katia Orvin, Alon Eisen, Amos Levi, Ran Kornowski, Tamar Fishman, Adam Goldman, Lior Seluk, Karen Scandrett, David A. Nace, Daniel E. Forman, Boris Fishman",
+  "year": "2025",
+  "journal": "The American Journal of Medicine",
+  "reference": "Lerman, T. T., Gadot, C., Greenberg, N., Kruchin, B., Rahat, O., Buturlin, K., Erez, A., Goldenberg, G., Barsheshet, A., Golovchiner, G., Orvin, K., Eisen, A., Levi, A., Kornowski, R., Fishman, T., Goldman, A., Seluk, L., Scandrett, K., Nace, D. A., Forman, D. E., ... Fishman, B. (2025). The safety profile of amiodarone among older adults (age ≥75 years): A pharmacovigilance study from the FDA data. The American Journal of Medicine, 138(5), 819-826. https://doi.org/10.1016/j.amjmed.2025.01.012",
+  "doi": "10.1016/j.amjmed.2025.01.012",
+  "chunk_index": 7,
+  "total_chunks": 37,
+  "retrieved_at": "2025-07-24T21:57:51.201537"
+}

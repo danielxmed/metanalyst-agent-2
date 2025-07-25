@@ -1,0 +1,17 @@
+{
+  "content": "Several studies have shown the efficacy of amiodarone in the management of atrial fibrillation in critically ill patients, but have not explained this potentially serious complication.6 Although amiodarone rapidly terminates atrial fibrillation, the long metabolism time of amiodarone may contribute to the poor prognosis. Serum amiodarone accumulation frequently impacts the thyroid, lungs, and liver",
+  "source": "https://www.sciencedirect.com/science/article/pii/S2173572725000086",
+  "chunk_id": "78b45d28-8d51-4d5b-ba1f-4ff8458ac8aa",
+  "similarity_score": 0.4363946318626404,
+  "query": "amiodarone adverse effects side effects safety profile atrial fibrillation thyroid pulmonary hepatic toxicity",
+  "rank": 33,
+  "title": "Intravenous beta-blockers versus amiodarone on in-hospital mortality and safety profile in adult septic patients",
+  "authors": "Guoge Huang, Haizhong Li, Feier Song, Chunmei Zhang, Mengling Jian, Chunyang Huang, Yingqin Zhang, Bei Hu, Wenqiang Jiang",
+  "year": "2025",
+  "journal": "Medicina Intensiva",
+  "reference": "Huang, G., Li, H., Song, F., Zhang, C., Jian, M., Huang, C., Zhang, Y., Hu, B., & Jiang, W. (2025). Intravenous beta-blockers versus amiodarone on in-hospital mortality and safety profile in adult septic patients. Medicina Intensiva, 49(7), 502143. https://doi.org/10.1016/j.medin.2025.502143",
+  "doi": "10.1016/j.medin.2025.502143",
+  "chunk_index": 44,
+  "total_chunks": 74,
+  "retrieved_at": "2025-07-24T21:57:51.201588"
+}

@@ -1,0 +1,17 @@
+{
+  "content": ". With increasing pressure on healthcare budgets, it is critical to select the high-value AADs by considering both the clinical efficacy and costs in order to furnish policymakers with evidence-based recommendations for the rational allocation of healthcare resources. However, studies based on the Chinese population are limited and may not align with the current dynamic adjustment mechanism of the national reimbursement drug list. This study aims to develop a cost-effectiveness model based on the ATHENA clinical trial to estimate the lifetime cost-effectiveness of dronedarone, in addition to standard of care, compare to amiodarone and sotalol for the treatment of paroxysmal or persistent AF in China from the health system perspective.",
+  "source": "https://www.sciencedirect.com/science/article/abs/pii/S0149291825002176",
+  "chunk_id": "54775022-bae5-48b1-a70e-1c7540b8b5d8",
+  "similarity_score": 0.34365934133529663,
+  "query": "cost effectiveness economic analysis amiodarone beta-blockers atrial fibrillation healthcare costs hospitalization reduction",
+  "rank": 5,
+  "title": "Cost-Effectiveness of Antiarrhythmic Drugs for Treating Paroxysmal or Persistent Atrial Fibrillation in China: An Economic Evaluation",
+  "authors": "Fuming Li, Dunming Xiao, Yu Xia, Junling Weng, Shimeng Liu, Yingyao Chen",
+  "year": "2025",
+  "journal": "Clinical Therapeutics",
+  "reference": "Li, F., Xiao, D., Xia, Y., Weng, J., Liu, S., & Chen, Y. (2025). Cost-effectiveness of antiarrhythmic drugs for treating paroxysmal or persistent atrial fibrillation in China: An economic evaluation. Clinical Therapeutics. https://doi.org/Not available",
+  "doi": "Not available",
+  "chunk_index": 12,
+  "total_chunks": 30,
+  "retrieved_at": "2025-07-24T21:58:16.915713"
+}

@@ -1,0 +1,17 @@
+{
+  "content": "Device-detected atrial fibrillation and risk for stroke: An analysis of >10,000 patients from the SOS AF project (Stroke preventiOn Strategies based on Atrial Fibrillation information from implanted devices). Eur. Heart J. 2014, 35, 508–516. [CrossRef] [PubMed] 154. Kirchhof, P.; Toennis, T.; Goette, A.; Camm, A.J.; Diener, H.C.; Becher, N.; Bertaglia, E.; Blomstrom Lundqvist, C.; Borlich, M.; Brandes, A.; et al. Anticoagulation with Edoxaban in Patients with Atrial High-Rate Episodes. N. Engl. J. Med. 2023, 389, 1167–1179. [CrossRef] 155. Healey, J.S.; Lopes, R.D.; Granger, C.B.; Alings, M.; Rivard, L.; McIntyre, W.F.; Atar, D.; Birnie, D.H.; Boriani, G.; Camm, A.J.; et al.",
+  "source": "https://pdfs.semanticscholar.org/a631/1102150c6556d8026ebfa73623992458f3d5.pdf",
+  "chunk_id": "01465b21-1b82-4ce1-a5a0-b633bc7fc605",
+  "similarity_score": 0.28658008575439453,
+  "query": "stroke prevention atrial fibrillation amiodarone beta-blockers thromboembolic events anticoagulation",
+  "rank": 40,
+  "title": "Advances in Atrial Fibrillation Management: A Guide for General Internists",
+  "authors": "Pham, H. N., Ibrahim, R., Truong, H. H., Sainbayar, E., Tran, V. N., Abdelnabi, M., Kanaan, C., & Sridharan, A.",
+  "year": "2024",
+  "journal": "Journal of Clinical Medicine",
+  "reference": "Pham, H. N., Ibrahim, R., Truong, H. H., Sainbayar, E., Tran, V. N., Abdelnabi, M., Kanaan, C., & Sridharan, A. (2024). Advances in atrial fibrillation management: A guide for general internists. Journal of Clinical Medicine, 13, 7846. https://doi.org/10.3390/jcm13247846",
+  "doi": "10.3390/jcm13247846",
+  "chunk_index": 164,
+  "total_chunks": 173,
+  "retrieved_at": "2025-07-24T22:33:38.168759"
+}

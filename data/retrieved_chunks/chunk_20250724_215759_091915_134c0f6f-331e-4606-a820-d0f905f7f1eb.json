@@ -1,0 +1,17 @@
+{
+  "content": "Conclusions:\nAmiodarone use was associated with significantly increased stroke and systemic embolism risk and a lower time in the therapeutic range when used with warfarin. Apixaban consistently reduced the rate of stroke and systemic embolism, death, and major bleeding compared with warfarin in amiodarone-treated patients and patients who were not on amiodarone.\nAmiodarone is the most effective antiarrhythmic drug for the prevention of atrial fibrillation (AF) (1–3), and it is recommended for patients with frequent, symptomatic AF recurrences, especially in the presence of structural heart disease (4). However, several potential drawbacks may limit the use of amiodarone in patients with AF.",
+  "source": "https://www.jacc.org/doi/10.1016/j.jacc.2014.07.967",
+  "chunk_id": "134c0f6f-331e-4606-a820-d0f905f7f1eb",
+  "similarity_score": 0.3148406744003296,
+  "query": "atrial fibrillation mortality outcomes cardiovascular events stroke prevention amiodarone beta-blockers hazard ratio",
+  "rank": 31,
+  "title": "Amiodarone, Anticoagulation, and Clinical Events in Patients With Atrial Fibrillation: Insights From the ARISTOTLE Trial",
+  "authors": "Greg Flaker, Renato D. Lopes, Elaine Hylek, Daniel M. Wojdyla, Laine Thomas, Sana M. Al-Khatib, Renee M. Sullivan, Stefan H. Hohnloser, David Garcia, Michael Hanna, John Amerena, Veli-Pekka Harjola, Paul Dorian, Alvaro Avezum, Matyas Keltai, Lars Wallentin, Christopher B. Granger",
+  "year": "2014",
+  "journal": "JACC",
+  "reference": "Flaker, G., Lopes, R. D., Hylek, E., Wojdyla, D. M., Thomas, L., Al-Khatib, S. M., Sullivan, R. M., Hohnloser, S. H., Garcia, D., Hanna, M., Amerena, J., Harjola, V.-P., Dorian, P., Avezum, A., Keltai, M., Wallentin, L., & Granger, C. B. (2014). Amiodarone, anticoagulation, and clinical events in patients with atrial fibrillation: Insights from the ARISTOTLE trial. JACC, 64(15), 556-575.",
+  "doi": "Not available",
+  "chunk_index": 9,
+  "total_chunks": 111,
+  "retrieved_at": "2025-07-24T21:57:59.084675"
+}
