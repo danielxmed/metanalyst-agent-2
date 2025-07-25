@@ -172,11 +172,11 @@ class MetaAnalysisCLI:
                     if 'current_iteration' in agent_data:
                         self.current_stats['iteration'] = agent_data['current_iteration']
                     
-                    if 'urls_to_process' in agent_data:
-                        self.current_stats['urls_to_process'] = len(agent_data['urls_to_process'])
+                    if 'urls_to_process_count' in agent_data:
+                        self.current_stats['urls_to_process'] = agent_data['urls_to_process_count']
                     
-                    if 'processed_urls' in agent_data:
-                        self.current_stats['urls_processed'] = len(agent_data['processed_urls'])
+                    if 'processed_urls_count' in agent_data:
+                        self.current_stats['urls_processed'] = agent_data['processed_urls_count']
                     
                     if 'retrieved_chunks_count' in agent_data:
                         self.current_stats['chunks_retrieved'] = agent_data['retrieved_chunks_count']
@@ -209,9 +209,9 @@ class MetaAnalysisCLI:
         if agent_name == "supervisor":
             if not agent_data.get('meta_analysis_pico'):
                 self.current_stats['current_step'] = "Defining PICO criteria"
-            elif not agent_data.get('urls_to_process') and not agent_data.get('processed_urls'):
+            elif agent_data.get('urls_to_process_count', 0) == 0 and agent_data.get('processed_urls_count', 0) == 0:
                 self.current_stats['current_step'] = "Starting bibliographic search"
-            elif agent_data.get('urls_to_process'):
+            elif agent_data.get('urls_to_process_count', 0) > 0:
                 self.current_stats['current_step'] = "Coordinating URL processing"
             elif agent_data.get('retrieved_chunks_count', 0) > 0:
                 self.current_stats['current_step'] = "Supervising data analysis"
@@ -245,8 +245,8 @@ class MetaAnalysisCLI:
         initial_state = MetaAnalysisState(
             user_request=query,
             messages=[{"role": "user", "content": query}],
-            urls_to_process=[],
-            processed_urls=[],
+            urls_to_process_count=0,
+            processed_urls_count=0,
             current_iteration=1,
             remaining_steps=10,
             meta_analysis_pico={},
@@ -254,10 +254,8 @@ class MetaAnalysisCLI:
             previous_retrieve_queries=[],
             retrieved_chunks_count=0,
             analysis_results=[],
-            current_draft="",
             current_draft_iteration=1,
-            reviewer_feedbacks=[],
-            final_draft=""
+            reviewer_feedbacks=[]
         )
         
         # Layout for real-time display

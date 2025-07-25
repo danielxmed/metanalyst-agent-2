@@ -4,6 +4,9 @@ from langgraph.prebuilt import InjectedState
 from langchain_core.messages import HumanMessage, ToolMessage
 from typing import Annotated
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.url_manager import add_urls_to_process, get_urls_to_process_count, get_processed_urls_count
 
 
 @tool
@@ -125,31 +128,19 @@ def literature_search(
                 if "url" in result:
                     urls.append(result["url"])
         
-        # Filter out URLs already queued or processed
-        existing_to_process = state.get("urls_to_process", [])
-        processed_urls = state.get("processed_urls", [])
-        urls = [u for u in urls if u not in existing_to_process and u not in processed_urls]
-        
-        # CONTROLE RIGOROSO: Para se já tem URLs suficientes
-        if len(existing_to_process) >= 100:
-            search_message = ToolMessage(
-                content=f"🛑 Search stopped: Already have {len(existing_to_process)} URLs queued (limit: 100).\n"
-                       f"Query attempted: '{query}' (not executed)",
-                tool_call_id=tool_call_id
-            )
-            # Let the custom reducer handle the query limiting
-            return Command(
-                update={
-                    "previous_search_queries": [query],  # Add single query, let reducer handle limiting
-                    "messages": [search_message]
-                }
-            )
+        # Add URLs to JSON file with deduplication
+        urls_added = add_urls_to_process(urls)
 
+        # Get current counts for reporting
+        current_to_process_count = get_urls_to_process_count()
+        current_processed_count = get_processed_urls_count()
+        
         # Create informative message about the search performed
         search_message = ToolMessage(
             content=f"🔍 Researcher Agent executed scientific literature search.\n"
                    f"Query: '{query}'\n" 
                    f"URLs found: {len(urls)}\n"
+                   f"URLs added (after deduplication): {urls_added}\n"
                    f"Domains searched: medical journals and scientific databases",
             tool_call_id=tool_call_id
         )
@@ -158,22 +149,17 @@ def literature_search(
         from langchain_core.messages import AIMessage
         friendly_message = AIMessage(
             content=f"Completei a busca por literatura científica sobre '{query}'. "
-                   f"Encontrei {len(urls)} novos artigos relevantes. "
-                   f"Total de URLs no estado: {len(existing_to_process + urls)}. "
+                   f"Encontrei {len(urls)} artigos e adicionei {urls_added} novos URLs únicos. "
+                   f"Total de URLs para processar: {current_to_process_count}. "
                    f"Pronto para processar os artigos ou fazer mais buscas se necessário.",
             name="researcher"
         )
         
-        # Return command to update state
-        updated_urls = existing_to_process + urls
-        # Limita rigorosamente a 100 URLs
-        if len(updated_urls) > 100:
-            updated_urls = updated_urls[:100]
-            
-        # Let the custom reducer handle the query limiting
+        # Return command to update state with counters
         return Command(
             update={
-                "urls_to_process": updated_urls,  # maintain existing + new unique URLs
+                "urls_to_process_count": current_to_process_count,
+                "processed_urls_count": current_processed_count,
                 "previous_search_queries": [query],  # Add single query, let reducer handle limiting
                 "messages": [search_message, friendly_message]  # ToolMessage + AIMessage amigável
             }

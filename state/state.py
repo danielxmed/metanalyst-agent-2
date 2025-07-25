@@ -4,21 +4,6 @@ from langgraph.graph.message import add_messages
 from langchain_core.messages import AnyMessage
 import operator
 
-def replace_urls_to_process_limited(left: List[str], right: List[str]) -> List[str]:
-    """
-    Custom reducer for urls_to_process that replaces the list instead of adding to it,
-    but limits to the last 100 URLs to prevent state overload.
-    This allows the processor to remove processed URLs from the list.
-    """
-    # If right (new value) is provided, use it; otherwise keep left (current value)
-    result = right if right is not None else left
-    
-    # Limit to last 100 URLs
-    if result and len(result) > 100:
-        result = result[-100:]
-    
-    return result if result is not None else []
-
 def add_limited_queries(left: List[str], right: List[str]) -> List[str]:
     """
     Custom reducer for query lists that maintains only the last 20 queries.
@@ -34,22 +19,6 @@ def add_limited_queries(left: List[str], right: List[str]) -> List[str]:
     
     # Keep only the last 20 queries
     return combined[-20:] if len(combined) > 20 else combined
-
-def add_limited_urls(left: List[str], right: List[str]) -> List[str]:
-    """
-    Custom reducer for URL lists that maintains only the last 100 URLs.
-    This prevents the state from being overloaded with too many URLs.
-    """
-    if right is None:
-        return left if left is not None else []
-    
-    if left is None:
-        combined = right
-    else:
-        combined = left + right
-    
-    # Keep only the last 100 URLs
-    return combined[-100:] if len(combined) > 100 else combined
 
 class MetaAnalysisState(TypedDict):
     """
@@ -81,11 +50,11 @@ class MetaAnalysisState(TypedDict):
     # Retrieve queries already performed
     previous_retrieve_queries: Annotated[List[str], add_limited_queries]
 
-    # URLs to be processed
-    urls_to_process: Annotated[List[str], replace_urls_to_process_limited]
+    # Number of URLs currently queued for processing (stored in data/urls/urls_to_process.json)
+    urls_to_process_count: int
 
-    # URLs already processed
-    processed_urls: Annotated[List[str], add_limited_urls]
+    # Number of URLs already processed (stored in data/urls/processed_urls.json)
+    processed_urls_count: int
 
     # Number of chunks retrieved and stored in data/retrieved_chunks directory
     retrieved_chunks_count: int

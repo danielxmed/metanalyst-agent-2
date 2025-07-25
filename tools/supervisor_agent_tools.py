@@ -90,18 +90,16 @@ def clean_context(
 ) -> Command:
     """
     Cleans the context by:
-    1. Clearing urls_to_process and processed_urls lists, leaving only a timestamp placeholder
-    2. Summarizing all messages into a single organized message to reduce context size
+    1. Summarizing all messages into a single organized message to reduce context size
+    2. Optionally clearing URL files if requested (URLs are now stored in files, not in state)
     
-    This tool helps prevent context overload by cleaning accumulated URLs and condensing message history.
+    This tool helps prevent context overload by condensing message history.
+    Note: URLs are now stored in files (data/urls/) so they don't contribute to context overload.
     """
     
     try:
         # Get current timestamp
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        
-        # Create placeholder messages for URL lists
-        url_placeholder = f"Cleaned at {current_time}"
         
         # Get current messages for summarization
         current_messages = state.get("messages", [])
@@ -143,7 +141,7 @@ Return ONLY the summary text, no additional formatting or comments.
 """.strip()
 
             # Use LLM to create summary
-            summary_model = ChatOpenAI(model="gpt-4,1", temperature=0.1)
+            summary_model = ChatOpenAI(model="gpt-4o-mini", temperature=0.1)
             summary_response = summary_model.invoke(summary_prompt)
             
             # Extract summary content
@@ -152,7 +150,7 @@ Return ONLY the summary text, no additional formatting or comments.
             # Create the summary message
             from langchain_core.messages import AIMessage
             summary_message = AIMessage(
-                content=f"📋 CONVERSATION SUMMARY (Generated at {current_time}):\n\n{summary_content}",
+                content=f"CONVERSATION SUMMARY (Generated at {current_time}):\n\n{summary_content}",
                 name="supervisor"
             )
             
@@ -165,7 +163,8 @@ Return ONLY the summary text, no additional formatting or comments.
         tool_message = {
             "role": "tool",
             "content": f"Context cleaned successfully at {current_time}. "
-                      f"URLs cleared and messages {'summarized' if len(current_messages) > 10 else 'maintained'}.",
+                      f"Messages {'summarized' if len(current_messages) > 10 else 'maintained'}. "
+                      f"URLs remain stored in files (data/urls/).",
             "name": "clean_context",
             "tool_call_id": tool_call_id,
         }
@@ -173,9 +172,10 @@ Return ONLY the summary text, no additional formatting or comments.
         # Create informative AI message
         from langchain_core.messages import AIMessage
         info_message = AIMessage(
-            content=f"🧹 Context cleanup completed! Cleared URL lists and "
-                   f"{'condensed {len(current_messages)} messages into a summary' if len(current_messages) > 10 else f'maintained {len(current_messages)} messages'}. "
-                   f"This should help reduce context overload and improve performance.",
+            content=f"Context cleanup completed! "
+                   f"{'Condensed {len(current_messages)} messages into a summary' if len(current_messages) > 10 else f'Maintained {len(current_messages)} messages'}. "
+                   f"This should help reduce context overload and improve performance. "
+                   f"URLs remain stored in files and don't contribute to context size.",
             name="supervisor"
         )
         
@@ -185,10 +185,8 @@ Return ONLY the summary text, no additional formatting or comments.
         # Add tool message and info message to the summarized messages
         updated_messages = add_messages(summarized_messages, [tool_message, info_message])
         
-        # Update state with cleaned data
+        # Update state with cleaned messages only (URLs remain in files)
         new_state_for_update.update({
-            "urls_to_process": [url_placeholder],
-            "processed_urls": [url_placeholder], 
             "messages": updated_messages
         })
         

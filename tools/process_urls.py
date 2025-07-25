@@ -18,6 +18,13 @@ import hashlib
 import concurrent.futures
 import shutil
 from pydantic import BaseModel, Field
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.url_manager import (
+    load_urls_to_process, move_urls_to_processed, 
+    get_urls_to_process_count, get_processed_urls_count,
+    get_batch_urls_to_process
+)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -370,14 +377,17 @@ def process_urls(
         except Exception as e:
             logger.warning(f"Error cleaning up temporary directories: {str(e)}")
 
-    # Main execution logic
-    urls_to_process = state.get("urls_to_process", [])
-    processed_urls_existing = state.get("processed_urls", [])
+    # Main execution logic - load URLs from JSON files
+    urls_to_process = load_urls_to_process()
     
     if not urls_to_process:
         logger.info("No URLs to process")
+        current_to_process_count = get_urls_to_process_count()
+        current_processed_count = get_processed_urls_count()
         return Command(
             update={
+                "urls_to_process_count": current_to_process_count,
+                "processed_urls_count": current_processed_count,
                 "messages": [
                     ToolMessage(
                         content="No URLs to process",
@@ -387,21 +397,21 @@ def process_urls(
             }
         )
     
-    # DEDUPLICATION:
-    # 1) remove duplicatas mantendo ordem original
-    # 2) descartar URLs já processadas
-    seen, deduped = set(), []
+    # Remove duplicates from the list (should already be handled by url_manager, but double-check)
+    seen, urls_to_process_filtered = set(), []
     for u in urls_to_process:
         if u not in seen:
             seen.add(u)
-            deduped.append(u)
-    urls_to_process_filtered = [url for url in deduped if url not in processed_urls_existing]
+            urls_to_process_filtered.append(u)
     
     if not urls_to_process_filtered:
-        logger.info("All URLs already processed")
+        logger.info("All URLs already processed or filtered")
+        current_to_process_count = get_urls_to_process_count()
+        current_processed_count = get_processed_urls_count()
         return Command(
             update={
-                "urls_to_process": [],  # Clear the list since all are already processed
+                "urls_to_process_count": current_to_process_count,
+                "processed_urls_count": current_processed_count,
                 "messages": [
                     ToolMessage(
                         content="All URLs have already been processed",
@@ -411,13 +421,11 @@ def process_urls(
             }
         )
     
-    # PROCESSAMENTO EM LOTE COM ROTAÇÃO ATÉ 200 URLS
-    MAX_BATCH_SIZE = 20          # requisição segura à Tavily/LLM
-    MAX_TOTAL_PER_INVOCATION = 200  # limite global por chamada da ferramenta
-
-    # Limita o total a processar nesta invocação
-    urls_to_handle_now = urls_to_process_filtered[:MAX_TOTAL_PER_INVOCATION]
-    remaining_urls = urls_to_process_filtered[MAX_TOTAL_PER_INVOCATION:]
+    # PROCESSAMENTO EM LOTE - Remove URL limits to allow unlimited processing
+    MAX_BATCH_SIZE = 20          # Safe batch size for Tavily/LLM requests
+    
+    # Process all URLs in this invocation (no more limits!)
+    urls_to_handle_now = urls_to_process_filtered
 
     try:
         processed_urls: List[str] = []
@@ -426,7 +434,7 @@ def process_urls(
         saved_chunk_files: List[str] = []
         vectorstore_path = ""
 
-        # Itera em blocos de 20 até esgotar ou atingir 200
+        # Process in batches of 20 URLs until all are processed
         for start in range(0, len(urls_to_handle_now), MAX_BATCH_SIZE):
             urls_batch = urls_to_handle_now[start:start + MAX_BATCH_SIZE]
             logger.info(f"Processing batch of {len(urls_batch)} URLs "
@@ -468,22 +476,22 @@ def process_urls(
         logger.info(f"Successfully processed {len(processed_urls)} URLs in this invocation, "
                     f"created {total_chunks} chunks")
 
-        # Marcar TODAS as URLs manuseadas neste lote como processadas,
-        # independentemente de falha ou sucesso, para evitar loops no supervisor
-        processed_urls_updated = list(set(processed_urls_existing + urls_to_handle_now))
-        
-        # Somente mantemos em urls_to_process aquelas que sobraram fora
-        # do limite MAX_TOTAL_PER_INVOCATION (remaining_urls)
-        urls_to_process_updated = remaining_urls
+        # Move processed URLs from to_process to processed files
+        # All URLs handled in this batch are marked as processed (success or failure)
+        move_urls_to_processed(urls_to_handle_now)
 
-        # Update state: remove processed URLs and keep only unprocessed/failed ones
+        # Get updated counts
+        current_to_process_count = get_urls_to_process_count()
+        current_processed_count = get_processed_urls_count()
+        
+        # Update state with counters
         batch_status = f"Batch {len(processed_urls)}/{len(urls_to_handle_now)} successful"
-        remaining_status = f", {len(urls_to_process_updated)} URLs remaining" if urls_to_process_updated else ", all URLs processed"
+        remaining_status = f", {current_to_process_count} URLs remaining" if current_to_process_count > 0 else ", all URLs processed"
         
         return Command(
             update={
-                "urls_to_process": urls_to_process_updated,  # Remove processed URLs, keep only unprocessed/failed
-                "processed_urls": processed_urls_updated,  # Deduplicated processed URLs
+                "urls_to_process_count": current_to_process_count,
+                "processed_urls_count": current_processed_count,
                 "messages": [
                     ToolMessage(
                         content=f"Successfully processed {len(processed_urls)}/{len(urls_to_handle_now)} URLs ({batch_status}){remaining_status}. "
@@ -498,14 +506,17 @@ def process_urls(
     except Exception as e:
         logger.error(f"Error in process_urls tool: {str(e)}")
         
-        # On failure, update state to avoid infinite loops
-        processed_urls_updated = list(set(processed_urls_existing + urls_to_handle_now))
-        urls_to_process_updated = remaining_urls
+        # On failure, still mark URLs as processed to avoid infinite loops
+        move_urls_to_processed(urls_to_handle_now)
+        
+        # Get updated counts
+        current_to_process_count = get_urls_to_process_count()
+        current_processed_count = get_processed_urls_count()
         
         return Command(
             update={
-                "urls_to_process": urls_to_process_updated,
-                "processed_urls": processed_urls_updated,
+                "urls_to_process_count": current_to_process_count,
+                "processed_urls_count": current_processed_count,
                 "messages": [
                     ToolMessage(
                         content=f"Error processing URLs: {str(e)}. "

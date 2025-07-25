@@ -22,8 +22,8 @@ try:
                     "content": "Amiodarone vs beta-blockers for atrial fibrillation"
                 }
             ],
-            urls_to_process = [],
-            processed_urls = [],
+            urls_to_process_count = 0,
+            processed_urls_count = 0,
             current_iteration = 1,
             remaining_steps = 10,
             meta_analysis_pico = {},
@@ -31,10 +31,8 @@ try:
             previous_retrieve_queries = [],
             retrieved_chunks_count = 0,
             analysis_results = [],
-            current_draft = "",
             current_draft_iteration = 1,
-            reviewer_feedbacks = [],
-            final_draft = ""
+            reviewer_feedbacks = []
         )
     ):
         chunk_count += 1
@@ -56,10 +54,10 @@ try:
                             logger.info(f"Tool calls: {[tc['name'] for tc in last_msg.tool_calls]}")
                 
                 # Log state info for debugging
-                if 'urls_to_process' in value:
-                    logger.info(f"URLs to process: {len(value['urls_to_process'])}")
-                if 'processed_urls' in value:
-                    logger.info(f"Processed URLs: {len(value['processed_urls'])}")
+                if 'urls_to_process_count' in value:
+                    logger.info(f"URLs to process count: {value['urls_to_process_count']}")
+                if 'processed_urls_count' in value:
+                    logger.info(f"Processed URLs count: {value['processed_urls_count']}")
                 
                 # Log queries info for debugging
                 if 'previous_search_queries' in value:

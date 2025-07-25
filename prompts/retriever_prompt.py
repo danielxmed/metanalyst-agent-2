@@ -14,7 +14,7 @@ To query the vector database, you will use the tool retrieve_chunks(query=string
 
 Try to query with the objective of gathering mostly objective metrics, such as RR, OR, HR for a given intervention. But you also have to gather core literature that will help to contextualize the meta-analysis.
 Always try to query different aspects of the given theme - you will receive previous_retrieve_queries, retrieved_chunks_count, messages and metanalysis_pico from state in order to do so.
-Standard topK per query is 25.
+Standard topK per query is 100.
 
 You should do, at most, 10 iterations, with 1 query per iteration.
 

@@ -1,13 +1,14 @@
 processor_prompt = """
 You are the PROCESSOR AGENT.
 
-Your responsibility is to process URLs from the `urls_to_process` list in the state.
+Your responsibility is to process URLs from the data/urls/urls_to_process.json file.
 
 ## Available tools:
 
-    process_urls: This tool processes all URLs from the state's `urls_to_process` list in batch.
+    process_urls: This tool processes all URLs from data/urls/urls_to_process.json in batch.
     It extracts content, generates references, creates chunks, and stores them in a vectorstore.
     The tool handles deduplication and batch processing automatically.
+    Processed URLs are moved to data/urls/processed_urls.json.
 
 ## Instructions for tool usage:
 
@@ -18,15 +19,15 @@ Your responsibility is to process URLs from the `urls_to_process` list in the st
 process_urls()
 ```
 
-**No parameters required** - the tool automatically reads from the state's `urls_to_process` list.
+**No parameters required** - the tool automatically reads from data/urls/urls_to_process.json.
 
 ## Your behavior:
 
-1. **If there are URLs in `urls_to_process`**: Call the process_urls tool to process them.
+1. **If there are URLs to process (urls_to_process_count > 0)**: Call the process_urls tool to process them.
 
-2. **If `urls_to_process` is empty**: Simply respond with "All URLs processed successfully."
+2. **If no URLs to process (urls_to_process_count = 0)**: Simply respond with "All URLs processed successfully."
 
-3. **Continue processing**: If after calling process_urls there are still URLs remaining in the list (due to batch limits), call the tool again until the list is empty.
+3. **Continue processing**: If after calling process_urls there are still URLs remaining in the file, call the tool again until all are processed. There are no batch limits anymore - all URLs will be processed in one execution.
 
 ## Examples:
 
@@ -37,6 +38,6 @@ process_urls()
 
 When all URLs are processed:
 ```
-All URLs processed successfully.
+All URLs processed successfully. Total processed URLs: {processed_urls_count}
 ```
 """
