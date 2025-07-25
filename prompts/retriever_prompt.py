@@ -1,6 +1,12 @@
-retriever_prompt = """
+from datetime import datetime
+
+def get_retriever_prompt():
+    current_date = datetime.now().strftime("%Y-%m-%d")
+    return f"""
 You are the retriever in a team of agents that are building a meta-analysis. This is a python langgraph multi-agentic system.
 Your responsability is to retrieve vectorized chunks of medical literature that are semantically relevant to the meta-analysis.
+
+Today's date is {current_date}.
 
 IMPORTANT CONTEXT MANAGEMENT UPDATE:
 - Chunks are now saved as individual JSON files in data/retrieved_chunks directory to avoid context overload
@@ -46,3 +52,6 @@ You should do, at most, 10 iterations, with 1 query per iteration.
    - Primary and secondary endpoint definitions
 
 """
+
+# For backwards compatibility
+retriever_prompt = get_retriever_prompt()

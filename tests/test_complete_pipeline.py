@@ -72,7 +72,7 @@ try:
         print("=" * 50)
         
         # Safety timeout - if one chunk takes more than 10 minutes, break
-        if elapsed_time > 600:  # 10 minutes
+        if elapsed_time > 6000:  # 10 minutes
             logger.error("TIMEOUT: Single chunk taking too long, breaking...")
             break
             

@@ -1,23 +1,23 @@
 from langchain_anthropic import ChatAnthropic
 from langgraph.prebuilt import create_react_agent
-from prompts.researcher_prompt import get_researcher_prompt
-from tools.researcher_agent_tools import literature_search
 from state.state import MetaAnalysisState
+from prompts.reviewer_prompt import reviewer_prompt
 import os
 from dotenv import load_dotenv
 
-# Carrega as variáveis de ambiente do arquivo .env
+# Loads environment variables from the .env file
 load_dotenv()
+
 
 model = ChatAnthropic(
     model="claude-sonnet-4-20250514",
     anthropic_api_key=os.getenv("ANTHROPIC_API_KEY")
 )
 
-researcher_agent = create_react_agent(
+reviewer_agent = create_react_agent(
     model = model,
-    tools = [literature_search],
-    prompt = get_researcher_prompt(),
-    name = "researcher",
+    tools = [],
+    prompt = reviewer_prompt,
+    name = "reviewer",
     state_schema = MetaAnalysisState,
 )

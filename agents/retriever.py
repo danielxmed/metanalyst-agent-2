@@ -4,10 +4,9 @@ from state.state import MetaAnalysisState
 import os
 from dotenv import load_dotenv
 from tools.retriever_agent_tools import retrieve_chunks
-from prompts.retriever_prompt import retriever_prompt
+from prompts.retriever_prompt import get_retriever_prompt
 
 load_dotenv()
-
 
 model = ChatAnthropic(
     model="claude-sonnet-4-20250514",
@@ -17,7 +16,7 @@ model = ChatAnthropic(
 retriever_agent = create_react_agent(
     model=model,
     tools=[retrieve_chunks],
-    prompt=retriever_prompt,
+    prompt=get_retriever_prompt(),
     name="retriever",
     state_schema=MetaAnalysisState,
 )

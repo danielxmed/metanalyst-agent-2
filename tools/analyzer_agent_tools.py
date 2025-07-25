@@ -18,6 +18,7 @@ from langgraph.prebuilt import InjectedState
 from langchain_core.messages import HumanMessage, ToolMessage, AIMessage
 from typing import Annotated
 from state.state import MetaAnalysisState
+from datetime import datetime
 import tempfile
 import subprocess
 import sys
@@ -108,9 +109,14 @@ def analyze_chunks(
         pico_context = state.get("meta_analysis_pico", {})
         user_request = state.get("user_request", "")
         
+        # Get current date
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        
         # Prompt aprimorado com foco em rastreabilidade científica
         analysis_prompt = f"""
         You are a medical meta-analysis expert. Carefully analyze all provided scientific literature chunks.
+
+        Today's date is {current_date}.
 
         META-ANALYSIS CONTEXT:
         - User request: {user_request}

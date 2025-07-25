@@ -13,6 +13,7 @@ from state.state import MetaAnalysisState
 import tempfile
 import subprocess
 import sys
+from datetime import datetime
 
 tool_prompt= """
 You are a scientific writer.
@@ -108,8 +109,13 @@ def write_draft(
 
 """ if current_draft_content or reviewer_feedbacks else ""
         
+        # Get current date
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        
         complete_prompt = f"""
 {tool_prompt}
+
+Today's date is {current_date}.
 
 ## PICO Elements:
 {json.dumps(meta_analysis_pico, indent=2)}
